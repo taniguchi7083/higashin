@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="8" height="15" viewBox="0 0 8 15">
+  <defs>
+    <style>
+      .a{fill:rgba(255,255,255,0);}
+      .b{clip-path:url(#a);}
+      .c{fill:#ffffff;}
+    </style>
+    <clipPath id="a">
+      <rect class="a" width="15" height="8" transform="translate(11144 7789)"/>
+    </clipPath>
+  </defs>
+  <g class="b" transform="translate(-7789 11159) rotate(-90)">
+    <g transform="translate(-2226.253 10173.587) rotate(-45)">
+      <rect class="c" width="1" height="10" transform="translate(11140 7769)"/>
+      <rect class="c" width="1" height="10" transform="translate(11140 7779) rotate(-90)"/>
+    </g>
+  </g>
+</svg>

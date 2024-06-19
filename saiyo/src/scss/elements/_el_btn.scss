@@ -1,0 +1,119 @@
+// root
+// ----------------------------------------------------------------- */
+.el_btn {
+	&__entry {
+		--button-text: #fff;
+		--button-background: var(--color_secondary);
+		--button-border: var(--color_secondary);
+
+		--button-hover-text: var(--color_secondary);
+		--button-hover-background: #fff;
+		--button-hover-border: var(--color_primary);
+	}
+
+	&__more {
+		--button-text: var(--color_primary);
+		--button-background: #fff;
+
+		--button-hover-text: #fff;
+		--button-hover-background: #fff;
+		--button-hover-border: var(--color_primary);
+	}
+}
+
+// el_btn
+// ----------------------------------------------------------------- */
+.el_btn {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.3s ease-out;
+	border-radius: 9in;
+	cursor: pointer;
+
+	&>span {
+		font-size: 20rem;
+		font-weight: 500;
+		position: relative;
+		z-index: 1;
+
+		@media (max-width: 768px) {
+			font-size: 28rem;
+		}
+	}
+}
+
+.el_btn__entry {
+	width: 160rem;
+	height: 60rem;
+	color: var(--button-text);
+	background: var(--button-background);
+	border: 1px solid var(--button-border);
+}
+
+.el_btn__more {
+	width: 240rem;
+	height: 60rem;
+	padding-inline: 32rem;
+	justify-content: space-between;
+	background: #fff;
+	color: var(--color_primary);
+	border: 1px solid var(--button-hover-border);
+
+	@media (max-width: 768px) {
+		width: 320rem;
+		height: 80rem;
+		padding-inline: 32rem 37rem;
+	}
+
+	&::after {
+		content: "";
+		background: var(--color_primary);
+		width: 32rem;
+		height: 32rem;
+		position: absolute;
+		right: 0;
+		transform: translateX(-21rem);
+		transition: width 0.6s cubic-bezier(0.75, 0, 0.25, 1),
+			height 0.6s cubic-bezier(0.75, 0, 0.25, 1),
+			transform 0.6s cubic-bezier(0.75, 0, 0.25, 1);
+		border-radius: 9in;
+
+		@media (max-width: 768px) {
+			width: 48rem;
+			height: 48rem;
+		}
+	}
+
+	.el_arrow {
+		position: relative;
+		z-index: 1;
+		width: 8rem;
+		height: 15rem;
+
+		@media (max-width: 768px) {
+			width: 12rem;
+			height: 26rem;
+		}
+	}
+}
+
+// ホバー
+// ----------------------------------------------------------------- */
+.el_btn {
+	@media (hover: hover) {
+		&:is(:hover) {
+			color: var(--button-hover-text);
+			background: var(--button-hover-background);
+		}
+
+		&__more {
+			&:hover::after {
+				width: 100%;
+				height: 100%;
+				transform: translateX(0);
+			}
+		}
+	}
+}

@@ -1,0 +1,54 @@
+@use './_var.scss' as *;
+
+html {
+	font-size: var(--font-size);
+}
+
+body {
+	font-family: var(--font-jp);
+	color: var(--color-black);
+	letter-spacing: 0;
+	line-height: 1;
+}
+
+* {
+	font-feature-settings: "palt";
+	letter-spacing: 0.02em;
+	// color: var(--color-black);
+	font-weight: 500;
+}
+
+svg {
+	width: 100%;
+	height: auto;
+	fill: currentColor;
+}
+
+h2,
+h3,
+h4 {
+	line-height: 1.4;
+}
+
+p {
+	font-size: 20rem;
+	line-height: 2;
+	letter-spacing: 0.12em;
+
+	@media (max-width: 768px) {
+		font-size: 28rem;
+	}
+}
+
+li {
+	list-style: none;
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+section {
+	position: relative;
+}
