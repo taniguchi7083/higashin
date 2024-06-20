@@ -25,19 +25,13 @@ block content
 		.bl_anime_floating__right
 			img(src=img_path+"/common/svg_ball.svg", alt="")
 
-	//- サークルアニメーション
-	//- .bl_anime_circle
-	//- 	.circle.circle1
-	//- 	.circle.circle2
-	//- 	.circle.circle3
-
 	main.l-main
 		//- -------------------------------------------------------------------
 		//- MV
 		//- -------------------------------------------------------------------
 		section.un_MV
 			.un_MV_inner
-				.bl_scroll
+				.bl_scroll.hp_pcOnly
 					p.hp_en
 						|Scroll
 				.un_MVtxt.js_MVanime
@@ -53,10 +47,12 @@ block content
 						.text
 							span 縁
 							|でつなぐ。
+
+		//- -------------------------------------------------------------------
+		//- un_message
 		//- -------------------------------------------------------------------
 		//- message
-		//- -------------------------------------------------------------------
-		section.un_message
+		section.bl_sect.un_message
 			//- スクロール文字
 			.un_loopSlider
 				.un_loopSlider_font.hp_en
@@ -91,12 +87,13 @@ block content
 					img(src=img_path+"/home/img_message.webp", alt="")
 
 		//- -------------------------------------------------------------------
-		//- About
+		//- .bl_sectHome
 		//- -------------------------------------------------------------------
-		section.bl_sect.bl_sect__reverse.un_about
-			figure.bl_sect_figure
+		//- About
+		section.bl_sectHome.bl_sectHome__reverse.un_about
+			figure.bl_sectHome_figure
 				img(src=img_path+"/home/img_about.webp", alt="")
-			.bl_sect_inner
+			.bl_sectHome_inner
 					//- サークルアニメーション
 					.el_lv2Heading_wrap
 						h2.el_lv2Heading.hp_en.js_fadein
@@ -106,20 +103,18 @@ block content
 							.circle.circle1
 							.circle.circle2
 							.circle.circle3
-					h3.bl_sect_ttl
+					h3.bl_sectHome_ttl
 						|地域をつなぐ信用金庫。
-					p.bl_sect_txt
+					p.bl_sectHome_txt
 						|ひがしんが地域やお客さまとどのような想いで関わっているのか。経営理念や金庫の歴史などひがしんを志望するうえで最初に知ってほしい基本的な情報をお伝えします。
 					//- ボタン
 					a.el_btn.el_btn__more.hp_en(href=link_path+"")
 						span View More
 						+icon_arrow
 
-		//- -------------------------------------------------------------------
 		//- Business
-		//- -------------------------------------------------------------------
-		section.bl_sect.un_business
-			.bl_sect_inner
+		section.bl_sectHome.un_business
+			.bl_sectHome_inner
 				//- サークルアニメーション
 				.el_lv2Heading_wrap
 					h2.el_lv2Heading.hp_en.js_fadein
@@ -129,51 +124,80 @@ block content
 						.circle.circle1
 						.circle.circle2
 						.circle.circle3
-				h3.bl_sect_ttl
+				h3.bl_sectHome_ttl
 					|色々な夢をつなぐ仕事。
-				p.bl_sect_txt
+				p.bl_sectHome_txt
 					|「夢を夢で終わらせない信用金庫」というスローガンを達成するために、各職種がどのような仕事を行っているのか。ひがしんを代表する4つの職種についてご紹介します。
 				//- ボタン
 				a.el_btn.el_btn__more.hp_en(href=link_path+"")
 					span View More
 					+icon_arrow
-			figure.bl_sect_figure
+			figure.bl_sectHome_figure
 				img(src=img_path+"/home/img_business.webp", alt="")
 
-		//- -------------------------------------------------------------------
 		//- People
-		//- -------------------------------------------------------------------
-		section.bl_sect.un_people
+		section.bl_sectHome.un_people
 			.ly_cont
 				.bl_swiper.js_fadein
 					.swiper_wrap
+						//- 画像swiper
 						.swiper.swiper__images
-							//- 画像swiper
 							.swiper-wrapper
-								.swiper-slide
-									img(src=img_path+"/home/img_home_about_01.webp", alt="")
-									p
+								a.swiper-slide(href=link_path+"")
+									img(src=img_path+"/home/img_people_01.webp", alt="")
+								a.swiper-slide(href=link_path+"")
+									img(src=img_path+"/home/img_people_02.webp", alt="")
+								a.swiper-slide(href=link_path+"")
+									img(src=img_path+"/home/img_people_03.webp", alt="")
+								a.swiper-slide(href=link_path+"")
+									img(src=img_path+"/home/img_people_04.webp", alt="")
+								a.swiper-slide(href=link_path+"")
+									img(src=img_path+"/home/img_people_05.webp", alt="")
+
+						//- テキストswiper
+						.swiper.swiper__text
+							.swiper-wrapper
+								a.swiper-slide(href=link_path+"")
+									.swiper-slide-item
 										|営業
 										br
 										span 
 											|2022年入庫
 											br
 											|商経学部卒
-								.swiper-slide
-									img(src=img_path+"/home/img_home_voice_01.webp", alt="")
-									p
-										|営業
+								a.swiper-slide(href=link_path+"")
+									.swiper-slide-item
+										|融資
 										br
 										span 
+											|2021年入庫
+											br
+											|生活科学部卒
+								a.swiper-slide(href=link_path+"")
+									.swiper-slide-item
+										|事務
+										br
+										span 
+											|2020年入庫
+											br
+											|産業科卒
+								a.swiper-slide(href=link_path+"")
+									.swiper-slide-item
+										|MA
+										br
+										span
 											|2022年入庫
 											br
-											|商経学部卒
-								.swiper-slide
-									img(src=img_path+"/home/img_home_voice_02.webp", alt="")
-								.swiper-slide
-									img(src=img_path+"/home/img_home_about_01.webp", alt="")
-								.swiper-slide
-									img(src=img_path+"/home/img_home_voice_01.webp", alt="")
+											|地域創生学部卒
+								a.swiper-slide(href=link_path+"")
+									.swiper-slide-item
+										|お客様
+										br
+										|サポート部
+										span 
+											|2011年入庫
+											br
+											|経営学部卒
 
 						//- ページネーション
 						.swiper-pagination.hp_en
@@ -184,7 +208,7 @@ block content
 						.swiper-button-next
 							+icon_arrow
 
-				.bl_sect_inner
+				.bl_sectHome_inner
 						//- サークルアニメーション
 						.el_lv2Heading_wrap
 							h2.el_lv2Heading.hp_en.js_fadein
@@ -194,20 +218,18 @@ block content
 								.circle.circle1
 								.circle.circle2
 								.circle.circle3
-						h3.bl_sect_ttl
+						h3.bl_sectHome_ttl
 							|縁をつなぐ人々。
-						p.bl_sect_txt
+						p.bl_sectHome_txt
 							|ひがしんの職員はどのような想いを持って働いているのか。地域やお客さまを支えるために、日々活動する職員たちに金庫や仕事に関するさまざまなことを聞いてみました。
 						//- ボタン
 						a.el_btn.el_btn__more.hp_en(href=link_path+"")
 							span View More
 							+icon_arrow
 
-		//- -------------------------------------------------------------------
 		//- Culture
-		//- -------------------------------------------------------------------
-		section.bl_sect.un_culture
-			.bl_sect_inner
+		section.bl_sectHome.un_culture
+			.bl_sectHome_inner
 				//- サークルアニメーション
 				.el_lv2Heading_wrap
 					h2.el_lv2Heading.hp_en.js_fadein
@@ -217,24 +239,22 @@ block content
 						.circle.circle1
 						.circle.circle2
 						.circle.circle3
-				h3.bl_sect_ttl
+				h3.bl_sectHome_ttl
 					|つながりを大切にする文化。
-				p.bl_sect_txt
+				p.bl_sectHome_txt
 					|「縁」という経営理念のもと、ひがしんで働く職員がどのように支え合っているのか。年齢や立場、職種の異なる職員に集まってもらい、職員同士のつながりを紐解きました。
 				//- ボタン
 				a.el_btn.el_btn__more.hp_en(href=link_path+"")
 					span View More
 					+icon_arrow
-			figure.bl_sect_figure
+			figure.bl_sectHome_figure
 				img(src=img_path+"/home/img_culture.webp", alt="")
 
-		//- -------------------------------------------------------------------
 		//- Career
-		//- -------------------------------------------------------------------
-		section.bl_sect.bl_sect__reverse.un_career
-			figure.bl_sect_figure
+		section.bl_sectHome.bl_sectHome__reverse.un_career
+			figure.bl_sectHome_figure
 				img(src=img_path+"/home/img_career.webp", alt="")
-			.bl_sect_inner
+			.bl_sectHome_inner
 				//- サークルアニメーション
 				.el_lv2Heading_wrap
 					h2.el_lv2Heading.hp_en.js_fadein
@@ -244,9 +264,9 @@ block content
 						.circle.circle1
 						.circle.circle2
 						.circle.circle3
-				h3.bl_sect_ttl
+				h3.bl_sectHome_ttl
 					|想いをつないできた日々。
-				p.bl_sect_txt
+				p.bl_sectHome_txt
 					|ひがしんのベテラン職員はどのような想いで仕事と向き合っているのか。ベテラン職員の入庫から現在までの歩みを通じて、ひがしんならではのキャリアをお伝えします。
 				//- ボタン
 				a.el_btn.el_btn__more.hp_en(href=link_path+"")
@@ -256,13 +276,14 @@ block content
 		//- -------------------------------------------------------------------
 		//- AreaVoice
 		//- -------------------------------------------------------------------
-		figure.un_homeImg_figure
-			img(src=img_path+"/home/img_homeImg.webp", alt="")
+		section.bl_sect
+			figure.un_homeImg_figure
+				img(src=img_path+"/home/img_homeImg.webp", alt="")
 
 		//- -------------------------------------------------------------------
 		//- AreaVoice
 		//- -------------------------------------------------------------------
-		section.un_AreaVoice
+		section.bl_sect.un_AreaVoice
 			.ly_cont
 				.bl_gridConts
 					.bl_grid_item.js_fadein
@@ -293,7 +314,7 @@ block content
 		//- -------------------------------------------------------------------
 		//- Recruit
 		//- -------------------------------------------------------------------
-		section.un_recruit
+		section.bl_sect.un_recruit
 			.ly_cont
 				h2.el_lv2Heading.hp_en.js_fadein
 					span 採用情報
