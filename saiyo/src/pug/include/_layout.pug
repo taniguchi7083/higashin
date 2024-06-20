@@ -16,10 +16,30 @@ html(lang="ja")
 			gtag('config', 'G-79TK28MJ31');
 		block head
 			include ../include/_head
+
 	body#js_body(class=bodyClass)
-		block bodyClass
-		include ../layout/_header
-		block content
-		include ../layout/_footer
-		block script
-			include ../include/_script
+		//- ローディング画面
+		#bl_loading
+		//- アニメーション
+		.bl_startAnime
+			.bl_anime_circle
+				.circle.circle1
+				.circle.circle2
+				.circle.circle3
+			.un_MVtxt.js_MVanime
+				.text
+					|この街を
+					span 縁
+					|でつなぐ。
+				.text
+					a.bl_headerConts_logo#js_logo(href=link_path+"")
+						.el_logo
+							img(src=img_path+"/common/icon_logo.svg", alt="")
+		//- アニメーション
+		.ly_wrap.img-wrap
+			block bodyClass
+			include ../layout/_header
+			block content
+			include ../layout/_footer
+			block script
+				include ../include/_script

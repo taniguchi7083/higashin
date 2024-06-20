@@ -93,18 +93,18 @@ fadeElements.forEach((fadeElement) => {
 // 		}
 // 	);
 
-// 	// const keyframes = {
-// 	//   opacity: [1, 0],
-// 	//   visibility: 'hidden',
-// 	// };
-// 	// const options = {
-// 	//   duration: 2000,
-// 	//   delay: 1200,
-// 	//   easing: 'ease',
-// 	//   fill: 'forwards',
-// 	// };
+// 	const keyframes = {
+// 		opacity: [1, 0],
+// 		visibility: 'hidden',
+// 	};
+// 	const options = {
+// 		duration: 2000,
+// 		delay: 1200,
+// 		easing: 'ease',
+// 		fill: 'forwards',
+// 	};
 
-// 	// loadingAreaGrey.animate(keyframes, options);
+// 	loadingAreaGrey.animate(keyframes, options);
 
 // 	// ローディング中（薄緑スクリーン）
 // 	loadingAreaGreen.animate(
@@ -138,6 +138,23 @@ fadeElements.forEach((fadeElement) => {
 // 		}
 // 	);
 // });
+const loadingArea = document.querySelector('#bl_loading');
+
+window.addEventListener('load', () => {
+	// ローディング終了後のフェードアウトアニメーション
+	loadingArea.animate(
+		{
+			opacity: [1, 0] // 透明度を1から0に変更
+		},
+		{
+			duration: 2000, // 2秒間でアニメーション
+			easing: 'ease', // イージングカーブを使用
+			fill: 'forwards' // アニメーション終了後にスタイルを保持
+		}
+	).onfinish = () => {
+		loadingArea.style.visibility = 'hidden'; // アニメーション終了後に非表示にする
+	};
+});
 
 
 /* スムーズスクロール */
@@ -191,43 +208,55 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-/* swiper */
+/* おためし */
 /* ------------------------------------------------------------- */
-// document.addEventListener('DOMContentLoaded', () => {
-// 	const swiper = new Swiper(".swiper", {
-// 		loop: true,
-// 		simulateTouch: false,
-// 		pagination: {
-// 			el: ".swiper-pagination",
-// 			type: "fraction", // 枚数表示
-// 			// clickable: true, 無効化
-// 		},
-// 		navigation: {
-// 			nextEl: ".swiper-button-next",
-// 			prevEl: ".swiper-button-prev",
-// 		},
-// 	});
+document.addEventListener("DOMContentLoaded", () => {
+	const imgWrap = document.querySelector('.img-wrap');
+
+	imgWrap.addEventListener('animationend', (event) => {
+		// アニメーションの実際の終了を確認
+		if (event.animationName === 'img-wrap') {
+			imgWrap.style.position = 'static';
+		}
+	});
+});
+
+// document.addEventListener("DOMContentLoaded", () => {
+// 	const imgWrap = document.querySelector('.img-wrap');
+
+// 	// 秒数を指定（例えば3秒後に発火）
+// 	const delaySeconds = 3;
+
+// 	setTimeout(() => {
+// 			imgWrap.style.position = 'static';
+// 	}, delaySeconds * 1000); // ミリ秒に変換
 // });
 
 
+/* swiper */
+/* ------------------------------------------------------------- */
 const swiper = new Swiper(".swiper", {
-  loop: true,
+	loop: true,
 	simulateTouch: false,
-  // ページネーション
-  pagination: {
-    el: ".swiper-pagination",
-    type: "fraction", // 枚数表示
-    renderFraction: function (currentClass, totalClass) {
-      return '<span class="' + currentClass + '"></span><span class="' + totalClass + '"></span>';
-    }
-  },
-  // 前後の矢印
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
+	effect: 'fade', // フェード効果を追加
+	fadeEffect: {
+		crossFade: true // スムーズなフェードを確保
+	},
+	speed: 800, // トランジションの速度を調整
+	// ページネーション
+	pagination: {
+		el: ".swiper-pagination",
+		type: "fraction", // 枚数表示
+		renderFraction: function (currentClass, totalClass) {
+			return '<span class="' + currentClass + '"></span><span class="' + totalClass + '"></span>';
+		}
+	},
+	// 前後の矢印
+	navigation: {
+		nextEl: ".swiper-button-next",
+		prevEl: ".swiper-button-prev",
+	},
 });
-
 
 
 /* gsap */
@@ -255,10 +284,27 @@ repeatAnime.to('.bl_anime_floating__right , .bl_anime_floating__left',
 
 /* テキストアニメーション */
 /* ------------------------------------------------------------- */
-document.addEventListener("DOMContentLoaded", function() {
-  const textContainer = document.querySelector('.js_MVanime');
-  // Simulating the addition of the .js_fadein class for demo purposes
-  setTimeout(() => {
-    textContainer.classList.add('.js_MVanime');
-  }, 1000);
+document.addEventListener("DOMContentLoaded", function () {
+	const textContainer = document.querySelector('.js_MVanime');
+	// Simulating the addition of the .js_fadein class for demo purposes
+	setTimeout(() => {
+		textContainer.classList.add('.js_MVanime');
+	}, 1000);
 });
+
+
+
+
+// const startAnime = document.querySelector('.bl_startAnime');
+
+// window.addEventListener('load', () => {
+// 	// アニメーションの追加
+// 	startAnime.style.transition = 'opacity 1s ease 3s';
+// 	startAnime.style.opacity = '0';
+
+// 	// アニメーション終了後に操作不能にする
+// 	setTimeout(() => {
+// 		startAnime.style.pointerEvents = 'none';
+// 		startAnime.style.visibility = 'hidden';
+// 	}, 4000); // 4秒後に実行 (3秒の遅延 + 1秒のフェードアウト)
+// });
