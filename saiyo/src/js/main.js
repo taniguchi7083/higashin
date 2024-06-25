@@ -233,32 +233,6 @@ document.addEventListener("DOMContentLoaded", () => {
 // });
 
 
-/* swiper */
-/* ------------------------------------------------------------- */
-const swiper = new Swiper(".swiper", {
-	loop: true,
-	simulateTouch: false,
-	effect: 'fade', // フェード効果を追加
-	fadeEffect: {
-		crossFade: true // スムーズなフェードを確保
-	},
-	speed: 800, // トランジションの速度を調整
-	// ページネーション
-	pagination: {
-		el: ".swiper-pagination",
-		type: "fraction", // 枚数表示
-		renderFraction: function (currentClass, totalClass) {
-			return '<span class="' + currentClass + '"></span><span class="' + totalClass + '"></span>';
-		}
-	},
-	// 前後の矢印
-	navigation: {
-		nextEl: ".swiper-button-next",
-		prevEl: ".swiper-button-prev",
-	},
-});
-
-
 /* gsap */
 /* ------------------------------------------------------------- */
 var repeatAnime = gsap.timeline({
@@ -295,27 +269,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 /* フェードイン */
 /* ------------------------------------------------------------- */
-// document.addEventListener("DOMContentLoaded", () => {
-// 	const addClassOnScroll = (targetSelector, className, thresholdValue = 0.1) => {
-// 		const targets = document.querySelectorAll(targetSelector);
-
-// 		const observer = new IntersectionObserver((entries, observer) => {
-// 			entries.forEach(entry => {
-// 				if (entry.isIntersecting) {
-// 					entry.target.classList.add(className);
-// 					observer.unobserve(entry.target); // 一度だけクラスを付与したい場合
-// 				}
-// 			});
-// 		}, {
-// 			threshold: thresholdValue
-// 		});
-
-// 		targets.forEach(target => observer.observe(target));
-// 	};
-
-// 	// 使用例
-// 	addClassOnScroll('.js_MVtxt', 'is_MVtxt', 0.1);
-// });
 
 
 

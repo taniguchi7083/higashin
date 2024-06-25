@@ -1,3 +1,29 @@
+// レイアウト
+// ================================================ */
+.pg_home {
+  .ly_main {
+    padding-bottom: 170rem;
+    overflow: hidden;
+
+    @media (max-width: 768px) {
+      padding-bottom: 144rem;
+    }
+  }
+
+  .bl_sect {
+    margin-top: 144rem;
+
+    @media (max-width: 768px) {
+      margin-top: 120rem;
+    }
+  }
+
+  .bl_sectHome {
+    margin-top: 200rem;
+  }
+}
+
+
 // メインビジュアル
 // ================================================ */
 .pg_home {

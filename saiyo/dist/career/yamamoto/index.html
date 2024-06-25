@@ -95,9 +95,12 @@
     </div>
     <main class="ly_main">
       <section class="bl_MV">
+        <div class="un_loopSlider">
+          <div class="un_loopSlider_font hp_en"><span>Higashin Recruiting Website</span><span>Higashin Recruiting Website</span></div>
+        </div>
         <div class="ly_cont">
           <div class="bl_comnMV">
-            <h1 class="el_thirdHeading"><span class="hp_en">Career</span>支店長</h1>
+            <h1 class="el_MVthirdHeading"><span class="hp_en">Career</span>支店長</h1>
             <div class="un_MVtxt js_MVanime">
               <div class="marker">
                 <div class="text">今まで受けた恩を</div>
@@ -135,7 +138,7 @@
                 <div class="circle circle3"></div>
               </div>
             </div>
-            <div class="un_MVtxt js_MVtxt">
+            <div class="un_slideAnime js_slideAnime">
               <div class="marker">
                 <div class="text">先輩や同期と過ごした</div>
               </div>
@@ -162,7 +165,7 @@
                 <div class="circle circle3"></div>
               </div>
             </div>
-            <div class="un_MVtxt js_MVtxt">
+            <div class="un_slideAnime js_slideAnime">
               <div class="marker">
                 <div class="text">周囲に支えられ、</div>
               </div>
@@ -178,7 +181,7 @@
           </div>
         </div>
       </section>
-      <section class="bl_sect un_message">
+      <section class="bl_sect un_message"> 
         <div class="ly_cont">
           <div class="un_messageUnit">
             <div class="el_thirdHeading_wrap">
@@ -189,7 +192,7 @@
                 <div class="circle circle3"></div>
               </div>
             </div>
-            <div class="un_MVtxt js_MVtxt">
+            <div class="un_slideAnime js_slideAnime">
               <div class="marker">
                 <div class="text">自分から心を開くことで、</div>
               </div>
@@ -216,7 +219,7 @@
                 <div class="circle circle3"></div>
               </div>
             </div>
-            <div class="un_MVtxt js_MVtxt">
+            <div class="un_slideAnime js_slideAnime">
               <div class="marker">
                 <div class="text">「お客さまに近い支店長」</div>
               </div>
@@ -233,7 +236,7 @@
           </div>
         </div>
       </section>
-      <section class="bl_sect bl_box">
+      <section class="bl_sect bl_box js_fadein">
         <div class="ly_cont">
           <div class="bl_boxUnit">
             <figure class="bl_box_figure"><img src="../../assets/images/career/yamamoto/img_graph_icon.webp" alt=""></figure>
@@ -506,6 +509,22 @@
       	// 初期ハイライト
       	highlightPoint(0);
       })();
+      
+      const processScroll = (selector, className, value) => {
+      	const elements = document.querySelectorAll(selector);
+      	elements.forEach(element => {
+      		if (window.scrollY > element.getBoundingClientRect().top + value) {
+      			element.classList.add(className);
+      		}
+      	});
+      };
+      
+      window.addEventListener('scroll', () => {
+      	const height = window.innerHeight;
+      	const value = window.scrollY - height * 0.75;
+      
+      	processScroll('.js_slideAnime', 'is_slideAnime', value);
+      });
     </script>
   </body>
 </html>

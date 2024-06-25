@@ -539,6 +539,30 @@
           </div>
         </div>
       </div>
+      <script>
+        const swiper = new Swiper(".swiper", {
+        	loop: true,
+        	simulateTouch: false,
+        	effect: 'fade', // フェード効果を追加
+        	fadeEffect: {
+        		crossFade: true // スムーズなフェードを確保
+        	},
+        	speed: 800, // トランジションの速度を調整
+        	//- ページネーション
+        	pagination: {
+        		el: ".swiper-pagination",
+        		type: "fraction", // 枚数表示
+        		renderFraction: function (currentClass, totalClass) {
+        			return '<span class="' + currentClass + '"></span><span class="' + totalClass + '"></span>';
+        		}
+        	},
+        	//- 前後の矢印
+        	navigation: {
+        		nextEl: ".swiper-button-next",
+        		prevEl: ".swiper-button-prev",
+        	},
+        });
+      </script>
     </div>
   </body>
 </html>

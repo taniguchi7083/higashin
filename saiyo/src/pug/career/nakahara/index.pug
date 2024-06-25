@@ -21,31 +21,36 @@ block content
 	//- 背景アニメーション
 	+floating-parts
 	main.ly_main
+
 		//- -------------------------------------------------------------------
 		//- career
 		//- -------------------------------------------------------------------
 		section.bl_MV
+			//- スクロール文字
+			.un_loopSlider
+				.un_loopSlider_font.hp_en
+					span Higashin Recruiting Website
+					span Higashin Recruiting Website
 			.ly_cont
 				.bl_comnMV
-					.bl_comnMV_txt
-						h1.el_thirdHeading
-							span.hp_en Career
-							|支店長
-						.un_MVtxt.js_MVanime
-							.marker
-								.text
-									|今まで受けた恩を
-							.marker.hp_mt
-								.text
-									|次世代へ送る。
-							.marker.hp_mt
-								.text
-									|支えてもらった分、
-							.marker.hp_mt
-								.text
-									|支えられる人になりたい。
-							p.un_MVtxt_small
-								|※内容は取材当時のものです
+					h1.el_MVthirdHeading
+						span.hp_en Career
+						|支店長
+					.un_MVtxt.js_MVanime
+						.marker
+							.text
+								|今まで受けた恩を
+						.marker.hp_mt
+							.text
+								|次世代へ送る。
+						.marker.hp_mt
+							.text
+								|支えてもらった分、
+						.marker.hp_mt
+							.text
+								|支えられる人になりたい。
+					p.un_MVtxt_small
+						|※内容は取材当時のものです
 
 					.bl_anime_circle
 						.circle.circle1
@@ -70,7 +75,7 @@ block content
 							.circle.circle1
 							.circle.circle2
 							.circle.circle3
-					.un_MVtxt.js_MVtxt
+					.un_slideAnime.js_slideAnime
 						.marker
 							.text
 								|先輩や同期と過ごした
@@ -96,7 +101,7 @@ block content
 							.circle.circle1
 							.circle.circle2
 							.circle.circle3
-					.un_MVtxt.js_MVtxt
+					.un_slideAnime.js_slideAnime
 						.marker
 							.text
 								|周囲に支えられ、
@@ -122,7 +127,7 @@ block content
 							.circle.circle1
 							.circle.circle2
 							.circle.circle3
-					.un_MVtxt.js_MVtxt
+					.un_slideAnime.js_slideAnime
 						.marker
 							.text
 								|自分から心を開くことで、
@@ -148,7 +153,7 @@ block content
 							.circle.circle1
 							.circle.circle2
 							.circle.circle3
-					.un_MVtxt.js_MVtxt
+					.un_slideAnime.js_slideAnime
 						.marker
 							.text
 								|「お客さまに近い支店長」
@@ -168,7 +173,7 @@ block content
 		//- -------------------------------------------------------------------
 		//- Chart
 		//- -------------------------------------------------------------------
-		section.bl_sect.bl_box
+		section.bl_sect.bl_box.js_fadein
 			.ly_cont
 				.bl_boxUnit
 					figure.bl_box_figure
@@ -360,3 +365,19 @@ block append script
 			// 初期ハイライト
 			highlightPoint(0);
 		})();
+
+		const processScroll = (selector, className, value) => {
+			const elements = document.querySelectorAll(selector);
+			elements.forEach(element => {
+				if (window.scrollY > element.getBoundingClientRect().top + value) {
+					element.classList.add(className);
+				}
+			});
+		};
+
+		window.addEventListener('scroll', () => {
+			const height = window.innerHeight;
+			const value = window.scrollY - height * 0.75;
+
+			processScroll('.js_slideAnime', 'is_slideAnime', value);
+		});
