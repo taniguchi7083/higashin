@@ -208,7 +208,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-/* おためし */
+/* スタートアニメーション */
 /* ------------------------------------------------------------- */
 document.addEventListener("DOMContentLoaded", () => {
 	const imgWrap = document.querySelector('.img-wrap');
@@ -293,18 +293,33 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+/* フェードイン */
+/* ------------------------------------------------------------- */
+// document.addEventListener("DOMContentLoaded", () => {
+// 	const addClassOnScroll = (targetSelector, className, thresholdValue = 0.1) => {
+// 		const targets = document.querySelectorAll(targetSelector);
 
+// 		const observer = new IntersectionObserver((entries, observer) => {
+// 			entries.forEach(entry => {
+// 				if (entry.isIntersecting) {
+// 					entry.target.classList.add(className);
+// 					observer.unobserve(entry.target); // 一度だけクラスを付与したい場合
+// 				}
+// 			});
+// 		}, {
+// 			threshold: thresholdValue
+// 		});
 
-// const startAnime = document.querySelector('.bl_startAnime');
+// 		targets.forEach(target => observer.observe(target));
+// 	};
 
-// window.addEventListener('load', () => {
-// 	// アニメーションの追加
-// 	startAnime.style.transition = 'opacity 1s ease 3s';
-// 	startAnime.style.opacity = '0';
-
-// 	// アニメーション終了後に操作不能にする
-// 	setTimeout(() => {
-// 		startAnime.style.pointerEvents = 'none';
-// 		startAnime.style.visibility = 'hidden';
-// 	}, 4000); // 4秒後に実行 (3秒の遅延 + 1秒のフェードアウト)
+// 	// 使用例
+// 	addClassOnScroll('.js_MVtxt', 'is_MVtxt', 0.1);
 // });
+
+
+
+
+
+
+

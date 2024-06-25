@@ -13,7 +13,7 @@ body {
 
 * {
 	font-feature-settings: "palt";
-	letter-spacing: 0.02em;
+	letter-spacing: 0.08em;
 	// color: var(--color-black);
 	font-weight: 500;
 }
@@ -24,16 +24,18 @@ svg {
 	fill: currentColor;
 }
 
+h1,
 h2,
 h3,
 h4 {
 	line-height: 1.4;
+	letter-spacing: 0.008em;
 }
 
 p {
 	font-size: 20rem;
 	line-height: 2;
-	letter-spacing: 0.12em;
+	letter-spacing: 0.09em;
 
 	@media (max-width: 768px) {
 		font-size: 28rem;

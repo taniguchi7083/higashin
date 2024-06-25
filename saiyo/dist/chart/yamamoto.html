@@ -1,0 +1,347 @@
+<!-- <!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Line Chart</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <style>
+    #chart-container {
+      width: 80%;
+      margin: auto;
+    }
+
+    .swiper-container {
+      width: 80%;
+      height: 300px;
+      margin: auto;
+    }
+
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.5rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="chart-container">
+    <canvas id="myChart"></canvas>
+  </div>
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">Slide 1</div>
+      <div class="swiper-slide">Slide 2</div>
+      <div class="swiper-slide">Slide 3</div>
+      <div class="swiper-slide">Slide 4</div>
+      <div class="swiper-slide">Slide 5</div>
+      <div class="swiper-slide">Slide 6</div>
+      <div class="swiper-slide">Slide 7</div>
+      <div class="swiper-slide">Slide 8</div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+
+  <script>
+    // チャートのサンプルデータ
+    const data = {
+      // labels: ['1990', '1994', '2006', '2010', '2014', '2018', '2022'],
+      datasets: [{
+        label: 'Sample Data',
+        data: [{ x: 1990, y: 50 }, { x: 1996, y: 60 }, { x: 2000, y: 65 }, { x: 2006, y: 70 }, { x: 2010, y: 75 }, { x: 2016, y: 75 }, { x: 2018, y: 80 }, { x: 2020, y: 85 }],
+        fill: false,
+        borderColor: '#176990',
+        borderWidth: 2, // 線の幅
+        tension: 0, // 線を直線にする
+        pointRadius: 6, // デフォルトのポイントサイズ
+        pointHoverRadius: 4, // ホバー時のポイントサイズ（デフォルトと同じ）
+        pointBackgroundColor: Array(9).fill('rgb(75, 192, 192)'), // デフォルトの色
+        pointBorderColor: Array(9).fill('rgb(75, 192, 192)') // デフォルトの境界色
+      }]
+    };
+
+    // 罫線のカスタムプラグイン
+    const gridLinesPlugin = {
+      id: 'customGridLines',
+      beforeDraw: (chart) => {
+        const { ctx, chartArea: { left, right, top, bottom }, scales: { x, y } } = chart;
+        ctx.save();
+        ctx.strokeStyle = '#e0e0e0';
+        ctx.lineWidth = 1;
+
+        // 縦線を追加するための位置を計算
+        for (let i = Math.ceil(x.min); i <= Math.floor(x.max); i += 2) {
+          const xPos = x.getPixelForValue(i);
+          ctx.beginPath();
+          ctx.moveTo(xPos, top);
+          ctx.lineTo(xPos, bottom);
+          ctx.stroke();
+        }
+
+        ctx.restore();
+      }
+    };
+
+    // チャートの設定
+    const config = {
+      type: 'line',
+      data: data,
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            display: false
+          },
+          tooltip: {
+            enabled: false
+          }
+        },
+        scales: {
+          x: {
+            type: 'linear',
+            position: 'bottom',
+            ticks: {
+              stepSize: 4, // 縦線のステップサイズを2に設定
+              callback: function (value) {
+                return Math.floor(value); // x軸の値を整数にする
+              }
+            }
+          },
+          y: {
+            beginAtZero: true,
+            suggestedMax: 100,
+            ticks: {
+              stepSize: 10
+            }
+          }
+        },
+        onClick: (event, elements) => {
+          if (elements.length > 0) {
+            const clickedElementIndex = elements[0].index;
+            swiper.slideTo(clickedElementIndex);
+          }
+        }
+      },
+      plugins: [gridLinesPlugin]
+    };
+
+    // チャートを初期化
+    const myChart = new Chart(
+      document.getElementById('myChart'),
+      config
+    );
+
+    // チャートのポイントをハイライトする関数
+    function highlightPoint(index) {
+      const pointColors = Array(10).fill('#176990');
+      const pointBorderColors = Array(10).fill('#176990');
+      const pointSizes = Array(10).fill(6); // デフォルトのポイントサイズを6に
+      pointColors[index] = '#C21A22'; // ハイライトカラー
+      pointBorderColors[index] = '#C21A22'; // ハイライト境界色
+      pointSizes[index] = 8; // ハイライトポイントサイズ（デフォルトより大きい）
+      myChart.data.datasets[0].pointBackgroundColor = pointColors;
+      myChart.data.datasets[0].pointBorderColor = pointBorderColors;
+      myChart.data.datasets[0].pointRadius = pointSizes;
+      myChart.update();
+    }
+
+    // Swiperを初期化
+    const swiper = new Swiper('.swiper-container', {
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      },
+      loop: false
+    });
+
+    // スライド変更時のイベントリスナー
+    swiper.on('slideChange', () => {
+      const currentIndex = swiper.activeIndex;
+      highlightPoint(currentIndex);
+    });
+
+    // 初期ハイライト
+    highlightPoint(0);
+  </script>
+</body>
+
+</html> -->
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Line Chart</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <style>
+    #chart-container {
+      width: 80%;
+      margin: auto;
+    }
+
+    .swiper-container {
+      width: 80%;
+      height: 300px;
+      margin: auto;
+    }
+
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.5rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="chart-container">
+    <canvas id="myChart"></canvas>
+  </div>
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">Slide 1</div>
+      <div class="swiper-slide">Slide 2</div>
+      <div class="swiper-slide">Slide 3</div>
+      <div class="swiper-slide">Slide 4</div>
+      <div class="swiper-slide">Slide 5</div>
+      <div class="swiper-slide">Slide 6</div>
+      <div class="swiper-slide">Slide 7</div>
+      <div class="swiper-slide">Slide 8</div>
+      <div class="swiper-slide">Slide 9</div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+
+  <script>
+    // チャートのサンプルデータ
+    const data = {
+      labels: ['1990', '1994', '1998', '2002', '2006', '2010', '2014', '2018', '2022'],
+      datasets: [{
+        label: 'Sample Data',
+        data: [100, 100, 100, 81, 56, 55, 70, 85, 90],
+        fill: false,
+        borderColor: '#176990',
+        borderWidth: 2, // 線の幅
+        tension: 0, // 線を直線にする
+        pointRadius: 6, // デフォルトのポイントサイズ
+        pointHoverRadius: 4, // ホバー時のポイントサイズ（デフォルトと同じ）
+        pointBackgroundColor: Array(9).fill('rgb(75, 192, 192)'), // デフォルトの色
+        pointBorderColor: Array(9).fill('rgb(75, 192, 192)') // デフォルトの境界色
+      }]
+    };
+
+    // 罫線のカスタムプラグイン
+    const gridLinesPlugin = {
+      id: 'customGridLines',
+      beforeDraw: (chart) => {
+        const { ctx, chartArea: { left, right, top, bottom }, scales: { x, y } } = chart;
+        ctx.save();
+        ctx.strokeStyle = '#e0e0e0';
+        ctx.lineWidth = 1;
+
+        // 罫線を追加するための位置を計算
+        for (let i = 0; i < x.ticks.length - 1; i++) {
+          const xPos = (x.getPixelForTick(i) + x.getPixelForTick(i + 1)) / 2;
+          ctx.beginPath();
+          ctx.moveTo(xPos, top);
+          ctx.lineTo(xPos, bottom);
+          ctx.stroke();
+        }
+
+        ctx.restore();
+      }
+    };
+
+    // チャートの設定
+    const config = {
+      type: 'line',
+      data: data,
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            display: false
+          },
+          tooltip: {
+            enabled: false
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            suggestedMax: 100, // suggestedMaxを使用
+            ticks: {
+              stepSize: 10
+            }
+          }
+        },
+        onClick: (event, elements) => {
+          if (elements.length > 0) {
+            const clickedElementIndex = elements[0].index;
+            swiper.slideTo(clickedElementIndex);
+          }
+        }
+      },
+      plugins: [gridLinesPlugin]
+    };
+
+    // チャートを初期化
+    const myChart = new Chart(
+      document.getElementById('myChart'),
+      config
+    );
+
+    // チャートのポイントをハイライトする関数
+    function highlightPoint(index) {
+      const pointColors = Array(9).fill('#176990');
+      const pointBorderColors = Array(9).fill('#176990');
+      const pointSizes = Array(9).fill(6); // デフォルトのポイントサイズを6に
+      pointColors[index] = '#C21A22'; // ハイライトカラー
+      pointBorderColors[index] = '#C21A22'; // ハイライト境界色
+      pointSizes[index] = 8; // ハイライトポイントサイズ（デフォルトより大きい）
+      myChart.data.datasets[0].pointBackgroundColor = pointColors;
+      myChart.data.datasets[0].pointBorderColor = pointBorderColors;
+      myChart.data.datasets[0].pointRadius = pointSizes;
+      myChart.update();
+    }
+
+    // Swiperを初期化
+    const swiper = new Swiper('.swiper-container', {
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      },
+      loop: false
+    });
+
+    // スライド変更時のイベントリスナー
+    swiper.on('slideChange', () => {
+      const currentIndex = swiper.activeIndex;
+      highlightPoint(currentIndex);
+    });
+
+    // 初期ハイライト
+    highlightPoint(0);
+  </script>
+</body>
+
+</html>
+ -->
+
+
+<!-- ['1990', '1995', '1999', '2006', '2010', '2010', '2015', '2018', '2020'], -->

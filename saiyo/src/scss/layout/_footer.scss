@@ -6,7 +6,7 @@
   background: #fff;
 
   @media (max-width: 768px) {
-    padding-block: 176rem 80rem;
+    padding-block: 220rem 80rem;
   }
 
   .ly_cont {
@@ -21,7 +21,7 @@
     width: 100%;
 
     &_font {
-      height: 280rem;
+      height: 320rem;
     }
   }
 }
@@ -67,15 +67,16 @@
     }
   }
 
-  &_ttl {
+  &_ttl2 {
     position: relative;
     font-size: 16rem;
     line-height: 1.2;
     font-weight: 700;
     padding-left: 20rem;
+    display: inline-block;
 
     @media (max-width: 768px) {
-      font-size: 24rem;
+      font-size: 32rem;
       padding-left: 24rem;
     }
 
@@ -88,7 +89,49 @@
       margin-bottom: 8rem;
 
       @media (max-width: 768px) {
-        font-size: 28rem;
+        font-size: 40rem;
+      }
+
+      &:before {
+        position: absolute;
+        left: 0;
+        content: "";
+        width: 10rem;
+        height: 10rem;
+        border: 2px solid var(--color_secondary);
+        border-radius: 50%;
+        margin-right: 8rem;
+
+        @media (max-width: 768px) {
+          width: 12rem;
+          height: 12rem;
+        }
+      }
+    }
+  }
+
+  &_ttl {
+    position: relative;
+    font-size: 16rem;
+    line-height: 1.2;
+    font-weight: 700;
+    padding-left: 20rem;
+
+    @media (max-width: 768px) {
+      font-size: 32rem;
+      padding-left: 24rem;
+    }
+
+    span {
+      display: flex;
+      align-items: center;
+      font-size: 20rem;
+      color: var(--color_primary);
+      line-height: 1.2;
+      margin-bottom: 8rem;
+
+      @media (max-width: 768px) {
+        font-size: 40rem;
       }
 
       &:before {
@@ -128,7 +171,8 @@
     line-height: 2;
 
     @media (max-width: 768px) {
-      font-size: 20rem;
+      font-size: 28rem;
+      padding-block: 12rem;
     }
   }
 }
@@ -147,7 +191,7 @@
     padding: 24re 40rem 21rem;
 
     @media (max-width: 768px) {
-      width: 420rem;
+      width: 100%;
       height: 140rem;
     }
 
@@ -164,6 +208,7 @@
   &_txt {
     line-height: 1;
     margin-top: 10rem;
+    font-weight: 700;
 
     @media (max-width: 768px) {
       margin-top: 16rem;
@@ -221,11 +266,21 @@
 // アコーディオン
 @media (max-width: 768px) {
   .bl_footerNav_item {
-    padding: 32rem;
+    padding: 32rem 0 32rem 32rem;
     border-bottom: 1px solid var(--color-lineGray);
   }
 
+  .bl_footerNav_item_inner {
+    display: flex;
+  }
+
   .bl_footerNav_ttl__accordion {
+    position: relative;
+    width: auto;
+    padding: 40rem;
+  }
+
+  .bl_footerNav_ttl__accordion2 {
     position: relative;
     width: 100%;
   }
@@ -240,7 +295,7 @@
     height: 16rem;
     position: absolute;
     inset: 0;
-    margin: auto 0 auto auto;
+    margin: auto;
     transition: transform 0.3s ease;
   }
 
@@ -259,6 +314,7 @@
     height: 0;
     padding-left: 24rem;
     transition: all 0.25s ease;
+    pointer-events: none;
   }
 
   // アコーディオンが開いた際に、
@@ -267,5 +323,6 @@
     height: auto;
     padding: 10px 0;
     padding-left: 24rem;
+    pointer-events: auto;
   }
 }

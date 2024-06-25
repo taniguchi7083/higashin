@@ -1,0 +1,361 @@
+//- _layout.pugを読み込みテンプレートとして使用する
+extends ../../include/_layout
+
+block config
+	include ../../include/_config
+	- var page = pagelist['culture01'];
+	- var h1_setting = false;
+	- var path = '../../assets/';
+	- var img_path = path + 'images';
+	- var link_path = '../../';
+	- var bodyClass = 'pg_culture pg_sec pg_third'
+
+//- index.htmlにのみ必要なcssファイル
+block append head
+	link(rel="stylesheet" href=path+"css/swiper.min.css")
+	script(src=path+"js/swiper.min.js")
+	script(src="https://cdn.jsdelivr.net/npm/chart.js")
+
+block bodyClass
+block content
+	//- 背景アニメーション
+	+floating-parts
+	main.ly_main
+		//- -------------------------------------------------------------------
+		//- career
+		//- -------------------------------------------------------------------
+		section.bl_MV
+			//- スクロール文字
+			.un_loopSlider
+				.un_loopSlider_font.hp_en
+					span Higashin Recruiting Website
+					span Higashin Recruiting Website
+			.ly_cont
+				.bl_comnMV
+					h1.el_thirdHeading
+						span.hp_en Culture
+						|上司×部下対談
+					.un_MVtxt.js_MVanime
+						.marker
+							.text
+								|上司の言葉を胸に、
+						.marker.hp_mt
+							.text
+								|恐れず挑戦を続ける。
+
+					.bl_anime_circle
+						.circle.circle1
+						.circle.circle2
+						.circle.circle3
+						figure.bl_anime_circle_figure
+							img(src=img_path+"/culture/01/img_culture_mv.webp", alt="")
+
+				p.bl_MV_txt
+					|成功も、失敗も優しく見守り、サポートしてくれる上司の存在。
+					br
+					|ひがしんにおける上司と部下の関係性はどういったものなのか。
+					br
+					|営業担当として同じ支店で働く2人に縦のつながりについて聞いてみました。
+
+
+		//- career01
+		section.bl_sect.un_message
+			.ly_cont
+				.un_messageUnit
+					.el_thirdHeading_wrap
+						h2.el_thirdHeading
+							span.hp_en Career 01
+						.bl_anime_circle
+							.circle.circle1
+							.circle.circle2
+							.circle.circle3
+					.un_MVtxt.js_MVtxt
+						.marker
+							.text
+								|先輩や同期と過ごした
+						.marker.hp_mt
+							.text
+								|かけがえない時間。
+				figure.un_message_figure
+					img(src=img_path+"/career/yamamoto/img_career01.webp", alt="")
+				.un_messageConts
+					p
+						|入庫のために地元である宮城県の田舎町から上京したのは、18歳の頃のこと。その当時の私にはもちろん知り合いなどおらず、不安が募るばかりでしたが、後戻りする選択肢はなく、腹をくくり社会人生活をスタートさせました。電話対応も、名刺交換も、すべてが未経験。分からないことは何でもメモを取っていましたが、物覚えは良い方ではなく、上司から指摘を受けることも多くありました。しかし、仕事で落ち込んだ日や分からないことがあった日は、いつでも寮に帰ってから先輩や同期が相談に乗ってくれました。そうして初めは抵抗を感じていた寮生活も、励まし、支えてくれた仲間のおかげで、いつしか私にとってかけがえのない時間になっていきました。
+					p
+						|なかなか仕事が覚えられない私を見かねた上司も「あなたはいそがなくていいから、一つひとつの仕事をコツコツやりなさい」と声をかけてくれました。厳格な上司でしたが、入庫3年目の頃に急遽出た欠員分の仕事をカバーしようと必死に業務に取り組んでいると、「すごいね。よく一人で頑張ったね」と初めて褒めてもらえました。そのときの喜びは、今でも忘れることができません。「努力する姿って、誰かが見てくれているんだな」。自らの経験を活かし、メンバーを正しく評価し、きちんと褒めてあげることは、年次を重ねた今、大切にしている姿勢です。新人時代に上司や先輩、同期からもらった恩。それを、後輩たちに送ってあげたいと思うようになったのは、この頃の経験からでした。
+
+		//- career02
+		section.bl_sect.un_message.un_message__reverse
+			.ly_cont
+				.un_messageUnit
+					.el_thirdHeading_wrap
+						h2.el_thirdHeading
+							span.hp_en Career 02
+						.bl_anime_circle
+							.circle.circle1
+							.circle.circle2
+							.circle.circle3
+					.un_MVtxt.js_MVtxt
+						.marker
+							.text
+								|周囲に支えられ、
+						.marker.hp_mt
+							.text
+								|切り拓いた新たな道。
+				figure.un_message_figure
+					img(src=img_path+"/career/yamamoto/img_career02.webp", alt="")
+				.un_messageConts
+					p
+						|入庫9年目のとき、キャリアのターニングポイントとなる出来事がありました。それまでは主に支店でお客さまの窓口対応を行っていたのですが、本部の営業推進部へ異動を告げられたのです。それも”年金担当”という聞き馴染みのない仕事。個人のお客さまが行う年金の手続きを、ひがしんで代行するという業務でした。お客さまとひがしんの関係を強くすることが目的で、いわゆる営業の仕事です。実はひがしんで女性の年金担当になったのは、私が初めてでした。もちろん、それまで外回りをしたこともなければ、年金に関する知識もありません。不安に駆られて、年金担当の先輩に相談してみると、「ずっと窓口で同じ仕事をしていたら、新たな発見が少ないでしょ？外回りは面白いよ。同じお客さまはいないし、それぞれのお客さまから求められることも異なる。新しいことにチャレンジした方が、発見もあって楽しいと思うよ」と説かれました。支店内での業務に慣れてしまっていた私にとって、目から鱗が落ちる思いでした。「性別にかかわらず、女性でも営業できることを証明しよう」と決意を胸に前を向きました。
+					p
+						|果敢に挑戦してみたものの、初めは年金に関する知識が乏しく、簡単には成績が上がりませんでした。そのため毎週金曜日に行われる本部会議での実績報告は、いつも気分が乗りません。しかし、支店長や営業長にニーズのあるお客さまを紹介してもらったり、先輩の営業に同行して話術を学んだりすることで、徐々に成約数は増えていきました。また、当時手続きのためによく出入りしていた年金事務所の副所長が、私の頼りない仕事ぶりを気の毒に感じたのか、「年金のことをじっくり教えてあげようか？」と言って、年金の制度について懇切丁寧に説明してくれました。利害関係が全くない私に対して、貴重な時間を割いてくれたことが、何よりも嬉しく、実績が向上していったのは間違いなく周囲の方々の支えがあってのことであり、感謝をしてもしきれませんでした。
+
+		//- career03
+		section.bl_sect.un_message
+			.ly_cont
+				.un_messageUnit
+					.el_thirdHeading_wrap
+						h2.el_thirdHeading
+							span.hp_en Career 03
+						.bl_anime_circle
+							.circle.circle1
+							.circle.circle2
+							.circle.circle3
+					.un_MVtxt.js_MVtxt
+						.marker
+							.text
+								|自分から心を開くことで、
+						.marker.hp_mt
+							.text
+								|築いた信頼関係。
+				figure.un_message_figure
+					img(src=img_path+"/career/yamamoto/img_career03.webp", alt="")
+				.un_messageConts
+					p
+						|入庫16年目のときには、初めて役席を経験しました。任されたのは、事務課係長（事務長）。事務課は窓口でのお客さま対応や口座開設のための書類作成といった、店舗における事務手続きを行う職種で、正規の職員だけではなく、パート職員も採用しています。そのため、ベテランのパート職員であれば、新卒で入庫した若手職員より業務に慣れているケースも多くありました。しかし、正規の職員とパートの職員では、雇用形態の違いから待遇に差が生まれてしまいます。実際に、私が赴任した当初、そうした待遇面の不満からパート職員のモチベーションが低下し、マネジメントが必要な状況でした。このままではメンバー同士の連携が上手く図れず、地域のお客さまに寄り添うという信用金庫本来の役割を果たせないのではないか——。そう感じた私は、まず各メンバーの役割分担と意識改革に着手しました。
+					p
+						|メンバーの役割を明確にしたうえで、「ここで働いていて良かったと思える支店にしたい。そのためには、皆さんの力が必要なんです」と正直な思いを伝え、協力を訴えました。また些細なことであっても、毎日必ずメンバー一人ひとりに声をかけるようにしました。「顔色良くないけど大丈夫？」「お子さんの運動会、どうだった？」「今日、花粉ひどいよね」。今思うと、お節介すぎるくらいだったと思います。それでも、そうした姿勢が少しずつ周囲に伝わったのか、メンバー同士の連携もスムーズに取れるようになっていきました。その後転勤する際には、「あのとき、私たちと向き合ってくれて嬉しかったです。ありがとうございました」と声をかけてもらいました。私は元々、出世したいと考えたことはありません。若手の頃に上司に褒められたことが嬉しくて、そうした人たちに認められたい、もらった恩を後輩たちも送ってあげたいと、必死に取り組んできただけでした。会社に貢献できただけで十分。係長（事務長）がキャリアのゴールなのかな、とさえ思えました。十数年後に、支店長を任されることになるとは、このときは思ってもみませんでした。
+
+		//- career04
+		section.bl_sect.un_message.un_message__reverse
+			.ly_cont
+				.un_messageUnit
+					.el_thirdHeading_wrap
+						h2.el_thirdHeading
+							span.hp_en Career 04
+						.bl_anime_circle
+							.circle.circle1
+							.circle.circle2
+							.circle.circle3
+					.un_MVtxt.js_MVtxt
+						.marker
+							.text
+								|「お客さまに近い支店長」
+						.marker.hp_mt
+							.text
+								|という目標を掲げて。
+				figure.un_message_figure
+					img(src=img_path+"/career/yamamoto/img_career02.webp", alt="")
+				.un_messageConts
+					p
+						|支店長を拝命したのは入庫30年目、2020年7月のことです。コロナ禍で街の様子は様変わりし、来店されるお客さまはすっかり減ってしまっていました。「こんな時期に支店長になるとは……」。喜びよりも、心配の方が大きかったです。そもそも、支店長に明確な仕事はありません。支店の業績向上、お客さまの対応、部下のマネジメント、本部との調整……。例を挙げればきりがないのです。ただ、コロナ禍の行動制限によって、思うような活動はできずにいました。営業担当がお客さまの自宅を訪問しようとしても、「いそぎでないのなら、今はコロナへの感染が怖いから今度にしてほしい」と断られてしまう始末。このままではお客さまとコミュニケーションが取れず、関係が疎遠になってしまうことは目に見えていました。
+					p
+						|そこで目指したのは、とにかく”顔が見える支店長”になることでした。営業担当の訪問に同行するのはもちろん、面会ができないお客さまに対しては、直筆の手紙を一筆箋に入れて投函して回りました。1年間で延べ900名ほどの方に、手紙をお届けしたと思います。コロナの流行が落ち着いてきた頃に、「あなたが支店長の山本さんね。手紙読んだよ。わざわざありがとう」と、支店を訪れてくださるお客さまもいました。この施策が正しかったかは、私には分かりません。しかし、少なくともお客さまが声をかけやすい支店長になれたと自負しています。「支店長さんって、こんなに近くで接してくれるのね」。そう言っていただけたときは、小さく心が踊りました。
+					p
+						|入寮した日の私に、今までのことを話したら、驚いて飛び上がってしまうかもしれません。それほど私にとっては、予期せぬことが連続したキャリアでした。そうした中でも常々思うのは、私は多くの人に恵まれて、ここまで仕事を続けることができているということ。上司や先輩からのアドバイス、同期からの励まし、後輩のサポート……。周囲の支えなくして、今の私はないと心の底から思います。ありがたいことに、素晴らしい環境を用意してもらいました。今度はそうした環境をつくることが、私の役割だと思っています。若手職員が成長できる支店やメンバー一人ひとりがここで働きたいと思える支店、そしてお客さまが足を運びたくなる支店。それがこれまでお世話になった方々への恩返しになると信じて、これからのキャリアを歩んでいきます。
+
+		//- -------------------------------------------------------------------
+		//- Chart
+		//- -------------------------------------------------------------------
+		section.bl_sect.bl_box
+			.ly_cont
+				.bl_boxUnit
+					figure.bl_box_figure
+						img(src=img_path+"/career/yamamoto/img_graph_icon.webp", alt="")
+					h2.bl_box_ttl
+						span.hp_en Motivation Chart
+						|モチベーショングラフ
+				.bl_chart
+					h3.bl_chart_ttl
+						|あの日、あの時の思い
+					.bl_chart_wrap
+						.bl_chart_inner
+							#chart-container
+								canvas#myChart
+						.bl_chart_inner
+							.swiper-container
+								.swiper-wrapper
+									.swiper-slide
+										.bl_swiper_year
+											|1990年4月 | 18歳 | 50点 
+										h4.bl_swiper_ttl
+											|入庫
+										p.bl_swiper_txt
+											|就職のために東京へ上京し、女子寮に入寮。先輩や同期とかけがえない時間を送りました。配属先の支店では、「初めて」のことばかりの毎日に緊張していました。「就職」という人生で一番変化のあった年となりました。
+									.swiper-slide
+										.bl_swiper_year
+											|1995年9月 | 23歳 | 60点
+										h4.bl_swiper_ttl
+											|小型店から大型店へ初の異動
+										p.bl_swiper_txt
+											|初めての異動で小型店舗から大型店舗へ。大型店舗だからこそ経験するイレギュラーな業務に必死に対応しました。3カ月ごとの業務ローテーションを通じて、多業務を習得し、仕事の幅が広がった時期でした。
+									.swiper-slide
+										.bl_swiper_year
+											|1999年5月 | 27歳 | 65点
+										h4.bl_swiper_ttl
+											|初の営業活動に苦戦
+										p.bl_swiper_txt
+											|営業推進部（年金担当）へ異動。それまで窓口での接客経験しかなかったため、訪問における営業の大変さや厳しさを学びました。営業課の方や年金担当の上司・同僚のフォローと励ましで乗り切れました。
+									.swiper-slide
+										.bl_swiper_year
+											|2006年2月 | 34歳 | 70点
+										h4.bl_swiper_ttl
+											|初めての役席（係長）に昇進
+										p.bl_swiper_txt
+											|事務課の係長として初めての役席を経験。スタッフをまとめることの難しさに悩みながらも、自分にできることを考え、行動していました。若手職員の育成にやりがいを感じた時期でもあります。
+									.swiper-slide
+										.bl_swiper_year
+											|2010年7月 | 38歳 | 75点
+										h4.bl_swiper_ttl
+											|事務部事務管理担当を経験
+										p.bl_swiper_txt
+											|社内システムの更改を控え、新システムの指導インストラクターとして事務部へ異動。本部・営業店職員向けの研修資料作成やシステムのオペレーション指導、システムの検証業務などを経験しました。
+									.swiper-slide
+										.bl_swiper_year
+											|2015年7月 | 43歳 | 75点
+										h4.bl_swiper_ttl
+											|お客様サポート部ライフプラン担当を経験
+										p.bl_swiper_txt
+											|預かり資産販売における営業店サポートとして、営業担当との同行訪問を実施。また、相談専門の店舗「ハロープラザ西葛西」開店のメンバーとして基礎づくりをしました。
+									.swiper-slide
+										.bl_swiper_year
+											|2018年7月 | 46歳 | 80点
+										h4.bl_swiper_ttl
+											|所長として8年ぶりに営業店へ
+										p.bl_swiper_txt
+											|預かり資産販売における営業店サポートとして、営業担当との同行訪問を実施。また、相談専門の店舗「ハロープラザ西葛西」開店のメンバーとして基礎づくりをしました。
+									.swiper-slide
+										.bl_swiper_year
+											|2020年7月 | 48歳 | 85点
+										h4.bl_swiper_ttl
+											|支店長に就任
+										p.bl_swiper_txt
+											|コロナ禍中に支店長を拝命しました。対面での訪問活動ができず、お客さまとコミュニケーションを取ることに苦労しましたが、会えないお客さまには一筆箋で手紙を書き、プレゼントに添えるなど工夫を施すことで、お客さまとの関係維持・強化に努めました。
+
+									
+								//- 前後の矢印
+								.swiper-button-prev.hp_reverse
+									+icon_arrow
+								.swiper-button-next
+									+icon_arrow
+
+		//- career_figure
+		section.bl_sect
+			.ly_cont
+				figure.bl_bg_figure
+					img(src=img_path+"/career/yamamoto/img_career05.webp", alt="")
+
+		//- -------------------------------------------------------------------
+		//- other
+		//- -------------------------------------------------------------------
+		//- +other-parts
+
+//- index.htmlにのみ必要なjsファイル
+block append script
+	script.
+		(() => {
+			// チャートのサンプルデータ
+			const data = {
+				labels: ['1996', '1997', '1999', '2000', '2002', '2006', '2010', '2020'],
+				datasets: [{
+					label: 'Sample Data',
+					data: [100, 50, 90, 100, 100, 60, 95, 100],
+					fill: false,
+					borderColor: '#176990',
+					borderWidth: 2,
+					tension: 0,
+					pointRadius: 6,
+					pointHoverRadius: 4,
+					pointBackgroundColor: Array(8).fill('rgb(75, 192, 192)'),
+					pointBorderColor: Array(8).fill('rgb(75, 192, 192)')
+				}]
+			};
+			// 罫線のカスタムプラグイン
+			const gridLinesPlugin = {
+				id: 'customGridLines',
+				beforeDraw: (chart) => {
+					const { ctx, chartArea: { left, right, top, bottom }, scales: { x, y } } = chart;
+					ctx.save();
+					ctx.strokeStyle = '#e0e0e0';
+					ctx.lineWidth = 1;
+					// 罫線を追加するための位置を計算
+					// for (let i = 0; i < x.ticks.length - 1; i++) {
+					// const xPos=(x.getPixelForTick(i) + x.getPixelForTick(i + 1)) / 2;
+					// ctx.beginPath();
+					// ctx.moveTo(xPos, top);
+					// ctx.lineTo(xPos, bottom);
+					// ctx.stroke();
+					// }
+					ctx.restore();
+				}
+			};
+			// チャートの設定
+			const config = {
+				type: 'line',
+				data: data,
+				options: {
+					responsive: true,
+					plugins: {
+						legend: { display: false },
+						tooltip: { enabled: false }
+					},
+					scales: {
+						y: {
+							beginAtZero: true,
+							suggestedMax: 100,
+							ticks: { stepSize: 10 }
+						}
+					},
+					onClick: (event, elements) => {
+						if (elements.length > 0) {
+							const clickedElementIndex = elements[0].index;
+							swiper.slideTo(clickedElementIndex);
+						}
+					}
+				},
+				plugins: [gridLinesPlugin]
+			};
+			// チャートを初期化
+			const myChart = new Chart(
+				document.getElementById('myChart'),
+				config
+			);
+			// チャートのポイントをハイライトする関数
+			const highlightPoint = (index) => {
+				const pointColors = Array(8).fill('#176990');
+				const pointBorderColors = Array(8).fill('#176990');
+				const pointSizes = Array(8).fill(6);
+				pointColors[index] = '#C21A22';
+				pointBorderColors[index] = '#C21A22';
+				pointSizes[index] = 8;
+				myChart.data.datasets[0].pointBackgroundColor = pointColors;
+				myChart.data.datasets[0].pointBorderColor = pointBorderColors;
+				myChart.data.datasets[0].pointRadius = pointSizes;
+				myChart.update();
+			};
+			// Swiperを初期化
+			const swiper = new Swiper('.swiper-container', {
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev'
+				},
+				loop: false
+			});
+			// スライド変更時のイベントリスナー
+			swiper.on('slideChange', () => {
+				const currentIndex = swiper.activeIndex;
+				highlightPoint(currentIndex);
+			});
+			// 初期ハイライト
+			highlightPoint(0);
+		})();

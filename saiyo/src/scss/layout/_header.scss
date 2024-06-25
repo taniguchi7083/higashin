@@ -207,7 +207,18 @@
 
 	.el_btn {
 		@media (max-width: 768px) {
-			margin-top: 32rem;
+			width: 320rem;
+			height: 100rem;
+
+			&>span {
+				font-size: 48rem;
+			}
+
+			&_wrap {
+				display: flex;
+				justify-content: center;
+				margin-top: 40rem;
+			}
 		}
 	}
 }
