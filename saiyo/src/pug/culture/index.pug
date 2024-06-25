@@ -1,0 +1,94 @@
+//- _layout.pugを読み込みテンプレートとして使用する
+extends ../include/_layout
+
+block config
+	include ../include/_config
+	- var page = pagelist['culture'];
+	- var h1_setting = false;
+	- var path = '../assets/';
+	- var img_path = path + 'images';
+	- var link_path = '../';
+	- var bodyClass = 'pg_culture pg_sec'
+
+//- index.htmlにのみ必要なcssファイル
+block append head
+	//- link(rel="stylesheet" href=path+"css/swiper.min.css")
+	//- script(src=path+"js/swiper.min.js")
+	//- script(src="https://cdn.jsdelivr.net/npm/chart.js")
+
+block bodyClass
+block content
+	//- 背景アニメーション
+	+floating-parts
+	main.ly_main
+		//- -------------------------------------------------------------------
+		//- career
+		//- -------------------------------------------------------------------
+		section.bl_MV
+			.ly_cont
+				.bl_comnMV
+				
+					.bl_comnMV_txt
+						.el_lv2Heading_wrap
+							h1.el_lv2Heading.hp_en.js_fadein
+								span ひがしんのキャリア
+								|Career
+
+					.bl_anime_circle
+						.circle.circle1
+						.circle.circle2
+						.circle.circle3
+						.bl_anime_circle_txt
+							|想いを
+							br
+							|つないできた日々。
+
+		//- nakahara
+		section.bl_sect.bl_career
+			.ly_cont
+				.bl_career_inner
+					figure.bl_career_figure
+						img(src=img_path+"/career/img_nakahara.webp", alt="")
+					.bl_careerUnit
+						h2.bl_career_ttl
+							|お客さまや部下と
+							br
+							|まっすぐ向き合う。
+							br
+							|支店長として、
+							br
+							|ここにしかない魅力を
+							br
+							|伝えていく。
+						a.bl_career_more(href=link_path+"career/nakahara")
+							|支店長／1996年入庫
+							.bl_career_more_btm
+								+icon_arrow
+
+		//- yamamoto
+		section.bl_sect.bl_career.bl_career_reverse
+			.ly_cont
+				.bl_career_inner
+					figure.bl_career_figure
+						img(src=img_path+"/career/img_yamamoto.webp", alt="")
+					.bl_careerUnit
+						h2.bl_career_ttl
+							|今まで受けた恩を
+							br
+							|次世代へ送る。
+							br
+							|支えてもらった分、
+							br
+							|支えられる人になりたい。
+						a.bl_career_more(href=link_path+"career/yamamoto")
+							|支店長／1990年入庫
+							.bl_career_more_btm
+								+icon_arrow
+
+		//- -------------------------------------------------------------------
+		//- other
+		//- -------------------------------------------------------------------
+		+other-parts
+
+//- index.htmlにのみ必要なjsファイル
+block append script

@@ -10,7 +10,7 @@
 		font-size: 128rem;
 	}
 
-	&_wrap{
+	&_wrap {
 		position: relative;
 
 		.bl_anime_circle {
@@ -52,6 +52,47 @@
 				top: 4rem;
 				width: 28rem;
 				height: 28rem;
+			}
+		}
+	}
+}
+
+.el_thirdHeading {
+	span {
+		font-size: 32rem;
+		color: var(--color_primary);
+		display: block;
+		margin-bottom: 8rem;
+
+		@media (max-width: 768px) {
+			font-size: 40rem;
+		}
+	}
+
+	font-size: 24rem;
+	color: #000;
+
+
+	@media (max-width: 768px) {
+		font-size: 32;
+	}
+
+	&_wrap {
+		position: relative;
+		display: inline-block;
+
+		.bl_anime_circle {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 220rem;
+			height: 220rem;
+			z-index: -1;
+
+			@media (max-width: 768px) {
+				width: 240rem;
+				height: 240rem;
 			}
 		}
 	}

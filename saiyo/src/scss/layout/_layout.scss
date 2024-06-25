@@ -32,34 +32,6 @@ body {
 
 // LOADING
 // ================================================ */
-// #bl_loading {
-// 	position: fixed;
-// 	inset: 0;
-// 	z-index: var(--z-index-loading);
-// 	display: grid;
-// 	place-items: center;
-// 	background: #fff;
-
-// 	&_screen {
-// 		background-color: #00e0654a;
-// 		position: fixed;
-// 		inset: 0;
-// 		z-index: 9998;
-// 		translate: 0 100vh;
-// 	}
-
-// 	&>p {
-// 		font-size: 40rem;
-// 		font-weight: 700;
-// 		color: var(--color_primary);
-
-// 		@media (max-width: 768px) {
-// 			font-size: 56rem;
-// 		}
-// 	}
-// }
-
-
 #bl_loading {
 	position: fixed;
 	top: 0;

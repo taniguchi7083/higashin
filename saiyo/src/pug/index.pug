@@ -19,13 +19,8 @@ block append head
 block bodyClass
 block content
 	//- 背景アニメーション
-	.bl_anime_floating
-		.bl_anime_floating__left
-			img(src=img_path+"/common/svg_ball.svg", alt="")
-		.bl_anime_floating__right
-			img(src=img_path+"/common/svg_ball.svg", alt="")
-
-	main.l-main
+	+floating-parts
+	main.ly_main
 		//- -------------------------------------------------------------------
 		//- MV
 		//- -------------------------------------------------------------------
