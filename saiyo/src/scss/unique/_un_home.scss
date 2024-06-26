@@ -129,6 +129,21 @@
           margin-top: 40rem;
         }
       }
+
+      &_txtTtl{
+        font-size: 32rem;
+        font-weight: 700;
+
+        @media (max-width: 768px) {
+          font-size: 40rem;
+        }
+  
+
+        &>span{
+          font-weight: 700;
+          color: var(--color_secondary);
+        }
+      }
     }
 
     &_logo {
@@ -356,6 +371,7 @@
       flex-direction: column;
       background: #fff;
       border-radius: 50%;
+      border: 1px solid var(--color_primary);
 
       @media (max-width: 768px) {
         width: 332rem;
@@ -482,9 +498,9 @@
     }
   }
 
-  .el_btn {
-    margin-top: 40rem;
-  }
+  // .el_btn {
+  //   margin-top: 40rem;
+  // }
 
   .el_btn.el_btn__entry {
     width: 320rem;

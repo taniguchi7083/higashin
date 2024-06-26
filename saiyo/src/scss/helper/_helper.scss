@@ -23,6 +23,10 @@
 	transform: rotate(180deg);
 }
 
+.hp_fw700{
+	font-weight: 700 !important;
+}
+
 
 // 画面幅に応じた表示・非表示用スタイル
 // ================================================ */
@@ -38,6 +42,13 @@
 	}
 }
 
+.hp_flex_rowReverse{
+	flex-direction: row-reverse !important;
+
+	@media (max-width: 768px) {
+		flex-direction:column !important;
+	}
+}
 
 // 画面幅に応じた表示・非表示用スタイル
 // ================================================ */

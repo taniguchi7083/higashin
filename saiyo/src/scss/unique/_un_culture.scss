@@ -36,7 +36,7 @@
 			display: flex;
 			justify-content: center;
 			text-align: center;
-			gap: 80rem;
+			gap: 56rem;
 			padding-block: 72rem;
 
 			&.hp_borderBtm {
@@ -91,11 +91,43 @@
 		}
 	}
 
+	.el_thirdHeading_wrap .bl_anime_circle {
+    width: 180rem;
+    height: 180rem;
+}
+
 	// ボタン
 	.el_btn.el_btn__more {
 		width: 480rem;
+		height: 80rem;
 		color: #000;
-		// justify-content: center;
+		justify-content: center;
+		gap: 32rem;
+
+		@media (max-width: 768px) {
+			width: auto;
+			height: 100rem;
+			gap: 40rem;
+		}
+
+		&.el_btn__more01{
+			&::after{
+				transform: translateX(-137rem);
+
+				@media (max-width: 768px) {
+					transform: translateX(-211rem);
+				}
+			}
+		}
+		&.el_btn__more02{
+			&::after{
+				transform: translateX(-79rem);
+
+				@media (max-width: 768px) {
+					transform: translateX(-129rem);
+				}
+			}
+		}
 	}
 
 	.el_btn {
@@ -109,7 +141,16 @@
 				&:hover::after {
 					width: 100%;
 					height: 100%;
-					transform: translateX(0);
+				}
+				&.el_btn__more01{
+					&:hover::after {
+						transform: translateX(0);
+					}
+				}
+				&.el_btn__more02{
+					&:hover::after {
+						transform: translateX(0);
+					}
 				}
 			}
 		}
@@ -140,7 +181,6 @@
 			margin-top: 88rem;
 
 			@media (max-width: 768px) {
-				font-size: 44rem;
 				margin-top: 96rem;
 			}
 		}

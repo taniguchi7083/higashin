@@ -25,476 +25,32 @@
     <script src="./assets/js/gsap.min.js"></script>
   </head>
   <body class="pg_home" id="js_body">
-    <div id="bl_loading"></div>
-    <div class="bl_startAnime">
-      <div class="bl_anime_circle">
-        <div class="circle circle1"></div>
-        <div class="circle circle2"></div>
-        <div class="circle circle3"></div>
+    <header class="ly_header">
+      <div class="ly_header_inner">
+        <h1 class="bl_headerConts u-pcOnly"><a class="bl_headerConts_logo" id="js_logo" href="./">
+            <div class="el_logo"><img src="./assets/images/common/icon_logo.svg" alt=""></div>
+            <p class="bl_headerConts_txt hp_en">New Graduate<br>Recruitment</p></a></h1>
+        <div class="bl_headerUnit"><a class="el_btn el_btn__entry hp_en hp_pcOnly" href="./message/"><span>ENTRY</span></a>
+          <div class="bl_ham">
+            <button class="bl_ham_inner" id="js_ham"><span></span><span></span></button>
+          </div>
+        </div>
       </div>
-      <div class="un_MVtxt js_MVanime">
-        <div class="text">この街を<span>縁</span>でつなぐ。</div>
-        <div class="text"><a class="bl_headerConts_logo" id="js_logo" href="./">
-            <div class="el_logo"><img src="./assets/images/common/icon_logo.svg" alt=""></div></a></div>
-      </div>
-    </div>
-    <div class="ly_wrap img-wrap">
-      <header class="ly_header">
-        <div class="ly_header_inner">
-          <h1 class="bl_headerConts u-pcOnly"><a class="bl_headerConts_logo" id="js_logo" href="./">
-              <div class="el_logo"><img src="./assets/images/common/icon_logo.svg" alt=""></div>
-              <p class="bl_headerConts_txt hp_en">New Graduate<br>Recruitment</p></a></h1>
-          <div class="bl_headerUnit"><a class="el_btn el_btn__entry hp_en hp_pcOnly" href="./message/"><span>ENTRY</span></a>
-            <div class="bl_ham">
-              <button class="bl_ham_inner" id="js_ham"><span></span><span></span></button>
-            </div>
-          </div>
-        </div>
-      </header>
-      <nav>
-        <div class="bl_hamNav" id="js_nav">
-          <div class="bl_hamNav_inner">
-            <div class="bl_footerNav">
-              <div class="bl_footerNav_list">
-                <div class="bl_footerConts_logo" id="js_logo">
-                  <div class="el_logo"><img src="./assets/images/common/icon_logo.svg" alt=""></div>
-                  <p class="bl_footerConts_txt hp_en">新卒採用サイト</p>
-                </div>
-                <div class="el_btn_wrap hp_spOnly"><a class="el_btn el_btn__entry hp_en" href="./message/"><span>ENTRY</span></a></div><a class="bl_footerNav_item" href="./">
-                  <div class="bl_footerNav_ttl"><span class="hp_en">Top</span>トップページ</div></a><a class="bl_footerNav_item" href="./">
-                  <div class="bl_footerNav_ttl"><span class="hp_en">About</span>ひがしんのこと</div></a><a class="bl_footerNav_item" href="./">
-                  <div class="bl_footerNav_ttl"><span class="hp_en">Business</span>ひがしんの仕事</div></a>
-              </div>
-              <div class="bl_footerNav_list">
-                <div class="bl_footerNav_item">
-                  <div class="bl_footerNav_item_inner"><a class="bl_footerNav_ttl2 bl_footerNav_ttl__accordion2" href="./#"><span class="hp_en">People</span>ひがしんの人々</a>
-                    <div class="bl_footerNav_ttl bl_footerNav_ttl__accordion"></div>
-                  </div>
-                  <div class="bl_footerNavChild bl_footerNavChild__accordion"><a class="bl_footerNavChild_link" href="./">営業／2022年入庫</a><a class="bl_footerNavChild_link" href="./">融資／2021年入庫</a><a class="bl_footerNavChild_link" href="./">事務／2020年入庫</a><a class="bl_footerNavChild_link" href="./">マネーアドバイザー／2022年入庫</a><a class="bl_footerNavChild_link" href="./">お客様サポート部／2011年入庫</a></div>
-                </div>
-                <div class="bl_footerNav_item">
-                  <div class="bl_footerNav_item_inner"><a class="bl_footerNav_ttl2 bl_footerNav_ttl__accordion2" href="./culture"><span class="hp_en">Culture</span>ひがしんの社風</a>
-                    <div class="bl_footerNav_ttl bl_footerNav_ttl__accordion"></div>
-                  </div>
-                  <div class="bl_footerNavChild bl_footerNavChild__accordion"><a class="bl_footerNavChild_link" href="./culture/01">上司×部下対談</a><a class="bl_footerNavChild_link" href="./culture/02">若手同期座談会</a><a class="bl_footerNavChild_link" href="./culture/03">営業×マネーアドバイザー対談</a></div>
-                </div>
-              </div>
-              <div class="bl_footerNav_list">
-                <div class="bl_footerNav_item">
-                  <div class="bl_footerNav_item_inner"><a class="bl_footerNav_ttl2 bl_footerNav_ttl__accordion2" href="./career"><span class="hp_en">Career</span>ひがしんのキャリア</a>
-                    <div class="bl_footerNav_ttl bl_footerNav_ttl__accordion"></div>
-                  </div>
-                  <div class="bl_footerNavChild bl_footerNavChild__accordion"><a class="bl_footerNavChild_link" href="./career/nakahara">支店長／1996年入庫</a><a class="bl_footerNavChild_link" href="./">支店長／1990年入庫</a></div>
-                </div>
-                <div class="bl_footerNav_item">
-                  <div class="bl_footerNav_ttl"><span class="hp_en">Area</span>ひがしん支店巡り</div>
-                </div>
-                <div class="bl_footerNav_item">
-                  <div class="bl_footerNav_item_inner"><a class="bl_footerNav_ttl2 bl_footerNav_ttl__accordion2" href="./#"><span class="hp_en">Voice</span>ひがしんアンケート</a>
-                    <div class="bl_footerNav_ttl bl_footerNav_ttl__accordion"></div>
-                  </div>
-                  <div class="bl_footerNavChild bl_footerNavChild__accordion"><a class="bl_footerNavChild_link" href="./">職員アンケート</a><a class="bl_footerNavChild_link" href="./">内定者アンケート</a></div>
-                </div>
-              </div>
-              <div class="bl_footerNav_list">
-                <div class="bl_footerNav_item">
-                  <div class="bl_footerNav_item_inner"><a class="bl_footerNav_ttl2 bl_footerNav_ttl__accordion2" href="./#"><span class="hp_en">Recruit</span>採用情報</a>
-                    <div class="bl_footerNav_ttl bl_footerNav_ttl__accordion"></div>
-                  </div>
-                  <div class="bl_footerNavChild bl_footerNavChild__accordion"><a class="bl_footerNavChild_link" href="./">働く環境</a><a class="bl_footerNavChild_link" href="./">人材育成</a><a class="bl_footerNavChild_link" href="./">募集要項</a><a class="bl_footerNavChild_link" href="./">よくある質問</a></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav>
-      <div class="bl_anime_floating">
-        <div class="bl_anime_floating__left"><img src="./assets/images/common/svg_ball.svg" alt=""/></div>
-        <div class="bl_anime_floating__right"><img src="./assets/images/common/svg_ball.svg" alt=""/></div>
-      </div>
-      <main class="ly_main">
-        <section class="un_MV">
-          <div class="un_MV_inner">
-            <div class="bl_scroll hp_pcOnly">
-              <p class="hp_en">Scroll</p>
-            </div>
-            <div class="un_MVtxt js_MVanime">
-              <div class="marker hp_pcOnly">
-                <div class="text">この街を<span>縁</span>でつなぐ。</div>
-              </div>
-              <div class="marker hp_mt hp_spOnly">
-                <div class="text">この街を</div>
-              </div>
-              <div class="marker hp_mt hp_spOnly">
-                <div class="text"><span>縁</span>でつなぐ。</div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="bl_sect un_message">
-          <div class="un_loopSlider">
-            <div class="un_loopSlider_font hp_en"><span>Higashin Recruiting Website</span><span>Higashin Recruiting Website</span></div>
-          </div>
-          <div class="ly_cont">
-            <div class="un_message_inner">
-              <div class="un_message_ttl hp_en">Message</div>
-              <div class="un_message_txtConts">
-                <p>「夢を夢で終わらせない信用金庫」というスローガンを軸に、<br class="hp_pcOnly">色々なお客さまの色々な夢に寄り添ってきたひがしん。</p>
-                <p>そんなひがしんでは、1945年の設立以来、<br class="hp_pcOnly">「縁」という経営理念を掲げ、地域やお客さま、<br class="hp_pcOnly">お取引先、職員とのつながりを大切にしてきました。</p>
-                <p>「この街を縁でつなぐ。」</p>
-                <p>これからも職員一人ひとりがそうした使命と想いを胸に<br class="hp_pcOnly">東京の東エリアを中心としたさまざまなお客さまに寄り添い、<br class="hp_pcOnly">夢をつなぐことで、地域の明日をつないでいきます。</p>
-              </div>
-              <figure class="un_message_logo"><img src="./assets/images/common/icon_logo.svg" alt=""></figure>
-            </div>
-            <figure class="un_message_figure"><img src="./assets/images/home/img_message.webp" alt=""></figure>
-          </div>
-        </section>
-        <section class="bl_sectHome bl_sectHome__reverse un_about">
-          <figure class="bl_sectHome_figure"><img src="./assets/images/home/img_about.webp" alt=""></figure>
-          <div class="bl_sectHome_inner">
-            <div class="el_lv2Heading_wrap">
-              <h2 class="el_lv2Heading hp_en js_fadein"><span>ひがしんのこと</span>About</h2>
-              <div class="bl_anime_circle">
-                <div class="circle circle1"></div>
-                <div class="circle circle2"></div>
-                <div class="circle circle3"></div>
-              </div>
-            </div>
-            <h3 class="bl_sectHome_ttl">地域をつなぐ信用金庫。</h3>
-            <p class="bl_sectHome_txt">ひがしんが地域やお客さまとどのような想いで関わっているのか。経営理念や金庫の歴史などひがしんを志望するうえで最初に知ってほしい基本的な情報をお伝えします。</p><a class="el_btn el_btn__more hp_en" href="./"><span>View More</span>
-              <div class="el_arrow">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="8" height="15" viewBox="0 0 8 15">
-                  <defs>
-                    <style>
-                      .el_arrow_a{fill:rgba(255,255,255,0);}
-                      .el_arrow_b{clip-path:url(#a);}
-                      .el_arrow_c{fill:#ffffff;}
-                    </style>
-                    <clipPath id="a">
-                      <rect class="el_arrow_a" width="15" height="8" transform="translate(11144 7789)"></rect>
-                    </clipPath>
-                  </defs>
-                  <g class="el_arrow_b" transform="translate(-7789 11159) rotate(-90)">
-                    <g transform="translate(-2226.253 10173.587) rotate(-45)">
-                      <rect class="el_arrow_c" width="1" height="10" transform="translate(11140 7769)"></rect>
-                      <rect class="el_arrow_c" width="1" height="10" transform="translate(11140 7779) rotate(-90)"></rect>
-                    </g>
-                  </g>
-                </svg>
-              </div></a>
-          </div>
-        </section>
-        <section class="bl_sectHome un_business">
-          <div class="bl_sectHome_inner">
-            <div class="el_lv2Heading_wrap">
-              <h2 class="el_lv2Heading hp_en js_fadein"><span>ひがしんの仕事</span>Business</h2>
-              <div class="bl_anime_circle">
-                <div class="circle circle1"></div>
-                <div class="circle circle2"></div>
-                <div class="circle circle3"></div>
-              </div>
-            </div>
-            <h3 class="bl_sectHome_ttl">色々な夢をつなぐ仕事。</h3>
-            <p class="bl_sectHome_txt">「夢を夢で終わらせない信用金庫」というスローガンを達成するために、各職種がどのような仕事を行っているのか。ひがしんを代表する4つの職種についてご紹介します。</p><a class="el_btn el_btn__more hp_en" href="./"><span>View More</span>
-              <div class="el_arrow">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="8" height="15" viewBox="0 0 8 15">
-                  <defs>
-                    <style>
-                      .el_arrow_a{fill:rgba(255,255,255,0);}
-                      .el_arrow_b{clip-path:url(#a);}
-                      .el_arrow_c{fill:#ffffff;}
-                    </style>
-                    <clipPath id="a">
-                      <rect class="el_arrow_a" width="15" height="8" transform="translate(11144 7789)"></rect>
-                    </clipPath>
-                  </defs>
-                  <g class="el_arrow_b" transform="translate(-7789 11159) rotate(-90)">
-                    <g transform="translate(-2226.253 10173.587) rotate(-45)">
-                      <rect class="el_arrow_c" width="1" height="10" transform="translate(11140 7769)"></rect>
-                      <rect class="el_arrow_c" width="1" height="10" transform="translate(11140 7779) rotate(-90)"></rect>
-                    </g>
-                  </g>
-                </svg>
-              </div></a>
-          </div>
-          <figure class="bl_sectHome_figure"><img src="./assets/images/home/img_business.webp" alt=""></figure>
-        </section>
-        <section class="bl_sectHome un_people">
-          <div class="ly_cont">
-            <div class="bl_swiper js_fadein">
-              <div class="swiper_wrap">
-                <div class="swiper swiper__images">
-                  <div class="swiper-wrapper"><a class="swiper-slide" href="./"><img src="./assets/images/home/img_people_01.webp" alt=""></a><a class="swiper-slide" href="./"><img src="./assets/images/home/img_people_02.webp" alt=""></a><a class="swiper-slide" href="./"><img src="./assets/images/home/img_people_03.webp" alt=""></a><a class="swiper-slide" href="./"><img src="./assets/images/home/img_people_04.webp" alt=""></a><a class="swiper-slide" href="./"><img src="./assets/images/home/img_people_05.webp" alt=""></a></div>
-                </div>
-                <div class="swiper swiper__text">
-                  <div class="swiper-wrapper"><a class="swiper-slide" href="./">
-                      <div class="swiper-slide-item">営業<br><span>
-                           2022年入庫<br>商経学部卒</span></div></a><a class="swiper-slide" href="./">
-                      <div class="swiper-slide-item">融資<br><span>
-                           2021年入庫<br>生活科学部卒</span></div></a><a class="swiper-slide" href="./">
-                      <div class="swiper-slide-item">事務<br><span>
-                           2020年入庫<br>産業科卒</span></div></a><a class="swiper-slide" href="./">
-                      <div class="swiper-slide-item">MA<br><span>2022年入庫<br>地域創生学部卒</span></div></a><a class="swiper-slide" href="./">
-                      <div class="swiper-slide-item">お客様<br>サポート部<span>
-                           2011年入庫<br>経営学部卒</span></div></a></div>
-                </div>
-                <div class="swiper-pagination hp_en"></div>
-                <div class="swiper-button-prev hp_reverse">
-                  <div class="el_arrow">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="8" height="15" viewBox="0 0 8 15">
-                      <defs>
-                        <style>
-                          .el_arrow_a{fill:rgba(255,255,255,0);}
-                          .el_arrow_b{clip-path:url(#a);}
-                          .el_arrow_c{fill:#ffffff;}
-                        </style>
-                        <clipPath id="a">
-                          <rect class="el_arrow_a" width="15" height="8" transform="translate(11144 7789)"></rect>
-                        </clipPath>
-                      </defs>
-                      <g class="el_arrow_b" transform="translate(-7789 11159) rotate(-90)">
-                        <g transform="translate(-2226.253 10173.587) rotate(-45)">
-                          <rect class="el_arrow_c" width="1" height="10" transform="translate(11140 7769)"></rect>
-                          <rect class="el_arrow_c" width="1" height="10" transform="translate(11140 7779) rotate(-90)"></rect>
-                        </g>
-                      </g>
-                    </svg>
-                  </div>
-                </div>
-                <div class="swiper-button-next">
-                  <div class="el_arrow">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="8" height="15" viewBox="0 0 8 15">
-                      <defs>
-                        <style>
-                          .el_arrow_a{fill:rgba(255,255,255,0);}
-                          .el_arrow_b{clip-path:url(#a);}
-                          .el_arrow_c{fill:#ffffff;}
-                        </style>
-                        <clipPath id="a">
-                          <rect class="el_arrow_a" width="15" height="8" transform="translate(11144 7789)"></rect>
-                        </clipPath>
-                      </defs>
-                      <g class="el_arrow_b" transform="translate(-7789 11159) rotate(-90)">
-                        <g transform="translate(-2226.253 10173.587) rotate(-45)">
-                          <rect class="el_arrow_c" width="1" height="10" transform="translate(11140 7769)"></rect>
-                          <rect class="el_arrow_c" width="1" height="10" transform="translate(11140 7779) rotate(-90)"></rect>
-                        </g>
-                      </g>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="bl_sectHome_inner">
-              <div class="el_lv2Heading_wrap">
-                <h2 class="el_lv2Heading hp_en js_fadein"><span>ひがしんの人々</span>People</h2>
-                <div class="bl_anime_circle">
-                  <div class="circle circle1"></div>
-                  <div class="circle circle2"></div>
-                  <div class="circle circle3"></div>
-                </div>
-              </div>
-              <h3 class="bl_sectHome_ttl">縁をつなぐ人々。</h3>
-              <p class="bl_sectHome_txt">ひがしんの職員はどのような想いを持って働いているのか。地域やお客さまを支えるために、日々活動する職員たちに金庫や仕事に関するさまざまなことを聞いてみました。</p><a class="el_btn el_btn__more hp_en" href="./"><span>View More</span>
-                <div class="el_arrow">
-                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="8" height="15" viewBox="0 0 8 15">
-                    <defs>
-                      <style>
-                        .el_arrow_a{fill:rgba(255,255,255,0);}
-                        .el_arrow_b{clip-path:url(#a);}
-                        .el_arrow_c{fill:#ffffff;}
-                      </style>
-                      <clipPath id="a">
-                        <rect class="el_arrow_a" width="15" height="8" transform="translate(11144 7789)"></rect>
-                      </clipPath>
-                    </defs>
-                    <g class="el_arrow_b" transform="translate(-7789 11159) rotate(-90)">
-                      <g transform="translate(-2226.253 10173.587) rotate(-45)">
-                        <rect class="el_arrow_c" width="1" height="10" transform="translate(11140 7769)"></rect>
-                        <rect class="el_arrow_c" width="1" height="10" transform="translate(11140 7779) rotate(-90)"></rect>
-                      </g>
-                    </g>
-                  </svg>
-                </div></a>
-            </div>
-          </div>
-        </section>
-        <section class="bl_sectHome un_culture">
-          <div class="bl_sectHome_inner">
-            <div class="el_lv2Heading_wrap">
-              <h2 class="el_lv2Heading hp_en js_fadein"><span>ひがしんの社風</span>Culture</h2>
-              <div class="bl_anime_circle">
-                <div class="circle circle1"></div>
-                <div class="circle circle2"></div>
-                <div class="circle circle3"></div>
-              </div>
-            </div>
-            <h3 class="bl_sectHome_ttl">つながりを大切にする文化。</h3>
-            <p class="bl_sectHome_txt">「縁」という経営理念のもと、ひがしんで働く職員がどのように支え合っているのか。年齢や立場、職種の異なる職員に集まってもらい、職員同士のつながりを紐解きました。</p><a class="el_btn el_btn__more hp_en" href="./"><span>View More</span>
-              <div class="el_arrow">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="8" height="15" viewBox="0 0 8 15">
-                  <defs>
-                    <style>
-                      .el_arrow_a{fill:rgba(255,255,255,0);}
-                      .el_arrow_b{clip-path:url(#a);}
-                      .el_arrow_c{fill:#ffffff;}
-                    </style>
-                    <clipPath id="a">
-                      <rect class="el_arrow_a" width="15" height="8" transform="translate(11144 7789)"></rect>
-                    </clipPath>
-                  </defs>
-                  <g class="el_arrow_b" transform="translate(-7789 11159) rotate(-90)">
-                    <g transform="translate(-2226.253 10173.587) rotate(-45)">
-                      <rect class="el_arrow_c" width="1" height="10" transform="translate(11140 7769)"></rect>
-                      <rect class="el_arrow_c" width="1" height="10" transform="translate(11140 7779) rotate(-90)"></rect>
-                    </g>
-                  </g>
-                </svg>
-              </div></a>
-          </div>
-          <figure class="bl_sectHome_figure"><img src="./assets/images/home/img_culture.webp" alt=""></figure>
-        </section>
-        <section class="bl_sectHome bl_sectHome__reverse un_career">
-          <figure class="bl_sectHome_figure"><img src="./assets/images/home/img_career.webp" alt=""></figure>
-          <div class="bl_sectHome_inner">
-            <div class="el_lv2Heading_wrap">
-              <h2 class="el_lv2Heading hp_en js_fadein"><span>ひがしんのキャリア</span>Career</h2>
-              <div class="bl_anime_circle">
-                <div class="circle circle1"></div>
-                <div class="circle circle2"></div>
-                <div class="circle circle3"></div>
-              </div>
-            </div>
-            <h3 class="bl_sectHome_ttl">想いをつないできた日々。</h3>
-            <p class="bl_sectHome_txt">ひがしんのベテラン職員はどのような想いで仕事と向き合っているのか。ベテラン職員の入庫から現在までの歩みを通じて、ひがしんならではのキャリアをお伝えします。</p><a class="el_btn el_btn__more hp_en" href="./"><span>View More</span>
-              <div class="el_arrow">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="8" height="15" viewBox="0 0 8 15">
-                  <defs>
-                    <style>
-                      .el_arrow_a{fill:rgba(255,255,255,0);}
-                      .el_arrow_b{clip-path:url(#a);}
-                      .el_arrow_c{fill:#ffffff;}
-                    </style>
-                    <clipPath id="a">
-                      <rect class="el_arrow_a" width="15" height="8" transform="translate(11144 7789)"></rect>
-                    </clipPath>
-                  </defs>
-                  <g class="el_arrow_b" transform="translate(-7789 11159) rotate(-90)">
-                    <g transform="translate(-2226.253 10173.587) rotate(-45)">
-                      <rect class="el_arrow_c" width="1" height="10" transform="translate(11140 7769)"></rect>
-                      <rect class="el_arrow_c" width="1" height="10" transform="translate(11140 7779) rotate(-90)"></rect>
-                    </g>
-                  </g>
-                </svg>
-              </div></a>
-          </div>
-        </section>
-        <section class="bl_sect">
-          <figure class="un_homeImg_figure"><img src="./assets/images/home/img_homeImg.webp" alt=""></figure>
-        </section>
-        <section class="bl_sect un_AreaVoice">
-          <div class="ly_cont">
-            <div class="bl_gridConts">
-              <div class="bl_grid_item js_fadein">
-                <h2 class="el_lv2Heading hp_en js_fadein"><span>ひがしん支店巡り</span>Area</h2>
-                <div class="bl_grid_item_figure"><img src="./assets/images/home/img_area.webp" alt=""></div>
-                <p class="bl_grid_item_txt">東京の東エリアを中心に、埼玉や千葉にも支店を展開するひがしん。各エリアや支店ごとにどのような特徴があるのか。それぞれの支店で働く若手職員に特徴を聞いてみました。</p><a class="el_btn el_btn__more hp_en" href="./"><span>View More</span>
-                  <div class="el_arrow">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="8" height="15" viewBox="0 0 8 15">
-                      <defs>
-                        <style>
-                          .el_arrow_a{fill:rgba(255,255,255,0);}
-                          .el_arrow_b{clip-path:url(#a);}
-                          .el_arrow_c{fill:#ffffff;}
-                        </style>
-                        <clipPath id="a">
-                          <rect class="el_arrow_a" width="15" height="8" transform="translate(11144 7789)"></rect>
-                        </clipPath>
-                      </defs>
-                      <g class="el_arrow_b" transform="translate(-7789 11159) rotate(-90)">
-                        <g transform="translate(-2226.253 10173.587) rotate(-45)">
-                          <rect class="el_arrow_c" width="1" height="10" transform="translate(11140 7769)"></rect>
-                          <rect class="el_arrow_c" width="1" height="10" transform="translate(11140 7779) rotate(-90)"></rect>
-                        </g>
-                      </g>
-                    </svg>
-                  </div></a>
-              </div>
-              <div class="bl_grid_item js_fadein">
-                <h2 class="el_lv2Heading hp_en js_fadein"><span>ひがしんアンケート</span>Voice</h2>
-                <div class="bl_grid_item_figure"><img src="./assets/images/home/img_voice.webp" alt=""></div>
-                <p class="bl_grid_item_txt">ひがしんの職員や内定者は金庫や仕事に対してどのような想いを抱いているのか。さまざまな年代・職種の職員や内定者に匿名アンケートを実施し、本音に迫りました。</p><a class="el_btn el_btn__more hp_en" href="./"><span>View More</span>
-                  <div class="el_arrow">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="8" height="15" viewBox="0 0 8 15">
-                      <defs>
-                        <style>
-                          .el_arrow_a{fill:rgba(255,255,255,0);}
-                          .el_arrow_b{clip-path:url(#a);}
-                          .el_arrow_c{fill:#ffffff;}
-                        </style>
-                        <clipPath id="a">
-                          <rect class="el_arrow_a" width="15" height="8" transform="translate(11144 7789)"></rect>
-                        </clipPath>
-                      </defs>
-                      <g class="el_arrow_b" transform="translate(-7789 11159) rotate(-90)">
-                        <g transform="translate(-2226.253 10173.587) rotate(-45)">
-                          <rect class="el_arrow_c" width="1" height="10" transform="translate(11140 7769)"></rect>
-                          <rect class="el_arrow_c" width="1" height="10" transform="translate(11140 7779) rotate(-90)"></rect>
-                        </g>
-                      </g>
-                    </svg>
-                  </div></a>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="bl_sect un_recruit">
-          <div class="ly_cont">
-            <h2 class="el_lv2Heading hp_en js_fadein"><span>採用情報</span>Recruit</h2>
-            <div class="un_recruitConts">
-              <div class="un_recruit_item">
-                <figure class="un_recruit_figure"><img src="./assets/images/home/img_recruit_en.webp" alt=""></figure>
-                <div class="un_recruit_ttl hp_en">Environment</div>
-                <div class="un_recruit_txt">働く環境</div>
-              </div>
-              <div class="un_recruit_item">
-                <figure class="un_recruit_figure"><img src="./assets/images/home/img_recruit_ed.webp" alt=""></figure>
-                <div class="un_recruit_ttl hp_en">Education</div>
-                <div class="un_recruit_txt">人材育成</div>
-              </div>
-              <div class="un_recruit_item">
-                <figure class="un_recruit_figure"><img src="./assets/images/home/img_recruit_re.webp" alt=""></figure>
-                <div class="un_recruit_ttl hp_en">Requirements</div>
-                <div class="un_recruit_txt">募集要項</div>
-              </div>
-              <div class="un_recruit_item">
-                <figure class="un_recruit_figure"><img src="./assets/images/home/img_recruit_faq.webp" alt=""></figure>
-                <div class="un_recruit_ttl hp_en">Faq</div>
-                <div class="un_recruit_txt">よくある質問</div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <div class="ly_cont">
-          <section class="bl_sect un_other">
-            <div class="un_otherConts">
-              <h2 class="un_other_ttl">この街を<span class="hp_cSec">縁</span>でつなぐ。</h2><a class="el_btn el_btn__entry hp_en" href="./message/"><span>ENTRY</span></a>
-            </div>
-          </section>
-        </div>
-      </main>
-      <div class="ly_footer">
-        <div class="un_loopSlider">
-          <div class="un_loopSlider_font hp_en"><span>Higashin Recruiting Website</span><span>Higashin Recruiting Website</span></div>
-        </div>
-        <div class="ly_cont">
+    </header>
+    <nav>
+      <div class="bl_hamNav" id="js_nav">
+        <div class="bl_hamNav_inner">
           <div class="bl_footerNav">
-            <div class="bl_footerNav_list"><a class="bl_footerConts_logo" id="js_logo" href="./">
+            <div class="bl_footerNav_list">
+              <div class="bl_footerConts_logo" id="js_logo">
                 <div class="el_logo"><img src="./assets/images/common/icon_logo.svg" alt=""></div>
-                <p class="bl_footerConts_txt hp_en">新卒採用サイト</p></a><a class="bl_footerNav_item" href="./">
-                <div class="bl_footerNav_ttl"><span class="hp_en">Top</span>トップページ</div></a><a class="bl_footerNav_item" href="./">
+                <p class="bl_footerConts_txt hp_en">新卒採用サイト</p>
+              </div>
+              <div class="el_btn_wrap hp_spOnly"><a class="el_btn el_btn__entry hp_en" href="./message/"><span>ENTRY</span></a></div><a class="bl_footerNav_item" href="./">
+                <div class="bl_footerNav_ttl"><span class="hp_en">Top</span>トップページ</div></a><a class="bl_footerNav_item" href="./about">
                 <div class="bl_footerNav_ttl"><span class="hp_en">About</span>ひがしんのこと</div></a><a class="bl_footerNav_item" href="./">
-                <div class="bl_footerNav_ttl"><span class="hp_en">Business</span>ひがしんの仕事</div></a></div>
+                <div class="bl_footerNav_ttl"><span class="hp_en">Business</span>ひがしんの仕事</div></a>
+            </div>
             <div class="bl_footerNav_list">
               <div class="bl_footerNav_item">
                 <div class="bl_footerNav_item_inner"><a class="bl_footerNav_ttl2 bl_footerNav_ttl__accordion2" href="./#"><span class="hp_en">People</span>ひがしんの人々</a>
@@ -533,36 +89,463 @@
                 </div>
                 <div class="bl_footerNavChild bl_footerNavChild__accordion"><a class="bl_footerNavChild_link" href="./">働く環境</a><a class="bl_footerNavChild_link" href="./">人材育成</a><a class="bl_footerNavChild_link" href="./">募集要項</a><a class="bl_footerNavChild_link" href="./">よくある質問</a></div>
               </div>
-              <div class="bl_footerCopyUnit"><a class="bl_footerCopyBlank" href="https://www.higashin.co.jp/" target="_blank"><span>東京東信用金庫サイト</span>
-                  <div class="el_logo"><img src="./assets/images/common/icon_blank.svg" alt=""></div></a><small class="bl_footerCopyright hp_en">&copy; The Tokyo Higashi Shinkin Bank.<br class="hp_pcOnly">All Rights Reserved.</small></div>
             </div>
           </div>
         </div>
       </div>
-      <script>
-        const swiper = new Swiper(".swiper", {
-        	loop: true,
-        	simulateTouch: false,
-        	effect: 'fade', // フェード効果を追加
-        	fadeEffect: {
-        		crossFade: true // スムーズなフェードを確保
-        	},
-        	speed: 800, // トランジションの速度を調整
-        	//- ページネーション
-        	pagination: {
-        		el: ".swiper-pagination",
-        		type: "fraction", // 枚数表示
-        		renderFraction: function (currentClass, totalClass) {
-        			return '<span class="' + currentClass + '"></span><span class="' + totalClass + '"></span>';
-        		}
-        	},
-        	//- 前後の矢印
-        	navigation: {
-        		nextEl: ".swiper-button-next",
-        		prevEl: ".swiper-button-prev",
-        	},
-        });
-      </script>
+    </nav>
+    <div class="bl_anime_floating">
+      <div class="bl_anime_floating__left"><img src="./assets/images/common/svg_ball.svg" alt=""/></div>
+      <div class="bl_anime_floating__right"><img src="./assets/images/common/svg_ball.svg" alt=""/></div>
     </div>
+    <main class="ly_main">
+      <section class="un_MV">
+        <div class="un_MV_inner">
+          <div class="bl_scroll hp_pcOnly">
+            <p class="hp_en">Scroll</p>
+          </div>
+          <div class="un_MVtxt js_MVanime">
+            <div class="marker hp_pcOnly">
+              <div class="text">この街を<span>縁</span>でつなぐ。</div>
+            </div>
+            <div class="marker hp_mt hp_spOnly">
+              <div class="text">この街を</div>
+            </div>
+            <div class="marker hp_mt hp_spOnly">
+              <div class="text"><span>縁</span>でつなぐ。</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="bl_sect un_message">
+        <div class="un_loopSlider">
+          <div class="un_loopSlider_font hp_en"><span>Higashin Recruiting Website</span><span>Higashin Recruiting Website</span></div>
+        </div>
+        <div class="ly_cont">
+          <div class="un_message_inner">
+            <div class="un_message_ttl hp_en">Message</div>
+            <div class="un_message_txtConts">
+              <p>「夢を夢で終わらせない信用金庫」というスローガンを軸に、<br class="hp_pcOnly">色々なお客さまの色々な夢に寄り添ってきたひがしん。</p>
+              <p>そんなひがしんでは、1945年の設立以来、<br class="hp_pcOnly">「縁」という経営理念を掲げ、地域やお客さま、<br class="hp_pcOnly">お取引先、職員とのつながりを大切にしてきました。</p>
+              <p class="un_message_txtConts_txtTtl">「この街を<span>縁</span>でつなぐ。」</p>
+              <p>これからも職員一人ひとりがそうした使命と想いを胸に<br class="hp_pcOnly">東京の東エリアを中心としたさまざまなお客さまに寄り添い、<br class="hp_pcOnly">夢をつなぐことで、地域の明日をつないでいきます。</p>
+            </div>
+            <figure class="un_message_logo"><img src="./assets/images/common/icon_logo.svg" alt=""></figure>
+          </div>
+          <figure class="un_message_figure"><img src="./assets/images/home/img_message.webp" alt=""></figure>
+        </div>
+      </section>
+      <section class="bl_sectHome bl_sectHome__reverse un_about">
+        <figure class="bl_sectHome_figure"><img src="./assets/images/home/img_about.webp" alt=""></figure>
+        <div class="bl_sectHome_inner">
+          <div class="el_lv2Heading_wrap">
+            <h2 class="el_lv2Heading hp_en js_fadein"><span>ひがしんのこと</span>About</h2>
+            <div class="bl_anime_circle">
+              <div class="circle circle1"></div>
+              <div class="circle circle2"></div>
+              <div class="circle circle3"></div>
+            </div>
+          </div>
+          <h3 class="bl_sectHome_ttl">地域をつなぐ信用金庫。</h3>
+          <p class="bl_sectHome_txt">ひがしんが地域やお客さまとどのような想いで関わっているのか。経営理念や金庫の歴史などひがしんを志望するうえで最初に知ってほしい基本的な情報をお伝えします。</p><a class="el_btn el_btn__more hp_en" href="./"><span>View More</span>
+            <div class="el_arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="8" height="15" viewBox="0 0 8 15">
+                <defs>
+                  <style>
+                    .el_arrow_a{fill:rgba(255,255,255,0);}
+                    .el_arrow_b{clip-path:url(#a);}
+                    .el_arrow_c{fill:#ffffff;}
+                  </style>
+                  <clipPath id="a">
+                    <rect class="el_arrow_a" width="15" height="8" transform="translate(11144 7789)"></rect>
+                  </clipPath>
+                </defs>
+                <g class="el_arrow_b" transform="translate(-7789 11159) rotate(-90)">
+                  <g transform="translate(-2226.253 10173.587) rotate(-45)">
+                    <rect class="el_arrow_c" width="1" height="10" transform="translate(11140 7769)"></rect>
+                    <rect class="el_arrow_c" width="1" height="10" transform="translate(11140 7779) rotate(-90)"></rect>
+                  </g>
+                </g>
+              </svg>
+            </div></a>
+        </div>
+      </section>
+      <section class="bl_sectHome un_business">
+        <div class="bl_sectHome_inner">
+          <div class="el_lv2Heading_wrap">
+            <h2 class="el_lv2Heading hp_en js_fadein"><span>ひがしんの仕事</span>Business</h2>
+            <div class="bl_anime_circle">
+              <div class="circle circle1"></div>
+              <div class="circle circle2"></div>
+              <div class="circle circle3"></div>
+            </div>
+          </div>
+          <h3 class="bl_sectHome_ttl">色々な夢をつなぐ仕事。</h3>
+          <p class="bl_sectHome_txt">「夢を夢で終わらせない信用金庫」というスローガンを達成するために、各職種がどのような仕事を行っているのか。ひがしんを代表する4つの職種についてご紹介します。</p><a class="el_btn el_btn__more hp_en" href="./"><span>View More</span>
+            <div class="el_arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="8" height="15" viewBox="0 0 8 15">
+                <defs>
+                  <style>
+                    .el_arrow_a{fill:rgba(255,255,255,0);}
+                    .el_arrow_b{clip-path:url(#a);}
+                    .el_arrow_c{fill:#ffffff;}
+                  </style>
+                  <clipPath id="a">
+                    <rect class="el_arrow_a" width="15" height="8" transform="translate(11144 7789)"></rect>
+                  </clipPath>
+                </defs>
+                <g class="el_arrow_b" transform="translate(-7789 11159) rotate(-90)">
+                  <g transform="translate(-2226.253 10173.587) rotate(-45)">
+                    <rect class="el_arrow_c" width="1" height="10" transform="translate(11140 7769)"></rect>
+                    <rect class="el_arrow_c" width="1" height="10" transform="translate(11140 7779) rotate(-90)"></rect>
+                  </g>
+                </g>
+              </svg>
+            </div></a>
+        </div>
+        <figure class="bl_sectHome_figure"><img src="./assets/images/home/img_business.webp" alt=""></figure>
+      </section>
+      <section class="bl_sectHome un_people">
+        <div class="ly_cont">
+          <div class="bl_swiper js_fadein">
+            <div class="swiper_wrap">
+              <div class="swiper swiper__images">
+                <div class="swiper-wrapper"><a class="swiper-slide" href="./"><img src="./assets/images/home/img_people_01.webp" alt=""></a><a class="swiper-slide" href="./"><img src="./assets/images/home/img_people_02.webp" alt=""></a><a class="swiper-slide" href="./"><img src="./assets/images/home/img_people_03.webp" alt=""></a><a class="swiper-slide" href="./"><img src="./assets/images/home/img_people_04.webp" alt=""></a><a class="swiper-slide" href="./"><img src="./assets/images/home/img_people_05.webp" alt=""></a></div>
+              </div>
+              <div class="swiper swiper__text">
+                <div class="swiper-wrapper"><a class="swiper-slide" href="./">
+                    <div class="swiper-slide-item">営業<br><span>
+                         2022年入庫<br>商経学部卒</span></div></a><a class="swiper-slide" href="./">
+                    <div class="swiper-slide-item">融資<br><span>
+                         2021年入庫<br>生活科学部卒</span></div></a><a class="swiper-slide" href="./">
+                    <div class="swiper-slide-item">事務<br><span>
+                         2020年入庫<br>産業科卒</span></div></a><a class="swiper-slide" href="./">
+                    <div class="swiper-slide-item">MA<br><span>2022年入庫<br>地域創生学部卒</span></div></a><a class="swiper-slide" href="./">
+                    <div class="swiper-slide-item">お客様<br>サポート部<span>
+                         2011年入庫<br>経営学部卒</span></div></a></div>
+              </div>
+              <div class="swiper-pagination hp_en"></div>
+              <div class="swiper-button-prev hp_reverse">
+                <div class="el_arrow">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="8" height="15" viewBox="0 0 8 15">
+                    <defs>
+                      <style>
+                        .el_arrow_a{fill:rgba(255,255,255,0);}
+                        .el_arrow_b{clip-path:url(#a);}
+                        .el_arrow_c{fill:#ffffff;}
+                      </style>
+                      <clipPath id="a">
+                        <rect class="el_arrow_a" width="15" height="8" transform="translate(11144 7789)"></rect>
+                      </clipPath>
+                    </defs>
+                    <g class="el_arrow_b" transform="translate(-7789 11159) rotate(-90)">
+                      <g transform="translate(-2226.253 10173.587) rotate(-45)">
+                        <rect class="el_arrow_c" width="1" height="10" transform="translate(11140 7769)"></rect>
+                        <rect class="el_arrow_c" width="1" height="10" transform="translate(11140 7779) rotate(-90)"></rect>
+                      </g>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+              <div class="swiper-button-next">
+                <div class="el_arrow">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="8" height="15" viewBox="0 0 8 15">
+                    <defs>
+                      <style>
+                        .el_arrow_a{fill:rgba(255,255,255,0);}
+                        .el_arrow_b{clip-path:url(#a);}
+                        .el_arrow_c{fill:#ffffff;}
+                      </style>
+                      <clipPath id="a">
+                        <rect class="el_arrow_a" width="15" height="8" transform="translate(11144 7789)"></rect>
+                      </clipPath>
+                    </defs>
+                    <g class="el_arrow_b" transform="translate(-7789 11159) rotate(-90)">
+                      <g transform="translate(-2226.253 10173.587) rotate(-45)">
+                        <rect class="el_arrow_c" width="1" height="10" transform="translate(11140 7769)"></rect>
+                        <rect class="el_arrow_c" width="1" height="10" transform="translate(11140 7779) rotate(-90)"></rect>
+                      </g>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bl_sectHome_inner">
+            <div class="el_lv2Heading_wrap">
+              <h2 class="el_lv2Heading hp_en js_fadein"><span>ひがしんの人々</span>People</h2>
+              <div class="bl_anime_circle">
+                <div class="circle circle1"></div>
+                <div class="circle circle2"></div>
+                <div class="circle circle3"></div>
+              </div>
+            </div>
+            <h3 class="bl_sectHome_ttl">縁をつなぐ人々。</h3>
+            <p class="bl_sectHome_txt">ひがしんの職員はどのような想いを持って働いているのか。地域やお客さまを支えるために、日々活動する職員たちに金庫や仕事に関するさまざまなことを聞いてみました。</p><a class="el_btn el_btn__more hp_en" href="./"><span>View More</span>
+              <div class="el_arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="8" height="15" viewBox="0 0 8 15">
+                  <defs>
+                    <style>
+                      .el_arrow_a{fill:rgba(255,255,255,0);}
+                      .el_arrow_b{clip-path:url(#a);}
+                      .el_arrow_c{fill:#ffffff;}
+                    </style>
+                    <clipPath id="a">
+                      <rect class="el_arrow_a" width="15" height="8" transform="translate(11144 7789)"></rect>
+                    </clipPath>
+                  </defs>
+                  <g class="el_arrow_b" transform="translate(-7789 11159) rotate(-90)">
+                    <g transform="translate(-2226.253 10173.587) rotate(-45)">
+                      <rect class="el_arrow_c" width="1" height="10" transform="translate(11140 7769)"></rect>
+                      <rect class="el_arrow_c" width="1" height="10" transform="translate(11140 7779) rotate(-90)"></rect>
+                    </g>
+                  </g>
+                </svg>
+              </div></a>
+          </div>
+        </div>
+      </section>
+      <section class="bl_sectHome un_culture">
+        <div class="bl_sectHome_inner">
+          <div class="el_lv2Heading_wrap">
+            <h2 class="el_lv2Heading hp_en js_fadein"><span>ひがしんの社風</span>Culture</h2>
+            <div class="bl_anime_circle">
+              <div class="circle circle1"></div>
+              <div class="circle circle2"></div>
+              <div class="circle circle3"></div>
+            </div>
+          </div>
+          <h3 class="bl_sectHome_ttl">つながりを大切にする文化。</h3>
+          <p class="bl_sectHome_txt">「縁」という経営理念のもと、ひがしんで働く職員がどのように支え合っているのか。年齢や立場、職種の異なる職員に集まってもらい、職員同士のつながりを紐解きました。</p><a class="el_btn el_btn__more hp_en" href="./"><span>View More</span>
+            <div class="el_arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="8" height="15" viewBox="0 0 8 15">
+                <defs>
+                  <style>
+                    .el_arrow_a{fill:rgba(255,255,255,0);}
+                    .el_arrow_b{clip-path:url(#a);}
+                    .el_arrow_c{fill:#ffffff;}
+                  </style>
+                  <clipPath id="a">
+                    <rect class="el_arrow_a" width="15" height="8" transform="translate(11144 7789)"></rect>
+                  </clipPath>
+                </defs>
+                <g class="el_arrow_b" transform="translate(-7789 11159) rotate(-90)">
+                  <g transform="translate(-2226.253 10173.587) rotate(-45)">
+                    <rect class="el_arrow_c" width="1" height="10" transform="translate(11140 7769)"></rect>
+                    <rect class="el_arrow_c" width="1" height="10" transform="translate(11140 7779) rotate(-90)"></rect>
+                  </g>
+                </g>
+              </svg>
+            </div></a>
+        </div>
+        <figure class="bl_sectHome_figure"><img src="./assets/images/home/img_culture.webp" alt=""></figure>
+      </section>
+      <section class="bl_sectHome bl_sectHome__reverse un_career">
+        <figure class="bl_sectHome_figure"><img src="./assets/images/home/img_career.webp" alt=""></figure>
+        <div class="bl_sectHome_inner">
+          <div class="el_lv2Heading_wrap">
+            <h2 class="el_lv2Heading hp_en js_fadein"><span>ひがしんのキャリア</span>Career</h2>
+            <div class="bl_anime_circle">
+              <div class="circle circle1"></div>
+              <div class="circle circle2"></div>
+              <div class="circle circle3"></div>
+            </div>
+          </div>
+          <h3 class="bl_sectHome_ttl">想いをつないできた日々。</h3>
+          <p class="bl_sectHome_txt">ひがしんのベテラン職員はどのような想いで仕事と向き合っているのか。ベテラン職員の入庫から現在までの歩みを通じて、ひがしんならではのキャリアをお伝えします。</p><a class="el_btn el_btn__more hp_en" href="./"><span>View More</span>
+            <div class="el_arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="8" height="15" viewBox="0 0 8 15">
+                <defs>
+                  <style>
+                    .el_arrow_a{fill:rgba(255,255,255,0);}
+                    .el_arrow_b{clip-path:url(#a);}
+                    .el_arrow_c{fill:#ffffff;}
+                  </style>
+                  <clipPath id="a">
+                    <rect class="el_arrow_a" width="15" height="8" transform="translate(11144 7789)"></rect>
+                  </clipPath>
+                </defs>
+                <g class="el_arrow_b" transform="translate(-7789 11159) rotate(-90)">
+                  <g transform="translate(-2226.253 10173.587) rotate(-45)">
+                    <rect class="el_arrow_c" width="1" height="10" transform="translate(11140 7769)"></rect>
+                    <rect class="el_arrow_c" width="1" height="10" transform="translate(11140 7779) rotate(-90)"></rect>
+                  </g>
+                </g>
+              </svg>
+            </div></a>
+        </div>
+      </section>
+      <section class="bl_sect">
+        <figure class="un_homeImg_figure"><img src="./assets/images/home/img_homeImg.webp" alt=""></figure>
+      </section>
+      <section class="bl_sect un_AreaVoice">
+        <div class="ly_cont">
+          <div class="bl_gridConts">
+            <div class="bl_grid_item js_fadein">
+              <h2 class="el_lv2Heading hp_en js_fadein"><span>ひがしん支店巡り</span>Area</h2>
+              <div class="bl_grid_item_figure"><img src="./assets/images/home/img_area.webp" alt=""></div>
+              <p class="bl_grid_item_txt">東京の東エリアを中心に、埼玉や千葉にも支店を展開するひがしん。各エリアや支店ごとにどのような特徴があるのか。それぞれの支店で働く若手職員に特徴を聞いてみました。</p><a class="el_btn el_btn__more hp_en" href="./"><span>View More</span>
+                <div class="el_arrow">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="8" height="15" viewBox="0 0 8 15">
+                    <defs>
+                      <style>
+                        .el_arrow_a{fill:rgba(255,255,255,0);}
+                        .el_arrow_b{clip-path:url(#a);}
+                        .el_arrow_c{fill:#ffffff;}
+                      </style>
+                      <clipPath id="a">
+                        <rect class="el_arrow_a" width="15" height="8" transform="translate(11144 7789)"></rect>
+                      </clipPath>
+                    </defs>
+                    <g class="el_arrow_b" transform="translate(-7789 11159) rotate(-90)">
+                      <g transform="translate(-2226.253 10173.587) rotate(-45)">
+                        <rect class="el_arrow_c" width="1" height="10" transform="translate(11140 7769)"></rect>
+                        <rect class="el_arrow_c" width="1" height="10" transform="translate(11140 7779) rotate(-90)"></rect>
+                      </g>
+                    </g>
+                  </svg>
+                </div></a>
+            </div>
+            <div class="bl_grid_item js_fadein">
+              <h2 class="el_lv2Heading hp_en js_fadein"><span>ひがしんアンケート</span>Voice</h2>
+              <div class="bl_grid_item_figure"><img src="./assets/images/home/img_voice.webp" alt=""></div>
+              <p class="bl_grid_item_txt">ひがしんの職員や内定者は金庫や仕事に対してどのような想いを抱いているのか。さまざまな年代・職種の職員や内定者に匿名アンケートを実施し、本音に迫りました。</p><a class="el_btn el_btn__more hp_en" href="./"><span>View More</span>
+                <div class="el_arrow">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="8" height="15" viewBox="0 0 8 15">
+                    <defs>
+                      <style>
+                        .el_arrow_a{fill:rgba(255,255,255,0);}
+                        .el_arrow_b{clip-path:url(#a);}
+                        .el_arrow_c{fill:#ffffff;}
+                      </style>
+                      <clipPath id="a">
+                        <rect class="el_arrow_a" width="15" height="8" transform="translate(11144 7789)"></rect>
+                      </clipPath>
+                    </defs>
+                    <g class="el_arrow_b" transform="translate(-7789 11159) rotate(-90)">
+                      <g transform="translate(-2226.253 10173.587) rotate(-45)">
+                        <rect class="el_arrow_c" width="1" height="10" transform="translate(11140 7769)"></rect>
+                        <rect class="el_arrow_c" width="1" height="10" transform="translate(11140 7779) rotate(-90)"></rect>
+                      </g>
+                    </g>
+                  </svg>
+                </div></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="bl_sect un_recruit">
+        <div class="ly_cont">
+          <h2 class="el_lv2Heading hp_en js_fadein"><span>採用情報</span>Recruit</h2>
+          <div class="un_recruitConts">
+            <div class="un_recruit_item">
+              <figure class="un_recruit_figure"><img src="./assets/images/home/img_recruit_en.webp" alt=""></figure>
+              <div class="un_recruit_ttl hp_en">Environment</div>
+              <div class="un_recruit_txt">働く環境</div>
+            </div>
+            <div class="un_recruit_item">
+              <figure class="un_recruit_figure"><img src="./assets/images/home/img_recruit_ed.webp" alt=""></figure>
+              <div class="un_recruit_ttl hp_en">Education</div>
+              <div class="un_recruit_txt">人材育成</div>
+            </div>
+            <div class="un_recruit_item">
+              <figure class="un_recruit_figure"><img src="./assets/images/home/img_recruit_re.webp" alt=""></figure>
+              <div class="un_recruit_ttl hp_en">Requirements</div>
+              <div class="un_recruit_txt">募集要項</div>
+            </div>
+            <div class="un_recruit_item">
+              <figure class="un_recruit_figure"><img src="./assets/images/home/img_recruit_faq.webp" alt=""></figure>
+              <div class="un_recruit_ttl hp_en">Faq</div>
+              <div class="un_recruit_txt">よくある質問</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="ly_cont">
+        <section class="bl_sect un_other">
+          <div class="un_otherConts"><a class="el_btn el_btn__entry hp_en" href="./message/"><span>ENTRY</span></a></div>
+        </section>
+      </div>
+    </main>
+    <div class="ly_footer">
+      <div class="un_loopSlider">
+        <div class="un_loopSlider_font hp_en"><span>Higashin Recruiting Website</span><span>Higashin Recruiting Website</span></div>
+      </div>
+      <div class="ly_cont">
+        <div class="bl_footerNav">
+          <div class="bl_footerNav_list"><a class="bl_footerConts_logo" id="js_logo" href="./">
+              <div class="el_logo"><img src="./assets/images/common/icon_logo.svg" alt=""></div>
+              <p class="bl_footerConts_txt hp_en">新卒採用サイト</p></a><a class="bl_footerNav_item" href="./">
+              <div class="bl_footerNav_ttl"><span class="hp_en">Top</span>トップページ</div></a><a class="bl_footerNav_item" href="./about">
+              <div class="bl_footerNav_ttl"><span class="hp_en">About</span>ひがしんのこと</div></a><a class="bl_footerNav_item" href="./business">
+              <div class="bl_footerNav_ttl"><span class="hp_en">Business</span>ひがしんの仕事</div></a></div>
+          <div class="bl_footerNav_list">
+            <div class="bl_footerNav_item">
+              <div class="bl_footerNav_item_inner"><a class="bl_footerNav_ttl2 bl_footerNav_ttl__accordion2" href="./#"><span class="hp_en">People</span>ひがしんの人々</a>
+                <div class="bl_footerNav_ttl bl_footerNav_ttl__accordion"></div>
+              </div>
+              <div class="bl_footerNavChild bl_footerNavChild__accordion"><a class="bl_footerNavChild_link" href="./">営業／2022年入庫</a><a class="bl_footerNavChild_link" href="./">融資／2021年入庫</a><a class="bl_footerNavChild_link" href="./">事務／2020年入庫</a><a class="bl_footerNavChild_link" href="./">マネーアドバイザー／2022年入庫</a><a class="bl_footerNavChild_link" href="./">お客様サポート部／2011年入庫</a></div>
+            </div>
+            <div class="bl_footerNav_item">
+              <div class="bl_footerNav_item_inner"><a class="bl_footerNav_ttl2 bl_footerNav_ttl__accordion2" href="./culture"><span class="hp_en">Culture</span>ひがしんの社風</a>
+                <div class="bl_footerNav_ttl bl_footerNav_ttl__accordion"></div>
+              </div>
+              <div class="bl_footerNavChild bl_footerNavChild__accordion"><a class="bl_footerNavChild_link" href="./culture/01">上司×部下対談</a><a class="bl_footerNavChild_link" href="./culture/02">若手同期座談会</a><a class="bl_footerNavChild_link" href="./culture/03">営業×マネーアドバイザー対談</a></div>
+            </div>
+          </div>
+          <div class="bl_footerNav_list">
+            <div class="bl_footerNav_item">
+              <div class="bl_footerNav_item_inner"><a class="bl_footerNav_ttl2 bl_footerNav_ttl__accordion2" href="./career"><span class="hp_en">Career</span>ひがしんのキャリア</a>
+                <div class="bl_footerNav_ttl bl_footerNav_ttl__accordion"></div>
+              </div>
+              <div class="bl_footerNavChild bl_footerNavChild__accordion"><a class="bl_footerNavChild_link" href="./career/nakahara">支店長／1996年入庫</a><a class="bl_footerNavChild_link" href="./">支店長／1990年入庫</a></div>
+            </div>
+            <div class="bl_footerNav_item">
+              <div class="bl_footerNav_ttl"><span class="hp_en">Area</span>ひがしん支店巡り</div>
+            </div>
+            <div class="bl_footerNav_item">
+              <div class="bl_footerNav_item_inner"><a class="bl_footerNav_ttl2 bl_footerNav_ttl__accordion2" href="./#"><span class="hp_en">Voice</span>ひがしんアンケート</a>
+                <div class="bl_footerNav_ttl bl_footerNav_ttl__accordion"></div>
+              </div>
+              <div class="bl_footerNavChild bl_footerNavChild__accordion"><a class="bl_footerNavChild_link" href="./">職員アンケート</a><a class="bl_footerNavChild_link" href="./">内定者アンケート</a></div>
+            </div>
+          </div>
+          <div class="bl_footerNav_list">
+            <div class="bl_footerNav_item">
+              <div class="bl_footerNav_item_inner"><a class="bl_footerNav_ttl2 bl_footerNav_ttl__accordion2" href="./#"><span class="hp_en">Recruit</span>採用情報</a>
+                <div class="bl_footerNav_ttl bl_footerNav_ttl__accordion"></div>
+              </div>
+              <div class="bl_footerNavChild bl_footerNavChild__accordion"><a class="bl_footerNavChild_link" href="./">働く環境</a><a class="bl_footerNavChild_link" href="./">人材育成</a><a class="bl_footerNavChild_link" href="./">募集要項</a><a class="bl_footerNavChild_link" href="./">よくある質問</a></div>
+            </div>
+            <div class="bl_footerCopyUnit"><a class="bl_footerCopyBlank" href="https://www.higashin.co.jp/" target="_blank"><span>東京東信用金庫サイト</span>
+                <div class="el_logo"><img src="./assets/images/common/icon_blank.svg" alt=""></div></a><small class="bl_footerCopyright hp_en">&copy; The Tokyo Higashi Shinkin Bank.<br class="hp_pcOnly">All Rights Reserved.</small></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const swiper = new Swiper(".swiper", {
+      	loop: true,
+      	simulateTouch: false,
+      	effect: 'fade', // フェード効果を追加
+      	fadeEffect: {
+      		crossFade: true // スムーズなフェードを確保
+      	},
+      	speed: 800, // トランジションの速度を調整
+      	//- ページネーション
+      	pagination: {
+      		el: ".swiper-pagination",
+      		type: "fraction", // 枚数表示
+      		renderFraction: function (currentClass, totalClass) {
+      			return '<span class="' + currentClass + '"></span><span class="' + totalClass + '"></span>';
+      		}
+      	},
+      	//- 前後の矢印
+      	navigation: {
+      		nextEl: ".swiper-button-next",
+      		prevEl: ".swiper-button-prev",
+      	},
+      });
+    </script>
   </body>
 </html>

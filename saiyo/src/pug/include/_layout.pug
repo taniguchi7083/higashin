@@ -19,25 +19,25 @@ html(lang="ja")
 
 	body#js_body(class=bodyClass)
 		if h1_setting
-			//- ローディング画面は常に含む
-			#bl_loading
-			//- アニメーション
-			.bl_startAnime
-				.bl_anime_circle
-					.circle.circle1
-					.circle.circle2
-					.circle.circle3
-				.un_MVtxt.js_MVanime
-					.text
-						| この街を
-						span 縁
-						| でつなぐ。
-					.text
-						a.bl_headerConts_logo#js_logo(href=link_path + "")
-							.el_logo
-								img(src=img_path + "/common/icon_logo.svg", alt="")
-			//- アニメーション
-			.ly_wrap.img-wrap
+				//- //- ローディング画面は常に含む
+				//- #bl_loading
+				//- //- アニメーション
+				//- .bl_startAnime
+				//- 	.bl_anime_circle
+				//- 		.circle.circle1
+				//- 		.circle.circle2
+				//- 		.circle.circle3
+				//- 	.un_MVtxt.js_MVanime
+				//- 		.text
+				//- 			| この街を
+				//- 			span 縁
+				//- 			| でつなぐ。
+				//- 		.text
+				//- 			a.bl_headerConts_logo#js_logo(href=link_path + "")
+				//- 				.el_logo
+				//- 					img(src=img_path + "/common/icon_logo.svg", alt="")
+				//- //- アニメーション
+				//- .ly_wrap.img-wrap
 				block bodyClass
 				include ../layout/_header
 				block content

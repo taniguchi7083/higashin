@@ -362,18 +362,20 @@
     color: transparent;
     background-color: #fff;
     clip-path: inset(0 100% 0 0);
-    animation: drawMarker 1s cubic-bezier(0.75, 0, 0.25, 1) forwards;
+    // animation: drawMarker 1s cubic-bezier(0.75, 0, 0.25, 1) forwards;
+    animation: drawMarker 1.4s ease-out forwards;
     padding: 16rem 24rem;
     border-radius: 16rem;
   }
 
   .text {
-    font-size: 64rem;
+    font-size: 56rem;
     font-weight: 700;
     letter-spacing: 0.16em;
     color: black;
     clip-path: inset(0 100% 0 0);
-    animation: drawText 1s cubic-bezier(0.75, 0, 0.25, 1) forwards;
+    // animation: drawText 1s cubic-bezier(0.75, 0, 0.25, 1) forwards;
+    animation: drawText 1.4s ease-out forwards;
 
     &>span {
       color: var(--color_secondary);
@@ -387,8 +389,8 @@
     .un_MVtxt {
       position: absolute;
       z-index: 1;
-      top: 180rem;
-      left: 120rem;
+      right: 80rem;
+      bottom: 120rem;
 
       @media (max-width: 768px) {
         top: auto;
@@ -398,12 +400,12 @@
     }
   }
 
-  .un_MVtxt {
-    position: absolute;
-    z-index: 1;
-    top: 180rem;
-    left: 120rem;
-  }
+  // .un_MVtxt {
+  //   position: absolute;
+  //   z-index: 1;
+  //   top: 180rem;
+  //   left: 120rem;
+  // }
 
   .marker {
     animation-delay: 4s;
