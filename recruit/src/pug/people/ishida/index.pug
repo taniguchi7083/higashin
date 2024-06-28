@@ -1,0 +1,358 @@
+//- _layout.pugを読み込みテンプレートとして使用する
+extends ../../include/_layout
+
+block config
+	include ../../include/_config
+	- var page = pagelist['ishida'];
+	- var h1_setting = false;
+	- var path = '../../assets/';
+	- var img_path = path + 'images';
+	- var link_path = '../../';
+	- var bodyClass = 'pg_people pg_sec pg_third'
+
+//- index.htmlにのみ必要なcssファイル
+block append head
+	link(rel="stylesheet" href=path+"css/swiper.min.css")
+	script(src=path+"js/swiper.min.js")
+	script(src="https://cdn.jsdelivr.net/npm/chart.js")
+
+block bodyClass
+block content
+	//- 背景アニメーション
+	+floating-parts
+	main.ly_main
+		//- -------------------------------------------------------------------
+		//- MV
+		//- -------------------------------------------------------------------
+		section.bl_MV
+			//- スクロール文字
+			.un_loopSlider
+				.un_loopSlider_font.hp_en
+					span Kaito Ishida Kaito Ishida
+					span Kaito Ishida Kaito Ishida
+			.ly_cont
+				.bl_comnMV
+					h1.el_MVthirdHeading
+						span.hp_en People
+						|営業
+					.un_MVtxt.js_MVanime
+						.marker
+							.text
+								|接する相手の目線に立ち、
+						.marker.hp_mt
+							.text
+								|最善を尽くす。
+					p.un_MVtxt_small
+						|※内容は取材当時のものです
+
+					.bl_anime_circle
+						.circle.circle1
+						.circle.circle2
+						.circle.circle3
+						figure.bl_anime_circle_figure
+							img(src=img_path+"/people/ishida/img_people_mv.webp", alt="")
+						.bl_anime_circle_item
+							|石田 海斗
+							br
+							span
+								|2022年入庫
+								br
+								|商経学部卒
+
+		//- -------------------------------------------------------------------
+		//- box
+		//- -------------------------------------------------------------------
+		section.bl_sect.bl_box.js_fadein
+			.ly_cont
+				.bl_boxUnit
+					figure.bl_box_figure
+						img(src=img_path+"/people/img_time_icon.webp", alt="")
+					h2.bl_box_ttl
+						span.hp_en One Day Schedule
+						|ひがしんの1日
+				.bl_box_time
+					.bl_box_time_col
+						p.bl_box_time_ttl
+							span.hp_en 8:30
+							|出社
+						p.bl_box_time_ttl
+							span.hp_en 8:45
+							|午前の訪問に向け、預金伝票や提案資料（商品チラシ）を準備する
+						p.bl_box_time_ttl
+							span.hp_en 9:15
+							|個人・法人のお客さま先に定例の集金や振込の預かり、税金支払いに伺う
+						p.bl_box_time_ttl
+							span.hp_en 12:00
+							|一旦営業先から支店に戻り、営業課のメンバーと昼食を取る
+						p.bl_box_time_ttl
+							span.hp_en 13:00
+							|午後もお客さまへ向かい、融資や保険を提案。1日15〜30件訪問する
+						p.bl_box_time_ttl
+							span.hp_en 16:00
+							|訪問で預かったお金の入金や伝票の処理など締め作業を行う
+					.bl_box_time_col
+						p.bl_box_time_ttl
+							span.hp_en 17:00
+							|ご相談を受けた融資案件の情報をまとめ、保証協会への申請書を作成する
+						p.bl_box_time_ttl
+							span.hp_en 17:15
+							|退社
+
+		//- -------------------------------------------------------------------
+		//- topic
+		//- -------------------------------------------------------------------
+		section.bl_sect
+			.bl_topic
+				.bl_topic_left.hp_pcOnly
+						.bl_stickyImg_wrap
+							.bl_stickyImg.is_active(data-image="1")
+								img(src=img_path+"/people/ishida/img_people_topic_01.webp", alt="Image 1")
+							.bl_stickyImg(data-image="2")
+								img(src=img_path+"/people/ishida/img_people_topic_02.webp", alt="Image 2")
+							.bl_stickyImg(data-image="3")
+								img(src=img_path+"/people/ishida/img_people_topic_03.webp", alt="Image 3")
+							.bl_stickyImg(data-image="4")
+								img(src=img_path+"/people/ishida/img_people_topic_04.webp", alt="Image 3")
+				.bl_topic_right
+						//- data-image="1"
+						.bl_topic_item(data-image="1")
+							.bl_stickyImg.hp_spOnly.hp_mb
+								img(src=img_path+"/people/ishida/img_people_topic_01.webp")
+							.bl_topic_item_inner
+								.un_messageUnit
+									.el_thirdHeading_wrap
+										h2.el_thirdHeading
+											span.hp_en Career 01
+										.bl_anime_circle
+											.circle.circle1
+											.circle.circle2
+											.circle.circle3
+									h2.el_thirdHeading
+										span ひがしんへの入庫理由
+								h2.bl_topic_item_ttl 
+									|地域に貢献しながら、
+									br
+									|自らも成長したいと思った。
+								p.bl_topic_item_txt
+									|私は幼少期から野球を始め、大学でも野球部に所属していました。そのため、地域の少年野球チームに関わる機会があり、将来的には地域住民に貢献できる仕事がしたいと思い、地方公務員や信用金庫を志望していました。特に信用金庫は他の民間企業とは異なり非営利組織であるため、地域密着型でお客さまとの距離も近く、魅力的な存在でした。ひがしんには大学時代の野球部の先輩が勤務しており、先輩からも「成長できる職場だし、野球も続けられる環境だよ」と助言をもらっていました。地域に貢献しながら野球も続けられることから、ひがしんへの入庫を決めました。
+							.bl_topic_item_inner
+								.un_messageUnit
+									.el_thirdHeading_wrap
+										h2.el_thirdHeading
+											span.hp_en Career 02
+									h2.el_thirdHeading
+										span 現在の仕事内容
+								h2.bl_topic_item_ttl
+									|ニーズに合わせた
+									br
+									|最適な商品を提案する。
+								p.bl_topic_item_txt
+									|現在は営業課の一員として、個人と法人両方のお客さまを担当しています。個人のお客さまであれば、お客さま先にお伺いし、集金を行ったり、相続商品や資産運用の提案をしたりしています。昨今、資産形成に関するお客さまの関心が高まっているため、お客さまにしっかりとNISAや保険といった金融商品をご案内できるよう、日々の勉強が欠かせません。また、法人のお客さまであれば、融資やビジネスマッチングのご提案などを行っています。個人と法人で営業の手法は異なりますが、どちらもお客さまのニーズを常に探り、先回りして解決していくことが私の役割だと思っています。
+
+						//- data-image="2"
+						.bl_topic_item(data-image="2")
+							.bl_stickyImg.hp_spOnly
+								img(src=img_path+"/people/ishida/img_people_topic_02.webp")
+							.bl_topic_item_inner
+								.un_messageUnit
+									.el_thirdHeading_wrap
+										h2.el_thirdHeading
+											span.hp_en Topic 03
+									h2.el_thirdHeading
+										span 仕事のやりがいと苦労すること
+								h2.bl_topic_item_ttl 
+									|「ありがとう」という一言が
+									br
+									|原動力に変わる。
+								p.bl_topic_item_txt
+									|営業担当としてやりがいを感じる瞬間は、お客さまのお役に立てたときです。以前、設備投資を考えていた法人のお客さまから融資のご相談をいただき、当庫内で検討を重ねた末、無事に融資を実行できることに。その際、お客さまから「ありがとう。石田くんのおかげだよ」と感謝のお言葉をいただき、喜びで胸がいっぱいになりました。一方で、掲げた目標数字を達成することには苦労します。会社から与えられるノルマはなく、「自主目標」という形で自ら目標を設定するため、その数字には責任を持たなければなりません。努力を重ねていても結果につながらないこともありますが、その際はしっかりと原因を考え、改善策を実行するように意識しています。
+							.bl_topic_item_inner
+								.un_messageUnit
+									.el_thirdHeading_wrap
+										h2.el_thirdHeading
+											span.hp_en Topic 04
+									h2.el_thirdHeading
+										span 仕事で心がけていること
+								h2.bl_topic_item_ttl
+									|密なコミュニケーションで
+									br
+									|深い信頼関係を築く。
+								p.bl_topic_item_txt
+									|担当するお客さまや同僚である職員と密にコミュニケーションを取るようにしています。営業の仕事は私一人では完結することができず、稟議書を作成し、融資を実行する融資担当や必要書類を作成する事務担当などのサポートが必要不可欠です。そのため、そうした各担当との連携を深め、お客さまのご要望に対してスピーディーに対応することを意識しています。また、お客さまとの会話を重ねる中で、金融の知識や各業界の市況感を知ることができます。一人のビジネスパーソンとして自分自身を成長させることができる瞬間でもあるため、お客さまとのコミュニケーションも大切にしています。
+
+						//- data-image="3"
+						.bl_topic_item(data-image="3")
+							.bl_stickyImg.hp_spOnly
+								img(src=img_path+"/people/ishida/img_people_topic_03.webp")
+							.bl_topic_item_inner
+								.un_messageUnit
+									.el_thirdHeading_wrap
+										h2.el_thirdHeading
+											span.hp_en Topic 05
+									h2.el_thirdHeading
+										span 成長を感じた瞬間
+								h2.bl_topic_item_ttl 
+									|大型案件に挑むことで得た、
+									br
+									|失敗と学び。
+								p.bl_topic_item_txt
+									|印象的だったのは、営業担当として業務を少しずつ覚えてきた頃、とあるお客さまからご相談いただいた大型融資案件です。普段から営業活動や融資に関する研修には前向きに取り組んでいましたが、いざ具体的な案件を前にした際、自らの力不足を痛感することに。お客さまから融資の手続きに関する質問を受けても、詳細を把握できておらず、「会社に戻って確認します」とその場で話を進めることができませんでした。結果的に、上司に同席してもらい、お客さまとコミュニケーションを重ねたことで融資の実行まで辿り着いたものの、自らの知識不足を認識する出来事となりました。それ以来、できる限り一人で対応できるよう、業務外での資格取得に励むなど、より知見を広げるために行動するようになりました。
+							.bl_topic_item_inner
+								.un_messageUnit
+									.el_thirdHeading_wrap
+										h2.el_thirdHeading
+											span.hp_en Topic 06
+									h2.el_thirdHeading
+										span ひがしんの好きなところ
+								h2.bl_topic_item_ttl
+									|研修を通じて
+									br
+									|実践的な知識が身につく。
+								p.bl_topic_item_txt
+									|ひがしんでは総合職育成プログラムを通じて、事務・融資・預かり資産・営業といった仕事内容を約1年かけて学んだ後、営業課兼マネーアドバイザーへ配属になります。入庫当初は金融知識や営業経験もない中で業務に臨むことに不安を抱えていましたが、ひがしんでは研修を通じて、1年間手厚くサポートしてもらえるため、着実に知識を身につけることができました。もちろん研修だけですべてを理解できるわけではありませんが、困難に直面したとき、研修時に学んだことをベースに解決に導けることがありました。そうした点から、当庫は着実にステップアップできる環境だと感じています。また、私はひがしんの野球部に所属していますが、休日の大会などで職員の方々が応援に来てくださるなど組織としての一体感があることも魅力です。
+
+						//- data-image="4"
+						.bl_topic_item(data-image="4")
+							.bl_stickyImg.hp_spOnly
+								img(src=img_path+"/people/ishida/img_people_topic_04.webp")
+							.bl_topic_item_inner
+								.un_messageUnit
+									.el_thirdHeading_wrap
+										h2.el_thirdHeading
+											span.hp_en Topic 07
+									h2.el_thirdHeading
+										span 今後の目標
+								h2.bl_topic_item_ttl 
+									|お客さまから頼られる
+									br
+									|営業担当になる。
+								p.bl_topic_item_txt
+									|営業の仕事では、正確性とスピード感がお客さまとの信頼関係を深める重要な要素になります。例えば、融資の手続きに必要な書類を作成する際、不備があればお客さまにお手間を取らせてしまいますし、融資の検討にも時間がかかってしまいます。逆に素早く手配し、融資を実行することができれば、お客さまもいち早く設備の購入や賞与・税金の支払いなどを進めることができます。お客さまの中には資金繰りの問題で一刻を争うケースもあるため、迅速な対応を常に意識しています。今はまだ力不足ですが、勉強と経験を重ね、お客さまから「石田さんなら、すぐに対応してくれる」と思っていただけるような営業担当を目指したいです。
+
+		//- -------------------------------------------------------------------
+		//- Column
+		//- -------------------------------------------------------------------
+		section.bl_sect
+			.ly_cont
+				.bl_column_label
+					span.hp_en Column
+					|ひがしんでつなぐ縁
+				.bl_column
+					.bl_column_inner
+						.bl_column_ttl
+							|営業課のムードメーカー、
+							br
+							|若手のエースに！
+						p.bl_column_txt
+							|石田くんには、マンツーマンで営業活動のサポートや指導を行っていますが、非常に活発で、営業活動に対してもアグレッシブに行動している印象です。こちらからの指示や質問などにも、ハキハキと元気に応えてくれるので、とても教えがいがあります。持ち前の積極性と明るさで営業課のムードメーカー、そして若手のエースとして成長してくれることを期待しています。これからも一緒にひがしんを盛り上げていけるよう、頑張りましょう！
+						.bl_column_smTxt
+							|※内容は取材当時のものです
+					.bl_column_figure_wrap
+						figure.bl_column_figure
+							img(src=img_path+"/people/ishida/img_people_column.webp", alt="")
+						.bl_column_figure_ttl
+							|熊田 将大
+							br
+							span 
+								|営業課 係長
+								br
+								|2016年入庫
+
+		//- -------------------------------------------------------------------
+		//- figure
+		//- -------------------------------------------------------------------
+		section.bl_sect
+			.ly_cont
+				figure.bl_bg_figure
+					img(src=img_path+"/people/ishida/img_people_bg.webp", alt="")
+
+		//- -------------------------------------------------------------------
+		//- figure
+		//- -------------------------------------------------------------------
+		section.bl_sect.un_lineSect.js_fadein
+			.ly_cont
+				h2.un_lineSect_ttl.hp_en
+					|Other People
+				.un_lineSect_inner
+					//- a.bl_slide_item(href=link_path+"")
+					//- 	figure.bl_slide_item_figure
+					//- 		img(src=img_path+"/home/img_people_01.webp", alt="")
+					//- 	.bl_slide_item_circle
+					//- 		|営業
+					//- 		br
+					//- 		span 
+					//- 			|2022年入庫
+					//- 			br
+					//- 			|商経学部卒
+					a.bl_slide_item(href=link_path+"")
+						figure.bl_slide_item_figure
+							img(src=img_path+"/home/img_people_02.webp", alt="")
+						.bl_slide_item_circle
+							|融資
+							br
+							span 
+								|2021年入庫
+								br
+								|生活科学部卒
+					a.bl_slide_item(href=link_path+"")
+						figure.bl_slide_item_figure
+							img(src=img_path+"/home/img_people_03.webp", alt="")
+						.bl_slide_item_circle
+							|事務
+							br
+							span 
+								|2020年入庫
+								br
+								|産業科卒
+					a.bl_slide_item(href=link_path+"")
+						afigure.bl_slide_item_figure
+							img(src=img_path+"/home/img_people_04.webp", alt="")
+						.bl_slide_item_circle
+							|MA
+							br
+							span
+								|2022年入庫
+								br
+								|地域創生学部卒
+					a.bl_slide_item(href=link_path+"")
+						figure.bl_slide_item_figure
+							img(src=img_path+"/home/img_people_05.webp", alt="")
+						.bl_slide_item_circle
+							|お客様
+							br
+							|サポート部
+							span 
+								|2011年入庫
+								br
+								|経営学部卒
+
+
+		//- -------------------------------------------------------------------
+		//- other
+		//- -------------------------------------------------------------------
+		+other-parts
+
+//- index.htmlにのみ必要なjsファイル
+block append script
+	script.
+		window.addEventListener('scroll', function () {
+			const sections = document.querySelectorAll('.bl_topic_right .bl_topic_item');
+			const images = document.querySelectorAll('.bl_stickyImg');
+			let currentImage = null;
+
+			sections.forEach((section) => {
+				const rect = section.getBoundingClientRect();
+				if (rect.top <= 0 && rect.bottom >= 0) {
+					const imageId = section.getAttribute('data-image');
+					currentImage = document.querySelector(`.bl_stickyImg[data-image="${imageId}"]`);
+				}
+			});
+
+			if (currentImage) {
+				images.forEach(image => {
+					image.classList.remove('is_active');
+				});
+				currentImage.classList.add('is_active');
+			}
+		});
+

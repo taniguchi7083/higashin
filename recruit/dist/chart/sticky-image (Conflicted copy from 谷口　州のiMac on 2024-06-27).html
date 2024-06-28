@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sticky Image with Scroll</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: flex;
+    }
+
+    .left {
+      position: relative;
+      width: 50%;
+    }
+
+    #sticky-image-container {
+      position: sticky;
+      top: 0;
+    }
+
+    #sticky-image {
+      width: 100%;
+    }
+
+    .right {
+      width: 50%;
+    }
+
+    section {
+      background: #f0f0f0;
+      padding: 40px;
+      box-sizing: border-box;
+    }
+
+    section h2 {
+      margin-top: 0;
+    }
+
+    p {
+      line-height: 4;
+    }
+  </style>
+</head>
+
+<body>
+  <section data-image="../assets/images/about/img_about_04.webp">
+    <h2>セクション4</h2>
+    <p>追加のテキスト行1</p>
+    <p>追加のテキスト行2</p>
+    <p>追加のテキスト行3</p>
+    <p>追加のテキスト行4</p>
+    <p>追加のテキスト行5</p>
+    <p>追加のテキスト行6</p>
+    <p>追加のテキスト行7</p>
+    <p>追加のテキスト行8</p>
+    <p>追加のテキスト行9</p>
+    <p>追加のテキスト行10</p>
+  </section>
+  <div class="container">
+    <div class="left">
+      <div id="sticky-image-container">
+        <img id="sticky-image" src="../assets/images/about/img_about_01.webp" alt="Image 1">
+      </div>
+    </div>
+    <div class="right">
+      <section data-image="../assets/images/about/img_about_01.webp">
+        <h2>セクション1</h2>
+        <p>追加のテキスト行1</p>
+        <p>追加のテキスト行2</p>
+        <p>追加のテキスト行3</p>
+        <p>追加のテキスト行4</p>
+        <p>追加のテキスト行5</p>
+        <p>追加のテキスト行6</p>
+        <p>追加のテキスト行7</p>
+        <p>追加のテキスト行8</p>
+        <p>追加のテキスト行9</p>
+        <p>追加のテキスト行10</p>
+      </section>
+      <section data-image="../assets/images/about/img_about_02.webp">
+        <h2>セクション2</h2>
+        <p>追加のテキスト行1</p>
+        <p>追加のテキスト行2</p>
+        <p>追加のテキスト行3</p>
+        <p>追加のテキスト行4</p>
+        <p>追加のテキスト行5</p>
+        <p>追加のテキスト行6</p>
+        <p>追加のテキスト行7</p>
+        <p>追加のテキスト行8</p>
+        <p>追加のテキスト行9</p>
+        <p>追加のテキスト行10</p>
+      </section>
+      <section data-image="../assets/images/about/img_about_03.webp">
+        <h2>セクション3</h2>
+        <p>追加のテキスト行1</p>
+        <p>追加のテキスト行2</p>
+        <p>追加のテキスト行3</p>
+        <p>追加のテキスト行4</p>
+        <p>追加のテキスト行5</p>
+        <p>追加のテキスト行6</p>
+        <p>追加のテキスト行7</p>
+        <p>追加のテキスト行8</p>
+        <p>追加のテキスト行9</p>
+        <p>追加のテキスト行10</p>
+      </section>
+      <section data-image="../assets/images/about/img_about_04.webp">
+        <h2>セクション4</h2>
+        <p>追加のテキスト行1</p>
+        <p>追加のテキスト行2</p>
+        <p>追加のテキスト行3</p>
+        <p>追加のテキスト行4</p>
+        <p>追加のテキスト行5</p>
+        <p>追加のテキスト行6</p>
+        <p>追加のテキスト行7</p>
+        <p>追加のテキスト行8</p>
+        <p>追加のテキスト行9</p>
+        <p>追加のテキスト行10</p>
+      </section>
+    </div>
+  </div>
+  <section data-image="../assets/images/about/img_about_04.webp">
+    <h2>セクション4</h2>
+    <p>追加のテキスト行1</p>
+    <p>追加のテキスト行2</p>
+    <p>追加のテキスト行3</p>
+    <p>追加のテキスト行4</p>
+    <p>追加のテキスト行5</p>
+    <p>追加のテキスト行6</p>
+    <p>追加のテキスト行7</p>
+    <p>追加のテキスト行8</p>
+    <p>追加のテキスト行9</p>
+    <p>追加のテキスト行10</p>
+  </section>
+  <script>
+    document.addEventListener('scroll', function () {
+      const sections = document.querySelectorAll('.right section');
+      const stickyImage = document.getElementById('sticky-image');
+      let currentImage = stickyImage.src;
+
+      sections.forEach(section => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= 0 && rect.bottom >= 0) {
+          const newImage = section.getAttribute('data-image');
+          if (currentImage !== newImage) {
+            stickyImage.src = newImage;
+            currentImage = newImage;
+          }
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

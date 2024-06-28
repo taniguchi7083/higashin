@@ -1,0 +1,169 @@
+//- _layout.pugを読み込みテンプレートとして使用する
+extends ../include/_layout
+
+block config
+	include ../include/_config
+	- var page = pagelist['people'];
+	- var h1_setting = false;
+	- var path = '../assets/';
+	- var img_path = path + 'images';
+	- var link_path = '../';
+	- var bodyClass = 'pg_people pg_sec'
+
+//- index.htmlにのみ必要なcssファイル
+block append head
+	//- link(rel="stylesheet" href=path+"css/swiper.min.css")
+	//- script(src=path+"js/swiper.min.js")
+	//- script(src="https://cdn.jsdelivr.net/npm/chart.js")
+
+block bodyClass
+block content
+	//- 背景アニメーション
+	+floating-parts
+	main.ly_main
+		//- -------------------------------------------------------------------
+		//- career
+		//- -------------------------------------------------------------------
+		section.bl_MV
+			.ly_cont
+				.bl_comnMV
+
+					.el_lv2Heading_wrap
+						h1.el_lv2Heading.hp_en.js_fadein
+							span ひがしんの人々
+							|People
+
+					.bl_anime_circle
+						.circle.circle1
+						.circle.circle2
+						.circle.circle3
+						.bl_anime_circle_txt
+							|縁をつなぐ人々。
+
+		//- 石田 海斗
+		section.bl_sect.bl_career.js_fadein
+			.ly_cont
+				.bl_career_inner
+					figure.bl_career_figure
+						img(src=img_path+"/people/img_people_01.webp", alt="")
+						.bl_anime_circle_item
+							|営業
+							br
+							span 
+								|2022年入庫
+								br
+								|商経学部卒
+					.bl_careerUnit
+						h2.bl_career_ttl
+							|接する相手の目線に立ち、
+							br
+							|最善を尽くす。
+						a.bl_career_more(href=link_path+"people/ishida")
+							|石田 海斗
+							.bl_career_more_btm
+								+icon_arrow
+
+		//- 岩元 洋果
+		section.bl_sect.bl_career.bl_career_reverse.js_fadein
+			.ly_cont
+				.bl_career_inner
+					figure.bl_career_figure
+						img(src=img_path+"/people/img_people_02.webp", alt="")
+						.bl_anime_circle_item
+							|融資
+							br
+							span 
+								|2021年入庫
+								br
+								|生活科学部卒
+					.bl_careerUnit
+						h2.bl_career_ttl
+							|融資を通じて、
+							br
+							|お客さまの現在と
+							br
+							|未来をつなぐ。
+						a.bl_career_more(href=link_path+"people/iwamoto")
+							|岩元 洋果
+							.bl_career_more_btm
+								+icon_arrow
+
+		//- 小笠原 茉那
+		section.bl_sect.bl_career.js_fadein
+			.ly_cont
+				.bl_career_inner
+					figure.bl_career_figure
+						img(src=img_path+"/people/img_people_03.webp", alt="")
+						.bl_anime_circle_item
+							|事務
+							br
+							span
+								|2020年入庫
+								br
+								|産業科卒
+					.bl_careerUnit
+						h2.bl_career_ttl
+							|ひがしんの顔として、
+							br
+							|お客さまと会社をつなぐ。
+						a.bl_career_more(href=link_path+"people/ogasawara")
+							|小笠原 茉那
+							.bl_career_more_btm
+								+icon_arrow
+
+		//- 山田 華織
+		section.bl_sect.bl_career.bl_career_reverse.js_fadein
+			.ly_cont
+				.bl_career_inner
+					figure.bl_career_figure
+						img(src=img_path+"/people/img_people_04.webp", alt="")
+						.bl_anime_circle_item
+							|MA
+							br
+							span 
+								|2022年入庫
+								br
+								|地域創生学部卒
+					.bl_careerUnit
+						h2.bl_career_ttl
+							|専門的な知識と経験で、
+							br
+							|地域を支えていく。
+						a.bl_career_more(href=link_path+"people/yamada")
+							|山田 華織
+							.bl_career_more_btm
+								+icon_arrow
+
+		//- 福水 雄己
+		section.bl_sect.bl_career.js_fadein
+			.ly_cont
+				.bl_career_inner
+					figure.bl_career_figure
+						img(src=img_path+"/people/img_people_05.webp", alt="")
+						.bl_anime_circle_item
+							|お客様
+							br
+							|サポート部
+							span 
+								|2011年入庫
+								br
+								|経営学部卒
+					.bl_careerUnit
+						h2.bl_career_ttl
+							|多角的な視点で
+							br
+							|さまざまな経営課題を
+							br
+							|解決に導く。
+						a.bl_career_more(href=link_path+"people/fukumizu")
+							|福水 雄己
+							.bl_career_more_btm
+								+icon_arrow
+
+		//- -------------------------------------------------------------------
+		//- other
+		//- -------------------------------------------------------------------
+		+other-parts
+
+//- index.htmlにのみ必要なjsファイル
+block append script

@@ -1,0 +1,416 @@
+//- _layout.pugを読み込みテンプレートとして使用する
+extends ../../include/_layout
+
+block config
+	include ../../include/_config
+	- var page = pagelist['voice01'];
+	- var h1_setting = false;
+	- var path = '../../assets/';
+	- var img_path = path + 'images';
+	- var link_path = '../../';
+	- var bodyClass = 'pg_sec pg_third pg_voice'
+
+//- index.htmlにのみ必要なcssファイル
+block append head
+	//- link(rel="stylesheet" href=path+"css/swiper.min.css")
+	//- script(src=path+"js/swiper.min.js")
+	//- script(src="https://cdn.jsdelivr.net/npm/chart.js")
+
+block bodyClass
+block content
+	//- 背景アニメーション
+	+floating-parts
+	main.ly_main
+
+		//- -------------------------------------------------------------------
+		//- career
+		//- -------------------------------------------------------------------
+		section.bl_sectMV
+			.bl_sectMV_inner
+				h1.el_MVthirdHeading
+					span.hp_en Career
+					|支店長
+				figure.bl_sectMV_figure
+					img(src=img_path+"/voice/voice01/img_voice_01.webp", alt="")
+				p.bl_sectMV_txt 
+					|ひがしんで働く職員の本音に迫るべく、「入庫前後のイメージギャップ」や「働くうえでのモットー」、
+					br
+					|「印象に残っている言葉」など職種や年齢の異なる職員にアンケートを実施しました。
+
+			//- アンカー
+			.bl_voiceAnker
+				a.bl_voiceAnker_btn#anchor_01(href="")
+					.bl_voiceAnker_number
+						|01
+					.bl_voiceAnker_txt
+						|決め手は人それぞれ。私がひがしんを選んだ理由。
+				a.bl_voiceAnker_btn#anchor_02(href="")
+					.bl_voiceAnker_number
+						|02
+					.bl_voiceAnker_txt
+						|入ってから知った。入庫前後のイメージギャップ。
+				a.bl_voiceAnker_btn#anchor_03(href="")
+					.bl_voiceAnker_number
+						|03
+					.bl_voiceAnker_txt
+						|働いたから分かる。仕事のやりがいと苦労すること。
+				a.bl_voiceAnker_btn#anchor_04(href="")
+					.bl_voiceAnker_number
+						|04
+					.bl_voiceAnker_txt
+						|ここがポイント。私が働くうえで大切にしていること。
+				a.bl_voiceAnker_btn#anchor_05(href="")
+					.bl_voiceAnker_number
+						|05
+					.bl_voiceAnker_txt
+						|今でも心に残る。私の印象的だったエピソード。
+				a.bl_voiceAnker_btn#anchor_06(href="")
+					.bl_voiceAnker_number
+						|06
+					.bl_voiceAnker_txt
+						|今だから話せる。私の失敗エピソード。
+				a.bl_voiceAnker_btn#anchor_07(href="")
+					.bl_voiceAnker_number
+						|07
+					.bl_voiceAnker_txt
+						|私を支えた。周囲からの忘れられない言葉。
+
+		//- -------------------------------------------------------------------
+		//- Question
+		//- -------------------------------------------------------------------
+		
+		//- Question 01
+		section.bl_sect.bl_voice#scroll_01
+			.ly_cont
+				.bl_circleTtl_wrap
+					.bl_circleTtl
+						h2.bl_circleTtl_ttl.hp_en
+							span.hp_en Question
+							|01
+						.bl_anime_circle
+							.circle.circle1
+							.circle.circle2
+							.circle.circle3
+					h2.bl_circleTtl_voiceTtl
+						|決め手は人それぞれ。私がひがしんを選んだ理由。
+
+				.bl_voice_grid
+					.bl_voice_grid_item
+						figure.bl_voice_grid_figure
+							img(src=img_path+"/voice/voice01/img_voice_man.webp", alt="")
+						p.bl_voice_grid_ttl
+							|20代／マネーアドバイザー
+						.bl_voice_grid_item_inner
+							p.bl_voice_grid_txt
+								|命の次に大切なお金に携わる仕事に就きたかったからです。その中でも、地域密着型である信用金庫に惹かれ、他の金庫や企業と比べて雰囲気が温かったひがしんに入庫を決めました。
+					.bl_voice_grid_item
+						figure.bl_voice_grid_figure
+							img(src=img_path+"/voice/voice01/img_voice_woman.webp", alt="")
+						p.bl_voice_grid_ttl
+							|20代／マネーアドバイザー
+						.bl_voice_grid_item_inner
+							p.bl_voice_grid_txt
+								|元々地元が墨田区だったため、ひがしんは幼い頃から身近な存在でした。また、説明会や選考を通じて関わった職員が優しく、最も印象が良かったため、入庫を決めました。
+					.bl_voice_grid_item
+						figure.bl_voice_grid_figure
+							img(src=img_path+"/voice/voice01/img_voice_man.webp", alt="")
+						p.bl_voice_grid_ttl
+							|30代／お客様サポート部
+						.bl_voice_grid_item_inner
+							p.bl_voice_grid_txt
+								|金融機関への就職を希望する中で、結婚・出産後も退職せずに長く勤めたいと思っていました。説明会で女性の育休取得率の高さや離職率の低さを知り、長く勤められそうだと思い、入庫しました。
+
+					.bl_voice_grid_item
+						figure.bl_voice_grid_figure
+							img(src=img_path+"/voice/voice01/img_voice_man.webp", alt="")
+						p.bl_voice_grid_ttl
+							|20代／営業
+						.bl_voice_grid_item_inner
+							p.bl_voice_grid_txt
+								|ひがしんは、学生時代から給食費の振替口座で利用していました。親と支店を訪れた際に窓口の職員が明るく丁寧に対応くれたことがきっかけで、私も同じ環境に身を置きたいと思いました。
+					.bl_voice_grid_item
+						figure.bl_voice_grid_figure
+							img(src=img_path+"/voice/voice01/img_voice_woman.webp", alt="")
+						p.bl_voice_grid_ttl
+							|20代／事務
+						.bl_voice_grid_item_inner
+							p.bl_voice_grid_txt
+								|元々誰かの力になれる仕事をしたいと思っていました。そんなとき、ひがしんのHPを見て、地域行事にも参加するなど地域の方とのコミュニケーションを大切にしていることを知り、入庫しました。
+					.bl_voice_grid_item
+						figure.bl_voice_grid_figure
+							img(src=img_path+"/voice/voice01/img_voice_man.webp", alt="")
+						p.bl_voice_grid_ttl
+							|20代／融資
+						.bl_voice_grid_item_inner
+							p.bl_voice_grid_txt
+								|兄が金融機関に勤めていたため、金融機関に興味を持っていました。その中で、より地域に密着した仕事ができる信用金庫を志望し、「縁」という経営理念に魅力を感じたひがしんを選びました。
+
+		//- Question 02
+		section.bl_sect.bl_voice#scroll_02
+			.ly_cont
+				.bl_circleTtl_wrap
+					.bl_circleTtl
+						h2.bl_circleTtl_ttl.hp_en
+							span.hp_en Question
+							|02
+						.bl_anime_circle
+							.circle.circle1
+							.circle.circle2
+							.circle.circle3
+					h2.bl_circleTtl_voiceTtl
+						|入ってから知った。入庫前後のイメージギャップ。
+
+				.bl_voice_grid
+					.bl_voice_grid_item
+						figure.bl_voice_grid_figure
+							img(src=img_path+"/voice/voice01/img_voice_man.webp", alt="")
+						p.bl_voice_grid_ttl
+							|20代／マネーアドバイザー
+						.bl_voice_grid_item_inner
+							p.bl_voice_grid_subTtl
+								|思ったより良かったところ
+							p.bl_voice_grid_txt
+								|新入職員研修・フォローアップ研修・勉強会など、入庫後の研修が充実しているところ。
+						.bl_voice_grid_item_inner
+							p.bl_voice_grid_subTtl
+								|思ったより残念だったところ
+							p.bl_voice_grid_txt
+								|システム面でアナログな部分があり、支店内や金庫外と書類でのやりとりが頻繁にあるところ。
+					.bl_voice_grid_item
+						figure.bl_voice_grid_figure
+							img(src=img_path+"/voice/voice01/img_voice_woman.webp", alt="")
+						p.bl_voice_grid_ttl
+							|20代／マネーアドバイザー
+						.bl_voice_grid_item_inner
+							p.bl_voice_grid_subTtl
+								|思ったより良かったところ
+							p.bl_voice_grid_txt
+								|健康保険組合が主催するレク活動や部活動が盛んで、職員同士のつながりが強いところ。
+						.bl_voice_grid_item_inner
+							p.bl_voice_grid_subTtl
+								|思ったより残念だったところ
+							p.bl_voice_grid_txt
+								|担当エリアによって業務内容に差があり、支店によって残業時間が異なるところ。
+					.bl_voice_grid_item
+						figure.bl_voice_grid_figure
+							img(src=img_path+"/voice/voice01/img_voice_man.webp", alt="")
+						p.bl_voice_grid_ttl
+							|20代／マネーアドバイザー
+						.bl_voice_grid_item_inner
+							p.bl_voice_grid_subTtl
+								|思ったより良かったところ
+							p.bl_voice_grid_txt
+								|入庫後の研修が充実していることに加え、配属後は上司や先輩が優しく業務をサポートしてくれるところ。
+						.bl_voice_grid_item_inner
+							p.bl_voice_grid_subTtl
+								|思ったより残念だったところ
+							p.bl_voice_grid_txt
+								|今は電子化されているものもありますが、依然として紙での業務が多いところ。
+
+					.bl_voice_grid_item
+						figure.bl_voice_grid_figure
+							img(src=img_path+"/voice/voice01/img_voice_man.webp", alt="")
+						p.bl_voice_grid_ttl
+							|20代／マネーアドバイザー
+						.bl_voice_grid_item_inner
+							p.bl_voice_grid_subTtl
+								|思ったより良かったところ
+							p.bl_voice_grid_txt
+								|金庫全体で計画的に有給休暇を取るように推奨されており、休暇が取りやすいところ。
+						.bl_voice_grid_item_inner
+							p.bl_voice_grid_subTtl
+								|思ったより残念だったところ
+							p.bl_voice_grid_txt
+								|業務内容が地域性によって異なり、業務量や仕事内容に違いがあるところ。
+					.bl_voice_grid_item
+						figure.bl_voice_grid_figure
+							img(src=img_path+"/voice/voice01/img_voice_woman.webp", alt="")
+						p.bl_voice_grid_ttl
+							|20代／マネーアドバイザー
+						.bl_voice_grid_item_inner
+							p.bl_voice_grid_subTtl
+								|思ったより良かったところ
+							p.bl_voice_grid_txt
+								|話しやすい方が多いので、分からないことや困ったことがあるときに相談しやすいところ。
+						.bl_voice_grid_item_inner
+							p.bl_voice_grid_subTtl
+								|思ったより残念だったところ
+							p.bl_voice_grid_txt
+								|資格試験がたくさんあるところ。大学生の頃よりも真面目に勉強しています。
+					.bl_voice_grid_item
+						figure.bl_voice_grid_figure
+							img(src=img_path+"/voice/voice01/img_voice_man.webp", alt="")
+						p.bl_voice_grid_ttl
+							|20代／マネーアドバイザー
+						.bl_voice_grid_item_inner
+							p.bl_voice_grid_subTtl
+								|思ったより良かったところ
+							p.bl_voice_grid_txt
+								|金融機関の堅苦しい雰囲気がなく、職員同士のコミュニケーションが活発なところ。
+						.bl_voice_grid_item_inner
+							p.bl_voice_grid_subTtl
+								|思ったより残念だったところ
+							p.bl_voice_grid_txt
+								|想像以上に金融知識の有無が業務に影響するため、普段から自己研鑽が求められるところ。
+
+		//- Question 03
+		section.bl_sect.bl_voice#scroll_03
+			.ly_cont
+				.bl_circleTtl_wrap
+					.bl_circleTtl
+						h2.bl_circleTtl_ttl.hp_en
+							span.hp_en Question
+							|03
+						.bl_anime_circle
+							.circle.circle1
+							.circle.circle2
+							.circle.circle3
+					h2.bl_circleTtl_voiceTtl
+						|働いたから分かる。仕事のやりがいと苦労すること。
+
+				.bl_voice_grid.bl_voice_grid_pattern2
+					.bl_voice_grid_item
+						figure.bl_voice_grid_figure
+							img(src=img_path+"/voice/voice01/img_voice_man.webp", alt="")
+						p.bl_voice_grid_ttl
+							|20代／マネーアドバイザー
+						.bl_voice_grid_item_inner
+							p.bl_voice_grid_subTtl
+								|思ったより良かったところ
+							p.bl_voice_grid_txt
+								|新入職員研修・フォローアップ研修・勉強会など、入庫後の研修が充実しているところ。
+						.bl_voice_grid_item_inner
+							p.bl_voice_grid_subTtl
+								|思ったより残念だったところ
+							p.bl_voice_grid_txt
+								|システム面でアナログな部分があり、支店内や金庫外と書類でのやりとりが頻繁にあるところ。
+					.bl_voice_grid_item
+						figure.bl_voice_grid_figure
+							img(src=img_path+"/voice/voice01/img_voice_woman.webp", alt="")
+						p.bl_voice_grid_ttl
+							|20代／マネーアドバイザー
+						.bl_voice_grid_item_inner
+							p.bl_voice_grid_subTtl
+								|思ったより良かったところ
+							p.bl_voice_grid_txt
+								|健康保険組合が主催するレク活動や部活動が盛んで、職員同士のつながりが強いところ。
+						.bl_voice_grid_item_inner
+							p.bl_voice_grid_subTtl
+								|思ったより残念だったところ
+							p.bl_voice_grid_txt
+								|担当エリアによって業務内容に差があり、支店によって残業時間が異なるところ。
+					.bl_voice_grid_item
+						figure.bl_voice_grid_figure
+							img(src=img_path+"/voice/voice01/img_voice_man.webp", alt="")
+						p.bl_voice_grid_ttl
+							|20代／マネーアドバイザー
+						.bl_voice_grid_item_inner
+							p.bl_voice_grid_subTtl
+								|思ったより良かったところ
+							p.bl_voice_grid_txt
+								|入庫後の研修が充実していることに加え、配属後は上司や先輩が優しく業務をサポートしてくれるところ。
+						.bl_voice_grid_item_inner
+							p.bl_voice_grid_subTtl
+								|思ったより残念だったところ
+							p.bl_voice_grid_txt
+								|今は電子化されているものもありますが、依然として紙での業務が多いところ。
+
+					.bl_voice_grid_item
+						figure.bl_voice_grid_figure
+							img(src=img_path+"/voice/voice01/img_voice_man.webp", alt="")
+						p.bl_voice_grid_ttl
+							|20代／マネーアドバイザー
+						.bl_voice_grid_item_inner
+							p.bl_voice_grid_subTtl
+								|思ったより良かったところ
+							p.bl_voice_grid_txt
+								|金庫全体で計画的に有給休暇を取るように推奨されており、休暇が取りやすいところ。
+						.bl_voice_grid_item_inner
+							p.bl_voice_grid_subTtl
+								|思ったより残念だったところ
+							p.bl_voice_grid_txt
+								|業務内容が地域性によって異なり、業務量や仕事内容に違いがあるところ。
+					.bl_voice_grid_item
+						figure.bl_voice_grid_figure
+							img(src=img_path+"/voice/voice01/img_voice_woman.webp", alt="")
+						p.bl_voice_grid_ttl
+							|20代／マネーアドバイザー
+						.bl_voice_grid_item_inner
+							p.bl_voice_grid_subTtl
+								|思ったより良かったところ
+							p.bl_voice_grid_txt
+								|話しやすい方が多いので、分からないことや困ったことがあるときに相談しやすいところ。
+						.bl_voice_grid_item_inner
+							p.bl_voice_grid_subTtl
+								|思ったより残念だったところ
+							p.bl_voice_grid_txt
+								|資格試験がたくさんあるところ。大学生の頃よりも真面目に勉強しています。
+					.bl_voice_grid_item
+						figure.bl_voice_grid_figure
+							img(src=img_path+"/voice/voice01/img_voice_man.webp", alt="")
+						p.bl_voice_grid_ttl
+							|20代／マネーアドバイザー
+						.bl_voice_grid_item_inner
+							p.bl_voice_grid_subTtl
+								|思ったより良かったところ
+							p.bl_voice_grid_txt
+								|金融機関の堅苦しい雰囲気がなく、職員同士のコミュニケーションが活発なところ。
+						.bl_voice_grid_item_inner
+							p.bl_voice_grid_subTtl
+								|思ったより残念だったところ
+							p.bl_voice_grid_txt
+								|想像以上に金融知識の有無が業務に影響するため、普段から自己研鑽が求められるところ。
+
+
+		//- -------------------------------------------------------------------
+		//- other
+		//- -------------------------------------------------------------------
+		+other-parts
+
+//- index.htmlにのみ必要なjsファイル
+block append script
+	script.
+		document.addEventListener('DOMContentLoaded', () => {
+			const element = document.querySelector('.bl_voiceAnker');
+			const triggerPoint = 400; // トリガーポイントを400pxに設定
+
+			let animation = null;
+			let isVisible = false;
+
+			const showElement = () => {
+				if (!isVisible) {
+					if (animation) animation.cancel();
+					animation = element.animate([{ opacity: 0 }, { opacity: 1 }], {
+						duration: 500,
+						fill: 'forwards',
+						easing: 'ease-in-out'
+					});
+					isVisible = true;
+				}
+			};
+
+			const hideElement = () => {
+				if (isVisible) {
+					if (animation) animation.cancel();
+					animation = element.animate([{ opacity: 1 }, { opacity: 0 }], {
+						duration: 500,
+						fill: 'forwards',
+						easing: 'ease-in-out'
+					});
+					isVisible = false;
+				}
+			};
+
+			const checkVisibility = () => {
+				const scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+				if (scrollTop >= triggerPoint) {
+					showElement();
+				} else {
+					hideElement();
+				}
+			};
+
+			window.addEventListener('scroll', checkVisibility);
+			checkVisibility(); // 初期チェック
+		});

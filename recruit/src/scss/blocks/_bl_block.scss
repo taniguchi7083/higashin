@@ -1,0 +1,334 @@
+// pg_home
+// ================================================ */
+.pg_sec {
+  .ly_main {
+    padding-bottom: 170rem;
+
+    @media (max-width: 768px) {
+      padding-bottom: 144rem;
+    }
+  }
+}
+
+
+
+// ヘッダー
+// ================================================ */
+.pg_sec {
+  .ly_header {
+    background: transparent;
+  }
+
+  .bl_sect {
+    margin-bottom: 158rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 768px) {
+      margin-bottom: 144rem;
+    }
+  }
+}
+
+// メインビジュアル
+.pg_sec {
+  .bl_comnMV {
+    position: relative;
+    height: 800rem;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+
+    @media (max-width: 768px) {
+      height: 640rem;
+    }
+
+    .el_lv2Heading_wrap {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+
+      @media (max-width: 768px) {
+        top: auto;
+        bottom: 0;
+        transform: translateY(0);
+      }
+    }
+
+    .bl_anime_circle {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 800rem;
+      height: 800rem;
+
+      @media (max-width: 768px) {
+        width: 500rem;
+        height: 500rem;
+      }
+
+      // テキストとアイコン
+      &_txt {
+        font-size: 64rem;
+        font-weight: 700;
+        line-height: 1.2;
+        white-space: nowrap;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+
+        @media (max-width: 768px) {
+          font-size: 48rem;
+        }
+
+        &::after {
+          content: "";
+          background-image: url("../../assets/images/home/img_career_char.webp");
+          background-repeat: no-repeat;
+          background-size: contain;
+          width: 170.01rem;
+          height: 207.22rem;
+          position: absolute;
+          bottom: 0;
+          left: 80rem;
+
+          @media (max-width: 768px) {
+            bottom: -40rem;
+            left: auto;
+            right: 0;
+          }
+        }
+      }
+
+      &_figure {
+        position: absolute;
+        inset: 0;
+        margin: auto;
+        width: 760rem;
+        height: 760rem;
+
+        @media (max-width: 768px) {
+          width: 460rem;
+          height: 460rem;
+        }
+      }
+
+      &_item {
+        position: absolute;
+        bottom: 40rem;
+        right: 0;
+        font-size: 20rem;
+        line-height: 1.8;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        width: 200rem;
+        height: 200rem;
+        border-radius: 50%;
+        background: var(--color_primary);
+
+        @media (max-width: 768px) {
+          bottom: 20rem;
+          right: 0;
+          font-size: 28rem;
+          width: 220rem;
+          height: 220rem;
+        }
+
+        &>span {
+          font-size: 16rem;
+          line-height: 1.5;
+          margin-top: 12rem;
+
+          @media (max-width: 768px) {
+            font-size: 24rem;
+          }
+        }
+      }
+    }
+  }
+
+  .bl_MV {
+    position: relative;
+    overflow: hidden;
+    padding-top: 100rem;
+    padding-bottom: 158rem;
+
+    @media (max-width: 768px) {
+      padding-top: 120rem;
+      // margin-bottom: 144rem;
+    }
+  }
+
+  .un_loopSlider {
+    position: absolute;
+    top: 440rem;
+    left: 0;
+
+    @media (max-width: 768px) {
+      top: 270rem;
+    }
+  }
+}
+
+// pg_career
+.pg_sec.pg_third.pg_career {
+  .bl_comnMV {
+    @media (max-width: 768px) {
+      height: 860rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .bl_MV {
+      padding-bottom: 80rem;
+    }
+  }
+}
+
+// pg_culture
+.pg_sec.pg_third.pg_culture {
+  .bl_comnMV {
+    @media (max-width: 768px) {
+      height: 640rem;
+    }
+  }
+}
+
+// 3階層
+// ================================================ */
+// MV
+.pg_sec.pg_third {
+  .bl_MV {
+    &_txt {
+      margin-top: 112rem;
+
+      @media (max-width: 768px) {
+        margin-top: 80rem;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .bl_comnMV {
+      height: 770rem;
+    }
+  }
+
+  .bl_comnMV {
+    .el_MVthirdHeading {
+      margin-top: 140rem;
+    }
+
+    .un_MVtxt {
+      margin-top: auto;
+      width: 50%;
+      position: relative;
+      z-index: 1;
+
+      @media (max-width: 768px) {
+        margin-bottom: 0;
+      }
+
+      .marker {
+        background-color: #ffffffd0;
+      }
+
+      .text {
+        font-size: 48rem;
+        white-space: nowrap;
+
+        &>span {
+          color: var(--color_secondary);
+          font-weight: 700;
+        }
+      }
+
+      &_small {
+        font-size: 14rem;
+        margin-top: 80rem;
+
+        @media (max-width: 768px) {
+          font-size: 18rem;
+          margin-top: 40rem;
+        }
+      }
+    }
+  }
+}
+
+
+
+// footerMV
+.pg_sec.pg_third {
+  .bl_bg_figure {
+    &>img {
+      border-radius: 30rem;
+    }
+  }
+}
+
+.un_slideAnime {
+  margin-top: 64rem;
+  width: 50%;
+
+  .hp_mt {
+    margin-top: 24rem;
+  }
+
+  .marker {
+    display: inline-block;
+    color: transparent;
+    clip-path: inset(0 100% 0 0);
+    border-radius: 16rem;
+    background-color: #ffffffd0;
+    padding: 16rem 10rem;
+  }
+
+  .text {
+    font-size: 40rem;
+    white-space: nowrap;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    color: black;
+    clip-path: inset(0 100% 0 0);
+
+    &>span {
+      color: var(--color_secondary);
+      font-weight: 700;
+    }
+  }
+
+  &_small {
+    font-size: 14rem;
+    margin-top: 80rem;
+
+    @media (max-width: 768px) {
+      font-size: 18rem;
+      margin-top: 40rem;
+    }
+  }
+
+  .hp_mt {
+    margin-top: 8rem;
+  }
+}
+
+.un_slideAnime.is_slideAnime {
+  .marker {
+    animation: drawMarker 1s cubic-bezier(0.75, 0, 0.25, 1) forwards;
+  }
+
+  .text {
+    animation: drawText 1s cubic-bezier(0.75, 0, 0.25, 1) forwards;
+  }
+}

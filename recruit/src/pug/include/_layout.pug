@@ -1,0 +1,56 @@
+include ../layout/_svg
+include ../layout/_recruit-parts
+include ../layout/_other-parts
+
+block config
+
+doctype html
+html(lang="ja")
+	head
+		//- Google tag (gtag.js)
+		//- script(async src="https://www.googletagmanager.com/gtag/js?id=G-79TK28MJ31")
+		//- script.
+		//- 	window.dataLayer = window.dataLayer || [];
+		//- 	function gtag(){dataLayer.push(arguments);}
+		//- 	gtag('js', new Date());
+		//- 	gtag('config', 'G-79TK28MJ31');
+		block head
+			include ../include/_head
+
+	body#js_body(class=bodyClass)
+		if h1_setting
+			//- ローディング画面は常に含む
+			#bl_loading
+			//- アニメーション
+			.bl_startAnime
+				.bl_anime_circle
+					.circle.circle1
+					.circle.circle2
+					.circle.circle3
+				.un_MVtxt.js_MVanime
+					.text
+						| この街を
+						span 縁
+						| でつなぐ。
+					.text
+						a.bl_headerConts_logo#js_logo(href=link_path + "")
+							.el_logo
+								img(src=img_path + "/common/icon_logo.svg", alt="")
+			//- アニメーション
+			.ly_wrap.img-wrap
+				block bodyClass
+				include ../layout/_header
+				block content
+				include ../layout/_footer
+				block script
+					include ../include/_script
+		else
+			//- ローディング画面のみ
+			#bl_loading
+
+			block bodyClass
+			include ../layout/_header
+			block content
+			include ../layout/_footer
+			block script
+				include ../include/_script

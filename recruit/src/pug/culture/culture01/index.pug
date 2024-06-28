@@ -1,0 +1,557 @@
+//- _layout.pugを読み込みテンプレートとして使用する
+extends ../../include/_layout
+
+block config
+	include ../../include/_config
+	- var page = pagelist['culture01'];
+	- var h1_setting = false;
+	- var path = '../../assets/';
+	- var img_path = path + 'images';
+	- var link_path = '../../';
+	- var bodyClass = 'pg_culture pg_sec pg_third'
+
+//- index.htmlにのみ必要なcssファイル
+block append head
+	link(rel="stylesheet" href=path+"css/swiper.min.css")
+	script(src=path+"js/swiper.min.js")
+	script(src="https://cdn.jsdelivr.net/npm/chart.js")
+
+block bodyClass
+block content
+	//- 背景アニメーション
+	+floating-parts
+	main.ly_main
+		//- -------------------------------------------------------------------
+		//- MV
+		//- -------------------------------------------------------------------
+		section.bl_MV
+			//- スクロール文字
+			.un_loopSlider
+				.un_loopSlider_font.hp_en
+					span Higashin Recruiting Website
+					span Higashin Recruiting Website
+			.ly_cont
+				.bl_comnMV
+					h1.el_MVthirdHeading
+						span.hp_en Culture
+						|上司×部下対談
+					.un_MVtxt.js_MVanime
+						.marker
+							.text
+								|上司の言葉を胸に、
+						.marker.hp_mt
+							.text
+								|恐れず挑戦を続ける。
+
+					.bl_anime_circle
+						.circle.circle1
+						.circle.circle2
+						.circle.circle3
+						figure.bl_anime_circle_figure
+							img(src=img_path+"/culture/culture01/img_culture_mv.webp", alt="")
+
+				p.bl_MV_txt
+					|成功も、失敗も優しく見守り、サポートしてくれる上司の存在。
+					br
+					|ひがしんにおける上司と部下の関係性はどういったものなのか。
+					br
+					|営業担当として同じ支店で働く2人に縦のつながりについて聞いてみました。
+
+		//- -------------------------------------------------------------------
+		//- lineSect
+		//- -------------------------------------------------------------------
+		section.bl_sect.un_lineSect.js_fadein
+			.ly_cont
+				h2.un_lineSect_ttl.hp_en
+					|lineSect
+				.un_lineSect_inner.hp_borderBtm
+					.un_lineSect_item
+						figure.un_lineSect_item_figure
+							img(src=img_path+"/culture/culture01/img_culture_sa.webp", alt="")
+						.un_lineSect_item_ttl
+							|齋藤 祐樹
+						p.un_lineSect_item_txt
+							|課長
+							br
+							|2009年入庫
+							br
+							|商経学部 卒
+						.un_lineSect_item_smTxt
+							|※内容は取材当時のものです
+					.un_lineSect_item
+						figure.un_lineSect_item_figure
+							img(src=img_path+"/culture/culture01/img_culture_na.webp", alt="")
+						.un_lineSect_item_ttl
+							|齋藤 祐樹
+						p.un_lineSect_item_txt
+							|課長
+							br
+							|2009年入庫
+							br
+							|商経学部 卒
+						.un_lineSect_item_smTxt
+							|※内容は取材当時のものです
+
+		//- un_topic01
+		section.bl_sect.un_topic
+			.el_thirdHeading_wrap
+				h2.el_thirdHeading
+					span.hp_en Topic 01
+					|普段の関わり
+				.bl_anime_circle
+					.circle.circle1
+					.circle.circle2
+					.circle.circle3
+			.ly_cont
+				.un_topic_ttl
+					|大きな背中を見つめながら、
+					br
+					|営業担当として着実に成長する。
+				//- speech
+				.un_topic_wrap
+					.un_topic_item.js_fadein
+						.un_topic_icon
+							.un_topic_icon_figure
+								img(src=img_path+"/culture/culture01/img_culture_sa.webp", alt="")
+							.un_topic_icon_txt
+								|齋藤
+						.un_topic_speech.un_topic_speech__left
+							p
+								|永井さんは今４年目で、２年目の１年間はマネーアドバイザー(以下MA)だったよね。３年目に営業担当としてこの支店に配属になってから今年で丸２年か。なんだか早く感じるね。
+					.un_topic_item.un_topic_item__reverse.js_fadein
+						.un_topic_icon
+							.un_topic_icon_figure
+								img(src=img_path+"/culture/culture01/img_culture_na.webp", alt="")
+							.un_topic_icon_txt
+								|永井
+						.un_topic_speech.un_topic_speech__right
+							p
+								|そうですね。現在は営業担当として担当エリアのお客さまのもとを訪問し、融資や保険、投資信託など幅広くご案内していますが、その前はMAとして資産運用や相続・贈与などお金に関する専門的な相談に対応していました。そのため、MAのときに培った知識は、現在の営業活動にも活きていると感じます。
+
+					.un_topic_item.js_fadein
+						.un_topic_icon
+							.un_topic_icon_figure
+								img(src=img_path+"/culture/culture01/img_culture_sa.webp", alt="")
+							.un_topic_icon_txt
+								|齋藤
+						.un_topic_speech.un_topic_speech__left
+							p
+								|永井さんが資産運用に関する知識を他の営業担当に共有してくれているから、組織の底上げにつながっていると感じるよ。４年目なのに周囲のケアもしていて本当に立派だなと感心している。
+					.un_topic_item.un_topic_item__reverse.js_fadein
+						.un_topic_icon
+							.un_topic_icon_figure
+								img(src=img_path+"/culture/culture01/img_culture_na.webp", alt="")
+							.un_topic_icon_txt
+								|永井
+						.un_topic_speech.un_topic_speech__right
+							p
+								|ありがとうございます。逆に営業の知識に関しては、齋藤さんを含む皆さんに教えてもらってばかりなので、少しでも恩返しできればと思って行動しています。齋藤さんには普段から契約が決まったお客さまへのご挨拶や重要な話し合いのときにフォローいただいており、感謝しています。
+
+					.un_topic_item.js_fadein
+						.un_topic_icon
+							.un_topic_icon_figure
+								img(src=img_path+"/culture/culture01/img_culture_sa.webp", alt="")
+							.un_topic_icon_txt
+								|齋藤
+						.un_topic_speech.un_topic_speech__left
+							p
+								|部下をマネジメントすることが課長としての役目だからね。今は支店の事業計画をもとに、各営業担当の行動や実績の管理を行うのがメイン業務。あと、各営業担当のお客さまを定期的に訪問して挨拶をしたり、他の営業担当がカバーできないエリアのお客さまを訪問したりもしているね。
+					.un_topic_item.un_topic_item__reverse.js_fadein
+						.un_topic_icon
+							.un_topic_icon_figure
+								img(src=img_path+"/culture/culture01/img_culture_na.webp", alt="")
+							.un_topic_icon_txt
+								|永井
+						.un_topic_speech.un_topic_speech__right
+							p
+								|齋藤さんの関係構築力や人脈には驚かされてばかりです。どのエリアのお客さまとも満遍なく信頼関係を築いていて、尊敬しています。
+
+					.un_topic_item.js_fadein
+						.un_topic_icon
+							.un_topic_icon_figure
+								img(src=img_path+"/culture/culture01/img_culture_sa.webp", alt="")
+							.un_topic_icon_txt
+								|齋藤
+						.un_topic_speech.un_topic_speech__left
+							p
+								|私は何もしてないよ。お客さまに恵まれているだけ。あと、この支店は法人のお客さまかつ新規のご相談が多いから、一から関係性を築けるというメリットもあるよね。
+					.un_topic_item.un_topic_item__reverse.js_fadein
+						.un_topic_icon
+							.un_topic_icon_figure
+								img(src=img_path+"/culture/culture01/img_culture_na.webp", alt="")
+							.un_topic_icon_txt
+								|永井
+						.un_topic_speech.un_topic_speech__right
+							p
+								|たしかに、個人の契約でも社長名義のケースも多いですよね。あと、個人のお客さまだと、70〜80代のお客さまからの相続や贈与に関するご相談もありますね。
+
+					.un_topic_item.js_fadein
+						.un_topic_icon
+							.un_topic_icon_figure
+								img(src=img_path+"/culture/culture01/img_culture_sa.webp", alt="")
+							.un_topic_icon_txt
+								|齋藤
+						.un_topic_speech.un_topic_speech__left
+							p
+								|ご高齢の方が多いのもこの支店の特徴だね。このエリアは近くにメガバンクや地方銀行といった競合他社が多いけど、そうした銀行に負けないように直接お客さまと会って話を聞いたり、商品・サービスのご案内をしたりと信用金庫ならではの強みを最大限活かして、お客さまと信頼関係を築くことが重要だよね。
+					.un_topic_item.un_topic_item__reverse.js_fadein
+						.un_topic_icon
+							.un_topic_icon_figure
+								img(src=img_path+"/culture/culture01/img_culture_na.webp", alt="")
+							.un_topic_icon_txt
+								|永井
+						.un_topic_speech.un_topic_speech__right
+							p
+								|そうですね。私もお客さまが何か悩みや課題を抱えたとき、一番に相談してもらえるよう、普段から定期的にお客さま先に顔を出すようにしています。
+
+				.un_topic_flex
+					figure.un_topic_flex_figure
+						img(src=img_path+"/culture/culture01/img_culture_01.webp", alt="")
+					figure.un_topic_flex_figure
+						img(src=img_path+"/culture/culture01/img_culture_02.webp", alt="")
+
+		//- un_topic02
+		section.bl_sect.un_topic
+			.el_thirdHeading_wrap
+				h2.el_thirdHeading
+					span.hp_en Topic 02
+					|お互いの第一印象
+				.bl_anime_circle
+					.circle.circle1
+					.circle.circle2
+					.circle.circle3
+			.ly_cont
+				.un_topic_ttl
+					|同じ支店で偶然出会った、
+					br
+					|相性抜群の明るい二人。
+				//- speech
+				.un_topic_wrap
+					.un_topic_item.js_fadein
+						.un_topic_icon
+							.un_topic_icon_figure
+								img(src=img_path+"/culture/culture01/img_culture_na.webp", alt="")
+							.un_topic_icon_txt
+								|永井
+						.un_topic_speech.un_topic_speech__left
+							p
+								|齋藤さんは、私がこの支店に配属になった１ヵ月後にこの支店に来られましたよね。そのときの私の第一印象は覚えていますか？
+					.un_topic_item.un_topic_item__reverse.js_fadein
+						.un_topic_icon
+							.un_topic_icon_figure
+								img(src=img_path+"/culture/culture01/img_culture_sa.webp", alt="")
+							.un_topic_icon_txt
+								|齋藤
+						.un_topic_speech.un_topic_speech__right
+							p
+								|もちろん覚えているよ。異動になる前から色んな人にバレー部に所属していて、元気な子だという話は聞いていた。実際に会ってみると、まさにその通りで周囲を一瞬で明るくするほどのパワーを兼ね備えている人だと思った。
+
+					.un_topic_item.js_fadein
+						.un_topic_icon
+							.un_topic_icon_figure
+								img(src=img_path+"/culture/culture01/img_culture_na.webp", alt="")
+							.un_topic_icon_txt
+								|永井
+						.un_topic_speech.un_topic_speech__left
+							p
+								|それ、ただ私の声が大きいからじゃないですか(笑)。
+					.un_topic_item.un_topic_item__reverse.js_fadein
+						.un_topic_icon
+							.un_topic_icon_figure
+								img(src=img_path+"/culture/culture01/img_culture_sa.webp", alt="")
+							.un_topic_icon_txt
+								|齋藤
+						.un_topic_speech.un_topic_speech__right
+							p
+								|そんなことないよ(笑)。いつも職員同士で協力が必要なときは、真っ先に「みんなで助け合おう」と声をかけて、率先して行動してくれる。私の立場からは言いづらいことを、若手から発信してくれるのは本当にありがたいと思っているよ。
+
+					.un_topic_item.js_fadein
+						.un_topic_icon
+							.un_topic_icon_figure
+								img(src=img_path+"/culture/culture01/img_culture_na.webp", alt="")
+							.un_topic_icon_txt
+								|永井
+						.un_topic_speech.un_topic_speech__left
+							p
+								|ストレートすぎて、たまに言い方がきつくなってしまうときもありますけどね（笑）。私も齋藤さんにお会いする前から「とにかく優しい方」と他の支店の人から聞いていましたよ。実際お会いしてみると、想像よりも明るくてよく喋る方でした。
+					.un_topic_item.un_topic_item__reverse.js_fadein
+						.un_topic_icon
+							.un_topic_icon_figure
+								img(src=img_path+"/culture/culture01/img_culture_sa.webp", alt="")
+							.un_topic_icon_txt
+								|齋藤
+						.un_topic_speech.un_topic_speech__right
+							p
+								|そりゃあ、営業は喋ってなんぼでしょ（笑）。おそらく「優しい」というのは、マネジメントをする立場として、部下が落ち込んでいるときはできる限り相談に乗って、一緒に解決策を考えたいと思っているからかな？
+
+					.un_topic_item.js_fadein
+						.un_topic_icon
+							.un_topic_icon_figure
+								img(src=img_path+"/culture/culture01/img_culture_na.webp", alt="")
+							.un_topic_icon_txt
+								|永井
+						.un_topic_speech.un_topic_speech__left
+							p
+								|aたしかに齋藤さんは大事な局面でしっかりサポートしてくれますし、例え失敗しても引きずることなく切り替えられるように促してくれるので、みんなすごく助けられていますよ。
+					.un_topic_item.un_topic_item__reverse.js_fadein
+						.un_topic_icon
+							.un_topic_icon_figure
+								img(src=img_path+"/culture/culture01/img_culture_sa.webp", alt="")
+							.un_topic_icon_txt
+								|齋藤
+						.un_topic_speech.un_topic_speech__right
+							p
+								|仕事はどうしても良いときもあれば悪いときもある。営業は特に人と関わる職種だから想定外の場面に出くわすことも多い。そんな中でも普段から常に高い目標に挑戦し、失敗してもすぐに改善しようと動ける永井さんのひたむきな姿勢は、支店のほかのメンバーにも確実に良い影響を与えていると思うよ。
+
+					.un_topic_item.js_fadein
+						.un_topic_icon
+							.un_topic_icon_figure
+								img(src=img_path+"/culture/culture01/img_culture_na.webp", alt="")
+							.un_topic_icon_txt
+								|永井
+						.un_topic_speech.un_topic_speech__left
+							p
+								|自分ではまだまだだと思っていますが、そう言っていただけると嬉しいですね。
+
+				.un_topic_flex
+					figure.un_topic_flex_figure
+						img(src=img_path+"/culture/culture01/img_culture_03.webp", alt="")
+					figure.un_topic_flex_figure
+						img(src=img_path+"/culture/culture01/img_culture_04.webp", alt="")
+
+		//- un_topic03
+		section.bl_sect.un_topic
+			.el_thirdHeading_wrap
+				h2.el_thirdHeading
+					span.hp_en Topic 03
+					|印象に残っているエピソード
+				.bl_anime_circle
+					.circle.circle1
+					.circle.circle2
+					.circle.circle3
+			.ly_cont
+				.un_topic_ttl
+					|一生忘れられない悔しい経験も、
+					br
+					|上司が前を向くきっかけをくれた。
+				//- speech
+				.un_topic_wrap
+					.un_topic_item.js_fadein
+						.un_topic_icon
+							.un_topic_icon_figure
+								img(src=img_path+"/culture/culture01/img_culture_sa.webp", alt="")
+							.un_topic_icon_txt
+								|齋藤
+						.un_topic_speech.un_topic_speech__left
+							p
+								|永井さんはこの支店で初めて営業担当になったけど、印象に残っている案件はある？
+					.un_topic_item.un_topic_item__reverse.js_fadein
+						.un_topic_icon
+							.un_topic_icon_figure
+								img(src=img_path+"/culture/culture01/img_culture_na.webp", alt="")
+							.un_topic_icon_txt
+								|永井
+						.un_topic_speech.un_topic_speech__right
+							p
+								|失敗談になってしまいますが、お客さまから初めて担当を外されてしまった経験は忘れられないですね。初回訪問の際に私の遅刻が原因でお叱りを受けたお客さまでした。そのときは誠心誠意謝罪したことで、その後の関係性に大きな影響はなく、約一年半担当させていただきました。しかし、そうした最初の出会いが原因で心のどこかで苦手意識が残ってしまい、他のお客さまに比べて少し関係性が薄くなってしまっていました。
+
+					.un_topic_item.js_fadein
+						.un_topic_icon
+							.un_topic_icon_figure
+								img(src=img_path+"/culture/culture01/img_culture_sa.webp", alt="")
+							.un_topic_icon_txt
+								|齋藤
+						.un_topic_speech.un_topic_speech__left
+							p
+								|たしか、その後永井さんのとある契約に関する説明が十分に行き届いていなくて、お客さまがお怒りの状態で支店に来られて、担当を変えてほしいと依頼されたんだよね。後日私と新しい担当で挨拶に伺い、最終的にはお取引を継続いただけることになったんだけど、永井さんの辛い気持ちはすごく理解できたよ。
+					.un_topic_item.un_topic_item__reverse.js_fadein
+						.un_topic_icon
+							.un_topic_icon_figure
+								img(src=img_path+"/culture/culture01/img_culture_na.webp", alt="")
+							.un_topic_icon_txt
+								|永井
+						.un_topic_speech.un_topic_speech__right
+							p
+								|あのときは悔しさや悲しさといったさまざまな感情が入り混じって、本当に辛かったです。悔いてもどうにもならないことは分かっていましたが、苦手だからと言って一歩引くのではなく、逆に関係を改善しようと前向きに行動していればと反省しました。
+
+					.un_topic_item.js_fadein
+						.un_topic_icon
+							.un_topic_icon_figure
+								img(src=img_path+"/culture/culture01/img_culture_sa.webp", alt="")
+							.un_topic_icon_txt
+								|齋藤
+						.un_topic_speech.un_topic_speech__left
+							p
+								|たしかにその悔しさは分かる。けど、正直人それぞれ相性はあると思う。すべてを相性のせいにしてはいけないけれど、自分の悪かった点をしっかりと反省できているなら、それはきっと次の糧になると思う。永井さんは自分に非があると正直に打ち明けてくれた。むしろ、そうした嘘をつかない姿勢を私は評価したいと思ったよ。
+					.un_topic_item.un_topic_item__reverse.js_fadein
+						.un_topic_icon
+							.un_topic_icon_figure
+								img(src=img_path+"/culture/culture01/img_culture_na.webp", alt="")
+							.un_topic_icon_txt
+								|永井
+						.un_topic_speech.un_topic_speech__right
+							p
+								|私がこの件ですごく落ち込んでいたとき、齋藤さんがかけてくれた「俺もそういう経験が沢山あったよ」という言葉に救われたんです。怒られると思っていたんですけど、そんなことは全くなく、優しい言葉をかけてくれましたよね。あのときは、齋藤さんの器の広さに助けられました。
+
+					.un_topic_item.js_fadein
+						.un_topic_icon
+							.un_topic_icon_figure
+								img(src=img_path+"/culture/culture01/img_culture_sa.webp", alt="")
+							.un_topic_icon_txt
+								|齋藤
+						.un_topic_speech.un_topic_speech__left
+							p
+								|永井さんがお客さまからお叱りを受けるなんて想像もつかないし、実際にその案件が初めてだった。普段、永井さんが担当している社長と話していても、「いつも永井さんに助けられている」とお褒めの言葉しか出てこない。永井さんの日頃の努力や魅力はこの件だけで覆るようなものでは決してないよ。あの一件は、永井さんがさらに成長する貴重な経験になったと思うよ。いつか部下ができたときに、後輩に語れる教訓を得たと思えば良いよ。
+					.un_topic_item.un_topic_item__reverse.js_fadein
+						.un_topic_icon
+							.un_topic_icon_figure
+								img(src=img_path+"/culture/culture01/img_culture_na.webp", alt="")
+							.un_topic_icon_txt
+								|永井
+						.un_topic_speech.un_topic_speech__right
+							p
+								|私は落ち込むとずっと引きずってしまうタイプなので、齋藤さんの切り替えの速さに何度も支えられています。あとは、案件の成約が決まった際にかけてくれる「そうした信頼関係の構築が大事だ！」という言葉にも勇気づけられています。競合他社が多い中で、選ばれる理由は担当者の人柄だったり、日頃の努力の賜物だったりするので、そうした過程を評価してくれるのは嬉しいです。
+
+					.un_topic_item.js_fadein
+						.un_topic_icon
+							.un_topic_icon_figure
+								img(src=img_path+"/culture/culture01/img_culture_sa.webp", alt="")
+							.un_topic_icon_txt
+								|齋藤
+						.un_topic_speech.un_topic_speech__left
+							p
+								|その言葉は、いつも大事にしているんだ。営業の仕事は、お客さまとの信頼関係が成約に直結するからね。
+
+				.un_topic_flex
+					figure.un_topic_flex_figure
+						img(src=img_path+"/culture/culture01/img_culture_05.webp", alt="")
+					figure.un_topic_flex_figure
+						img(src=img_path+"/culture/culture01/img_culture_06.webp", alt="")
+
+		//- un_topic04
+		section.bl_sect.un_topic
+			.el_thirdHeading_wrap
+				h2.el_thirdHeading
+					span.hp_en Topic 04
+					|部下に期待すること
+				.bl_anime_circle
+					.circle.circle1
+					.circle.circle2
+					.circle.circle3
+			.ly_cont
+				.un_topic_ttl
+					|これからのひがしんを引っ張っていく、
+					br
+					|高い志を持った営業長を目指して。
+				//- speech
+				.un_topic_wrap
+					.un_topic_item.js_fadein
+						.un_topic_icon
+							.un_topic_icon_figure
+								img(src=img_path+"/culture/culture01/img_culture_sa.webp", alt="")
+							.un_topic_icon_txt
+								|齋藤
+						.un_topic_speech.un_topic_speech__left
+							p
+								|永井さんが常に高い目標を掲げて頑張っているから周りの営業担当も良い影響を受けているよ。目標を達成するかしないかよりも、目指すところをブラさない芯の強さがすごく重要で、支店に必要不可欠な存在だと思っている。ぜひ営業長を目指して、ゆくゆくはひがしんを引っ張っていってほしいな。
+					.un_topic_item.un_topic_item__reverse.js_fadein
+						.un_topic_icon
+							.un_topic_icon_figure
+								img(src=img_path+"/culture/culture01/img_culture_na.webp", alt="")
+							.un_topic_icon_txt
+								|永井
+						.un_topic_speech.un_topic_speech__right
+							p
+								|ただ、普通ではいたくないとは思っているだけです。あくまで一人で成績を伸ばしたいわけではなくて、みんなで頑張りたいという気持ちが強いんです。結局、金融機関では支店というチームが大事だと思うので、支店全体をより良くしていきたいですね。
+
+					.un_topic_item.js_fadein
+						.un_topic_icon
+							.un_topic_icon_figure
+								img(src=img_path+"/culture/culture01/img_culture_sa.webp", alt="")
+							.un_topic_icon_txt
+								|齋藤
+						.un_topic_speech.un_topic_speech__left
+							p
+								|そうだね。組織には色んな個性を持った人がいて、その人たちが同じ方向を向いてこそチームは一つになる。だからまずは全員で同じ目標を掲げ、高みを目指すことが重要だよね。今はまだ知識が足りないと感じることもあると思うけど、臆せず積極的に色々な挑戦をしてほしい。失敗しても反省することを忘れなければ、必ず成長につながるから。その素質はすでにあるから、永井さんはきっと大丈夫だよ。
+					.un_topic_item.un_topic_item__reverse.js_fadein
+						.un_topic_icon
+							.un_topic_icon_figure
+								img(src=img_path+"/culture/culture01/img_culture_na.webp", alt="")
+							.un_topic_icon_txt
+								|永井
+						.un_topic_speech.un_topic_speech__right
+							p
+								|仕事においても、バレーに打ち込んできた経験が活かされているのかもしれませんね（笑）。
+
+					.un_topic_item.js_fadein
+						.un_topic_icon
+							.un_topic_icon_figure
+								img(src=img_path+"/culture/culture01/img_culture_sa.webp", alt="")
+							.un_topic_icon_txt
+								|齋藤
+						.un_topic_speech.un_topic_speech__left
+							p
+								|たしかに、そうかもね。これまでは社会的に「営業＝男性」というイメージが強かったけど、ひがしんでは女性の支店長もいるし、女性の活躍を後押しする環境も整っていると感じる。私は性別に関係なく志の高い人が上に立つべきだと考えているよ。
+					.un_topic_item.un_topic_item__reverse.js_fadein
+						.un_topic_icon
+							.un_topic_icon_figure
+								img(src=img_path+"/culture/culture01/img_culture_na.webp", alt="")
+							.un_topic_icon_txt
+								|永井
+						.un_topic_speech.un_topic_speech__right
+							p
+								|そうですね。営業長という目標に挑むのは、やりがいがありそうですね。とにかく、みんなの記憶に残る人になりたいと思っています。
+
+					.un_topic_item.js_fadein
+						.un_topic_icon
+							.un_topic_icon_figure
+								img(src=img_path+"/culture/culture01/img_culture_sa.webp", alt="")
+							.un_topic_icon_txt
+								|齋藤
+						.un_topic_speech.un_topic_speech__left
+							p
+								|自信を持って、これからも永井さんの良さをどんどん発揮してほしい。これからもさらなる成長を期待しているよ。
+					.un_topic_item.un_topic_item__reverse.js_fadein
+						.un_topic_icon
+							.un_topic_icon_figure
+								img(src=img_path+"/culture/culture01/img_culture_na.webp", alt="")
+							.un_topic_icon_txt
+								|永井
+						.un_topic_speech.un_topic_speech__right
+							p
+								|ありがとうございます！齋藤さんの期待を超えられるよう、これからも頑張ります！
+
+				.un_topic_flex
+
+		//- -------------------------------------------------------------------
+		//- figure
+		//- -------------------------------------------------------------------
+		section.bl_sect
+			.ly_cont
+				figure.bl_bg_figure
+					img(src=img_path+"/culture/culture01/img_culture_bg.webp", alt="")
+
+		//- -------------------------------------------------------------------
+		//- lineSect
+		//- -------------------------------------------------------------------
+		section.bl_sect.js_fadein
+			.ly_cont
+				h2.un_lineSect_ttl.hp_en
+					|lineSect
+				.un_lineSect_inner
+					//- ボタン
+					a.el_btn.el_btn__more.el_btn__more01.hp_en(href=link_path+"")
+						span 若手同期座談会
+						+icon_arrow
+					//- ボタン
+					a.el_btn.el_btn__more.el_btn__more02.hp_en(href=link_path+"")
+						span 営業×マネーアドバイザー対談
+						+icon_arrow
+
+		//- -------------------------------------------------------------------
+		//- other
+		//- -------------------------------------------------------------------
+		+other-parts
+
+//- index.htmlにのみ必要なjsファイル
+block append script

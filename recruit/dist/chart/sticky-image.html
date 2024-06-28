@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sticky Image with Scroll</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .bl_topic {
+      display: flex;
+    }
+
+    .bl_topic_left {
+      position: relative;
+      width: 50%;
+    }
+
+    .bl_topic_right {
+      width: 50%;
+    }
+
+    .bl_stickyImg_wrap {
+      position: sticky;
+      top: 0;
+    }
+
+    .bl_stickyImg {
+      position: absolute;
+      top: 0;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+
+    .bl_stickyImg img {
+      width: 100%;
+    }
+
+    section {
+      background: #f0f0f0;
+      padding: 40px;
+      box-sizing: border-box;
+    }
+
+    section h2 {
+      margin-top: 0;
+    }
+
+    p {
+      line-height: 4;
+    }
+
+    .is_active {
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="bl_topic">
+    <div class="bl_topic_left">
+      <div class="bl_stickyImg_wrap">
+        <div class="bl_stickyImg is_active" data-image="1">
+          <img src="../assets/images/people/ishida/img_people_topic_01.webp" alt="Image 1">
+        </div>
+        <div class="bl_stickyImg" data-image="2">
+          <img src="../assets/images/people/ishida/img_people_topic_02.webp" alt="Image 2">
+        </div>
+        <div class="bl_stickyImg" data-image="3">
+          <img src="../assets/images/people/ishida/img_people_topic_03.webp" alt="Image 3">
+        </div>
+        <div class="bl_stickyImg" data-image="4">
+          <img src="../assets/images/people/ishida/img_people_topic_04.webp" alt="Image 4">
+        </div>
+      </div>
+    </div>
+    <div class="bl_topic_right">
+      <section data-image="1">
+        <h2>セクション1</h2>
+        <p>追加のテキスト行1</p>
+        <p>追加のテキスト行2</p>
+        <p>追加のテキスト行3</p>
+        <p>追加のテキスト行4</p>
+        <p>追加のテキスト行5</p>
+        <p>追加のテキスト行6</p>
+        <p>追加のテキスト行7</p>
+        <p>追加のテキスト行8</p>
+        <p>追加のテキスト行9</p>
+        <p>追加のテキスト行10</p>
+      </section>
+      <section data-image="2">
+        <h2>セクション2</h2>
+        <p>追加のテキスト行1</p>
+        <p>追加のテキスト行2</p>
+        <p>追加のテキスト行3</p>
+        <p>追加のテキスト行4</p>
+        <p>追加のテキスト行5</p>
+        <p>追加のテキスト行6</p>
+        <p>追加のテキスト行7</p>
+        <p>追加のテキスト行8</p>
+        <p>追加のテキスト行9</p>
+        <p>追加のテキスト行10</p>
+      </section>
+      <section data-image="3">
+        <h2>セクション3</h2>
+        <p>追加のテキスト行1</p>
+        <p>追加のテキスト行2</p>
+        <p>追加のテキスト行3</p>
+        <p>追加のテキスト行4</p>
+        <p>追加のテキスト行5</p>
+        <p>追加のテキスト行6</p>
+        <p>追加のテキスト行7</p>
+        <p>追加のテキスト行8</p>
+        <p>追加のテキスト行9</p>
+        <p>追加のテキスト行10</p>
+      </section>
+      <section data-image="4">
+        <h2>セクション4</h2>
+        <p>追加のテキスト行1</p>
+        <p>追加のテキスト行2</p>
+        <p>追加のテキスト行3</p>
+        <p>追加のテキスト行4</p>
+        <p>追加のテキスト行5</p>
+        <p>追加のテキスト行6</p>
+        <p>追加のテキスト行7</p>
+        <p>追加のテキスト行8</p>
+        <p>追加のテキスト行9</p>
+        <p>追加のテキスト行10</p>
+      </section>
+    </div>
+  </div>
+  <script>
+    window.addEventListener('scroll', function () {
+      const sections = document.querySelectorAll('.bl_topic_right section');
+      const images = document.querySelectorAll('.bl_stickyImg');
+      let currentImage = null;
+
+      sections.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= 0 && rect.bottom >= 0) {
+          const imageId = section.getAttribute('data-image');
+          currentImage = document.querySelector(`.bl_stickyImg[data-image="${imageId}"]`);
+        }
+      });
+
+      if (currentImage) {
+        images.forEach(image => {
+          image.classList.remove('is_active');
+        });
+        currentImage.classList.add('is_active');
+      }
+    });
+  </script>
+</body>
+
+</html>
